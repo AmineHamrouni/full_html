@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>إمارة منطقة جازان</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <!-- c3 Charts -->
+    <link href="css/plugins/c3/c3.min.css" rel="stylesheet">
+
+    <!-- Esri -->
+    
+    <link rel="stylesheet" href="https://js.arcgis.com/4.2/esri/css/main.css">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 350px;
+            width: 100%;
+        }
+        .header-style {
+            min-height: 80px;
+        }
+        .page-wrapper__inner {
+            margin-top: 0;
+        }
+        
+        .header-style__particles {
+            background-image: none;
+        }
+        .header-style__title {
+            top: 15px;
+        }
+    </style>
+
+</head>
+
+<body class="jaz rtls fixed-sidebar fixed-nav fixed-nav-basic">
+    <div id="wrapper" class="">
+        <!--navigation-->
+        <nav class="navbar-default navbar-static-side nav-style-1" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <div class="profile-element__img">
+                                <img alt="image" class="" src="img/khaled_1.png" />
+                            </div>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <div class="clear">
+                                    <h2 class="block m-t-xs profile-element__name">
+                                          <strong class="font-bold">خالد ضعافي</strong>
+                                   </h2>
+                                    <h4 class="block profile-element__title">مدير ادارة التعاملات الالكترونية</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="active fadeIn animated">
+                        <div class="form-group"><label>Password</label> <input type="password" placeholder="Password" class="form-control"></div>
+                    </li>
+                    <li class="fadeIn animated">
+                        <a href="#"><i class="fa fa-user"></i><span class="nav-label">البيانات الشخصية</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <!--page wrapper-->
+        <div id="page-wrapper" class="gray-bg dashbard-1 page-wrapper--down">
+            <!--topnavbar-->
+            <div class="row border-bottom white-bg dashboard-header header-style">
+                <div class="header-style__title ui-sortable">
+                    <h2>مرحبا بك في نظام ادارة شؤون المشايخ</h2>
+                </div>
+                <div class="header-style__particles" id="particles-js"></div>
+            </div>
+
+            <div class="page-wrapper__inner">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row" id="sortable-view">
+                            <div class="col-xs-12" id="viewDiv"></div>
+                            <div class="col-xs-12">
+                                <table class="table table-hover table-bordered white-bg">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th></th>
+                                            <th>الإسم الكامل</th>
+                                            <th>الوظيفة</th>
+                                            <th>العنوان</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><span class="pie">0.52,1.041</span></td>
+                                            <td>أحمد محمد</td>
+                                            <td class="text-navy"> -- </td>
+                                            <td class="text-info"> صبيا </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><span class="pie">0.52,1.041</span></td>
+                                            <td>عبد الله الغامدي</td>
+                                            <td class="text-navy"> -- </td>
+                                            <td class="text-info"> صبيا </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><span class="pie">0.52,1.041</span></td>
+                                            <td>أحمد عبد الله</td>
+                                            <td class="text-navy"> -- </td>
+                                            <td class="text-info"> صبيا </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td><span class="pie">0.52,1.041</span></td>
+                                            <td>عبد النور محمد</td>
+                                            <td class="text-navy"> -- </td>
+                                            <td class="text-info"> صبيا </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="footer fixed">
+                            <!-- <div class="pull-right">
+                                10GB of <strong>250GB</strong> Free.
+                            </div> -->
+                            <div>
+                                <strong>جميع الحقوق محفوظة</strong> إمارة منطقة جازان &copy; 2017
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- d3 and c3 charts -->
+    <script src="js/plugins/d3/d3.min.js"></script>
+    <script src="js/plugins/c3/c3.min.js"></script>
+
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- GITTER -->
+    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Sparkline demo data  -->
+    <script src="js/demo/sparkline-demo.js"></script>
+
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+
+    <!-- Toastr -->
+    <script src="js/plugins/toastr/toastr.min.js"></script>
+    
+    <!-- Particles -->
+    <script src="js/plugins/particles/particles.min.js"></script>
+
+    <script src="https://js.arcgis.com/4.2/"></script>
+    <script>
+        require([
+              "esri/Map",
+              "esri/views/MapView",
+              "dojo/domReady!"
+            ], function (Map, MapView) {
+            var map = new Map({
+                basemap: "streets"
+            });
+            var view = new MapView({
+                container: "viewDiv", // Reference to the scene div created in step 5
+                map: map, // Reference to the map object created before the scene
+                zoom: 9, // Sets the zoom level based on level of detail (LOD)
+                center: [42.3811385, 16.9933363] // Sets the center point of view in lon/lat
+            });
+        });
+        
+        $(document).ready(function() {
+            /* ---- particles.js config ---- */
+
+            particlesJS("particles-js", {
+              "particles": {
+                "number": {
+                  "value": 398,
+                  "density": {
+                    "enable": true,
+                    "value_area": 1657.2100474277727
+                  }
+                },
+                "color": {
+                  "value": "#ffffff"
+                },
+                "shape": {
+                  "type": "circle",
+                  "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                  },
+                  "polygon": {
+                    "nb_sides": 5
+                  },
+                  "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                  }
+                },
+                "opacity": {
+                  "value": 0.5,
+                  "random": false,
+                  "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                  }
+                },
+                "size": {
+                  "value": 3,
+                  "random": true,
+                  "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                  }
+                },
+                "line_linked": {
+                  "enable": true,
+                  "distance": 150,
+                  "color": "#ffffff",
+                  "opacity": 0.4,
+                  "width": 1
+                },
+                "move": {
+                  "enable": true,
+                  "speed": 3,
+                  "direction": "none",
+                  "random": true,
+                  "straight": false,
+                  "out_mode": "out",
+                  "bounce": false,
+                  "attract": {
+                    "enable": true,
+                    "rotateX": 4329.212564336912,
+                    "rotateY": 1200
+                  }
+                }
+              },
+              "interactivity": {
+                "detect_on": "window",
+                "events": {
+                  "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                  },
+                  "onclick": {
+                    "enable": true,
+                    "mode": "repulse"
+                  },
+                  "resize": true
+                },
+                "modes": {
+                  "grab": {
+                    "distance": 203.7962037962038,
+                    "line_linked": {
+                      "opacity": 0.8418939375541366
+                    }
+                  },
+                  "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                  },
+                  "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                  },
+                  "push": {
+                    "particles_nb": 4
+                  },
+                  "remove": {
+                    "particles_nb": 2
+                  }
+                }
+              },
+              "retina_detect": true
+            });
+
+
+            /* ---- stats.js config ---- */
+
+            var count_particles, stats, update;
+            stats = new Stats;
+            stats.setMode(0);
+            stats.domElement.style.position = 'absolute';
+            stats.domElement.style.left = '0px';
+            stats.domElement.style.top = '0px';
+            document.body.appendChild(stats.domElement);
+            count_particles = document.querySelector('.js-count-particles');
+            update = function() {
+              stats.begin();
+              stats.end();
+              if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+              }
+              requestAnimationFrame(update);
+            };
+            requestAnimationFrame(update);
+        });
+    </script>
+    <!-- End Esri -->
+
+</body>
+
+</html>

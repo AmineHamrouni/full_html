@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>إمارة منطقة جازان</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <!-- c3 Charts -->
+    <link href="css/plugins/c3/c3.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="jaz rtls fixed-sidebar fixed-nav fixed-nav-basic">
+   <div class="menu menu--opened animated fadeInDown collapse" id="collapseExample">
+       <ul class="menu__items">
+           <li class="menu__item">
+               <a href="" class="menu__item__icon">
+                   <i class="fa fa-user"></i>
+                   <span>بياناتي</span>
+               </a>
+           </li>
+           <li class="menu__item">
+               <a href="" class="menu__item__icon">
+                   <i class="fa fa-calendar"></i>
+                   <span>إجازاتي</span>
+               </a>
+           </li>
+           <li class="menu__item">
+               <a href="" class="menu__item__icon">
+                   <i class="fa fa-users"></i>
+                   <span>بيانات الاتصال</span>
+               </a>
+           </li>
+           <li class="menu__item">
+               <a href="" class="menu__item__icon">
+                   <i class="fa fa-envelope"></i>
+                   <span>بريد الكتروني</span>
+               </a>
+           </li>
+           <li class="menu__close">
+                <button class="close" type="button" data-toggle="collapse" data-target="#collapseExample" aria-exapnded="false" aria-controls="collapseExample">
+                   &times;
+               </button>
+            </li>
+       </ul>
+       
+   </div>
+    <div id="wrapper" class="">
+        <!--navigation-->
+        <nav class="navbar-default navbar-static-side nav-style-1" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <div class="profile-element__img">
+                                <img alt="image" class="" src="img/khaled_1.png" />
+                            </div>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <div class="clear">
+                                    <h2 class="block m-t-xs profile-element__name">
+                                          <strong class="font-bold">خالد ضعافي</strong>
+                                   </h2>
+                                    <h4 class="block profile-element__title">مدير ادارة التعاملات الالكترونية<b class="caret"></b></h4>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">الملف الشخصي</a></li>
+                                <li><a href="contacts.html">جهات الاتصال</a></li>
+                                <li><a href="mailbox.html">صندوق البريد</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">خروج</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+
+                        </div>
+                    </li>
+                    <li class="active fadeIn animated">
+                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">لوحة التحكم</span> </a>
+                    </li>
+                    <li class="fadeIn animated">
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i><span class="nav-label">البريد الالكتروني </span><span class="label label-warning pull-right">16/24</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="mailbox.html">البريد الالكتروني</a></li>
+                            <li><a href="mail_detail.html">مثال لبريد الكتروني</a></li>
+                            <li><a href="mail_compose.html">إرسال بريد الكتروني</a></li>
+                            <li><a href="email_template.html">المسودات</a></li>
+                        </ul>
+                    </li>
+                    <li class="fadeIn animated">
+                        <a href="profile.html"><i class="fa fa-user"></i><span class="nav-label">البيانات الشخصية</span></a>
+                    </li>
+                    <li class="fadeIn animated">
+                        <a href="index.html"><i class="fa fa-check-square"></i><span class="nav-label">كشف حضوري وانصرافي</span></a>
+                    </li>
+                    <li class="fadeIn animated">
+                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">طلبات الاجازات</span></a>
+                    </li>
+                    <li class="fadeIn animated">
+                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">الدورات التدريبية</span></a>
+                    </li>
+                    <li class="fadeIn animated">
+                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">الأخبار</span></a>
+                    </li>
+                    <li class="fadeIn animated">
+                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">التحويلات الداخلية</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <!--page wrapper-->
+        <div id="page-wrapper" class="gray-bg dashbard-1 page-wrapper--down">
+            <!--topnavbar-->
+            <div class="row border-bottom white-bg dashboard-header header-style">
+                <div class="header-style__title ui-sortable">
+                    <h2>مرحبا بك في لوحة التحكم الخاصة بك</h2> <small>لديك 42 رسالة و 6 إشعارات</small>
+                </div>
+                <div class="header-style__particles" id="particles-js"></div>
+            </div>
+            
+            
+            <div class="page-wrapper__inner">
+                        
+                <div class="row border-bottom">
+                        <div class="dashboard-widget col-lg-12">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox__title">
+                                    <span class="label label-success pull-right">شهريا</span>
+                                    <h5>نسبة الحضور</h5>
+                                </div>
+                                <div class="ibox__content">
+                                    <h1 class="no-margins">40</h1>
+                                    <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div>
+                                    <small>شهريا</small>
+                                </div>
+                            </div>
+                            <div class="ibox float-e-margins">
+                                <div class="ibox__title">
+                                    <span class="label label-info pull-right">سنويا</span>
+                                    <h5>نسبة الحضور</h5>
+                                </div>
+                                <div class="ibox__content">
+                                    <h1 class="no-margins">275,800</h1>
+                                    <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i></div>
+                                    <span class="label label-primary pull-right">اليوم</span>
+                                    <small>عدد المعاملات</small>
+                                </div>
+                            </div>
+                            <div class="ibox float-e-margins">
+                                <div class="ibox__title">
+
+                                    <h5>عدد الموظفين</h5>
+                                </div>
+                                <div class="ibox__content">
+                                    <h1 class="no-margins">106</h1>
+                                    <div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i></div>
+                                    <small>عدد المقاولين</small>
+                                </div>
+                            </div>
+                            <div class="ibox float-e-margins">
+                                <div class="ibox__title">
+                                    <span class="label label-danger pull-right">Low value</span>
+                                    <h5>رصيد الاجازات</h5>
+                                </div>
+                                <div class="ibox__content">
+                                    <h1 class="no-margins">80,600</h1>
+                                    <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i></div>
+                                    <small>In first month</small>
+                                </div>
+                            </div>
+                </div>
+            </div>
+
+                <div class="row border-bottom white-bg dashboard-header">
+                    <div class="col-md-3" id="step1">
+                        <ul class="list-group clear-list m-t">
+                            <li class="list-group-item fist-item"> <span class="pull-right">
+                                        09:00 pm
+                                    </span> <span class="label label-success">1</span> إتصل بالموظف </li>
+                            <li class="list-group-item"> <span class="pull-right">
+                                        10:16 am
+                                    </span> <span class="label label-info">2</span> إمضاء عقد </li>
+                            <li class="list-group-item"> <span class="pull-right">
+                                        08:22 pm
+                                    </span> <span class="label label-primary">3</span> إرسال ايمايل </li>
+                            <li class="list-group-item"> <span class="pull-right">
+                                        11:06 pm
+                                    </span> <span class="label label-default">4</span> إجراء إتصال هاتفي </li>
+                            <li class="list-group-item"> <span class="pull-right">
+                                        12:00 am
+                                    </span> <span class="label label-primary">5</span> إستقبال ضيف </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="flot-chart dashboard-chart">
+                            <div class="flot-chart-content" id="flot-dashboard-chart"></div>
+                        </div>
+                        <div class="row text-left">
+                            <div class="col-xs-4">
+                                <div class=" m-l-md"> <span class="h4 font-bold m-t block">$ 406,100</span> <small class="text-muted m-b block">القيمة الجملية للمشاريع</small> </div>
+                            </div>
+                            <div class="col-xs-4"> <span class="h4 font-bold m-t block">$ 150,401</span> <small class="text-muted m-b block">القيمة الفعلية للمشاريع</small> </div>
+                            <div class="col-xs-4"> <span class="h4 font-bold m-t block">$ 16,822</span> <small class="text-muted m-b block">القيمة المنجزة</small> </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="statistic-box">
+                            <h4>
+                                    المشاريع حسب المناطق
+                                </h4>
+                            <p> يمكنك متابعة احصائيات المشاريع حسب المناطق بمنطقة جازان. </p>
+                            <div class="row text-center">
+                                <div class="col-lg-6">
+                                    <canvas id="doughnutChart2" width="80" height="80" style="margin: 18px auto 0"></canvas>
+                                    <h5>صبيا</h5>
+                                </div>
+                                <div class="col-lg-6">
+                                    <canvas id="doughnutChart" width="80" height="80" style="margin: 18px auto 0"></canvas>
+                                    <h5>أبو عريش</h5>
+                                </div>
+                            </div>
+                            <div class="m-t">
+                                <small>آخر البلديات حسب آخر تحديث.</small>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row border-bottom white-bg">
+                    <div class="news-bar col-sm-12">
+                        <a href="" class="news-bar__title">
+                            <i class="fa fa-newspaper-o fa-2x" aria-hidden="true"></i> آخر الأخبار
+                        </a>
+                        <div class="news-bar__time"><span>على الساعة <span>14:00</span></span>
+                        </div>
+                        <div class="news-bar__content">
+                            <a href="">
+                    يبق العدّ الساحة وهولندا، إذ, بفرض التّحول الانجليزية إذ لان. في مايو التكاليف وتم, أن حيث ومضى تعديل, السبب الشرقي الفرنسي ذات و. </a>
+                        </div>
+
+                    </div>
+                    <!--
+                 <div class="meteo-bar col-sm-4">
+                   <div class="meteo-bar__content">
+                     <span>منطقة جازان الآن</span>
+                   </div>
+                 </div>
+                -->
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="wrapper wrapper-content">
+                            <div class="row" id="sortable-view">
+                                <div class="col-lg-4">
+                                    <div class="ibox float-e-margins">
+                                        <div class="ibox__title">
+                                            <h5><a ui-sref="mailbox.inbox">البريد الإلكتروني</a></h5>
+                                            <div class="ibox__tools">
+                                                <a class="collapse-link">
+                                                    <i class="fa fa-chevron-up"></i>
+                                                </a>
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                    <i class="fa fa-wrench"></i>
+                                                </a>
+                                                <a class="close-link">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="ibox__content ibox-heading">
+
+                                            <h3>
+                                            <i class="fa fa-envelope-o"></i>
+                                            رسائل جديدة</h3> <small>
+                                            <i class="fa fa-tim"></i>
+                                            لديك
+                                            22
+                                            رسالة جديدة و
+                                            16
+                                            رسالة في الانتظار في المسودة.</small>
+
+                                        </div>
+                                        
+                                        <div class="ibox__content">
+                                            <div class="feed-activity-list">
+                                                <div class="feed-element">
+                                                    <div> <small class="pull-right text-navy">1m ago</small> <strong>أحمد مصطفى</strong>
+                                                        <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</div> <small class="text-muted">Today 5:60 pm - 12.06.2014</small> </div>
+                                                </div>
+                                                <div class="feed-element">
+                                                    <div> <small class="pull-right">2m ago</small> <strong>سالم محمد</strong>
+                                                        <div>There are many variations of passages of Lorem Ipsum available</div> <small class="text-muted">Today 2:23 pm - 11.06.2014</small> </div>
+                                                </div>
+                                                <div class="feed-element">
+                                                    <div> <small class="pull-right">5m ago</small> <strong>أحمد مصطفى</strong>
+                                                        <div>Contrary to popular belief, Lorem Ipsum</div> <small class="text-muted">Today 1:00 pm - 08.06.2014</small> </div>
+                                                </div>
+                                            </div>
+                                            <hr class="hr-line-dashed">
+                                            <p>
+                                                <button type="button" class="btn btn-xs btn-block btn-outline btn-primary">كل الرسائل</button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="ibox float-e-margins">
+                                        <div class="ibox__title">
+                                            <h5>New data for the report</h5> <span class="label label-primary">IN+</span>
+                                            <div class="ibox__tools">
+                                                <a class="collapse-link">
+                                                    <i class="fa fa-chevron-up"></i>
+                                                </a>
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                    <i class="fa fa-wrench"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-user">
+                                                    <li><a href="#">Config option 1</a>
+                                                    </li>
+                                                    <li><a href="#">Config option 2</a>
+                                                    </li>
+                                                </ul>
+                                                <a class="close-link">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="ibox__content">
+                                            <div>
+
+                                                <div class="pull-right text-right">
+
+                                                    <span class="bar_dashboard">5,3,9,6,5,9,7,3,5,2,4,7,3,2,7,9,6,4,5,7,3,2,1,0,9,5,6,8,3,2,1</span>
+                                                    <br/>
+                                                    <small class="font-bold">$ 20 054.43</small>
+                                                </div>
+                                                <h4>NYS report new data!
+                                                <br/>
+                                                <small class="m-r"><a href="graph_flot.html"> Check the stock price! </a> </small>
+                                            </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+
+                                    <div class="ibox float-e-margins">
+                                        <div class="ibox__title">
+                                            <h5>قائمة ما يجب عمله</h5>
+                                            <div class="ibox__tools">
+                                                <a class="collapse-link">
+                                                    <i class="fa fa-chevron-up"></i>
+                                                </a>
+                                                <a class="close-link">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="ibox__content">
+                                            <ul class="todo-list m-t small-list">
+                                                <li>
+                                                    <a href="#" class="check-link"><i class="fa fa-check-square"></i> </a>
+                                                    <span class="m-l-xs todo-list__label--completed">موعد عمل</span>
+
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                                    <span class="m-l-xs">مكالمة هاتفية مع الأخ عبد الله.</span>
+
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                                    <span class="m-l-xs">إرسال ملفات المشروع إلى المسؤول</span>
+                                                    <small class="todo-list__label label label-primary"><i class="fa fa-clock-o"></i> 1 mins</small>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                                    <span class="m-l-xs">إرسال طلب</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="check-link"><i class="fa fa-check-square"></i> </a>
+                                                    <span class="m-l-xs todo-list__label--completed">موعد مع طبيب</span>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="ibox float-e-margins">
+                                        <div class="ibox__title">
+                                            <h5>الدوام</h5>
+                                            <div class="ibox__tools">
+                                                <a class="collapse-link">
+                                                    <i class="fa fa-chevron-up"></i>
+                                                </a>
+                                                <a class="close-link">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="ibox__content">
+                                            <div>
+                                                <div id="gauge"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="widget style1 lazur-bg">
+                                        <div class="row">
+                                            <div class="col-xs-4"> <i class="fa fa-envelope-o fa-5x"></i> </div>
+                                            <div class="col-xs-8 text-right"> <span> عدد الطلبات </span>
+                                                <h2 class="font-bold">14</h2> </div>
+                                        </div>
+                                    </div>
+                                    <div class="widget style1 yellow-bg">
+                                        <div class="row">
+                                            <div class="col-xs-4"> <i class="fa fa-bell-o fa-5x"></i> </div>
+                                            <div class="col-xs-8 text-right"> <span> إشعارات </span>
+                                                <h2 class="font-bold">12</h2> </div>
+                                        </div>
+                                    </div>
+                                    <div class="widget style1 navy-bg">
+                                        <div class="row">
+                                            <div class="col-xs-4"> <i class="fa fa-cloud fa-5x"></i> </div>
+                                            <div class="col-xs-8 text-right"> <span> درجة الحرارة بمنطقة جازان </span>
+                                                <h2 class="font-bold">26'C</h2> </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ibox">
+                                        <div class="ibox__title">
+                                            <span class="label label-primary pull-right">جديد</span>
+                                            <h5>إدارة تقنية المعلومات</h5>
+                                        </div>
+                                        <div class="ibox__content">
+                                            <div class="team-members">
+                                                <a class="team-members__member" href="#">
+                                                    <div class="team-members__img-container">
+                                                        <img alt="member" class="" src="img/a9.png">
+                                                    </div>
+                                                    <div class="team-member__description">
+                                                        <div class="overlay"></div>
+                                                        <span>عبد الله عبد الغفار عبد الرحيم</span>
+                                                    </div>
+                                                </a>
+                                                <a class="team-members__member" href="#">
+                                                    <div class="team-members__img-container">
+                                                        <img alt="member" class="" src="img/a9.png">
+                                                    </div>
+                                                    <div class="team-member__description">
+                                                        <div class="overlay"></div>
+                                                        <span>عبد الله عبد الغفار عبد الرحيم</span>
+                                                    </div>
+                                                </a>
+                                                <a class="team-members__member" href="#">
+                                                    <div class="team-members__img-container">
+                                                        <img alt="member" class="" src="img/a9.png">
+                                                    </div>
+                                                    <div class="team-member__description">
+                                                        <div class="overlay"></div>
+                                                        <span>عبد الله عبد الغفار عبد الرحيم</span>
+                                                    </div>
+                                                </a>
+                                                <a class="team-members__member" href="#">
+                                                    <div class="team-members__img-container">
+                                                        <img alt="member" class="" src="img/a9.png">
+                                                    </div>
+                                                    <div class="team-member__description">
+                                                        <div class="overlay"></div>
+                                                        <span>عبد الله عبد الغفار عبد الرحيم</span>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                            <hr>
+
+                                            <div class="">
+                                                <span>نسبة الحاضرين:</span>
+                                                <div class="stat-percent">88%</div>
+                                                <div class="progress progress-mini">
+                                                    <div style="width: 88%;" class="progress-bar"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row  m-t-sm">
+                                                <div class="col-sm-8">
+                                                    <div class="font-bold">مدير الإدارة</div>
+                                                    محمد عبد الله محمد
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="font-bold">تحويلة</div>
+                                                    1234
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="footer fixed">
+                            <!-- <div class="pull-right">
+                                10GB of <strong>250GB</strong> Free.
+                            </div> -->
+                            <div>
+                                <strong>جميع الحقوق محفوظة</strong> إمارة منطقة جازان &copy; 2017
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div id="particles-js"></div>
+                </div>
+
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- d3 and c3 charts -->
+    <script src="js/plugins/d3/d3.min.js"></script>
+    <script src="js/plugins/c3/c3.min.js"></script>
+
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- GITTER -->
+    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Sparkline demo data  -->
+    <script src="js/demo/sparkline-demo.js"></script>
+
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+
+    <!-- Toastr -->
+    <script src="js/plugins/toastr/toastr.min.js"></script>
+    
+    <!-- Particles -->
+    <script src="js/plugins/particles/particles.min.js"></script>
+    
+    <script>
+        
+                $(document).ready(function () {
+            
+            $(".pie").peity("pie");
+
+            setTimeout(function () {
+                toastr.options = {
+                    closeButton: true,
+                    progressBar: true,
+                    showMethod: 'slideDown',
+                    "positionClass": "toast-top-left",
+                    timeOut: 4000
+                };
+                toastr.success('إمارة منطقة جازان', 'مرحبا بك في لو حة التحكم الخاصة بك');
+
+            }, 1300);
+
+            WinMove();
+
+
+            var data1 = [
+                [0, 4], [1, 8], [2, 5], [3, 10], [4, 4], [5, 16], [6, 5], [7, 11], [8, 6], [9, 11], [10, 30], [11, 10], [12, 13], [13, 4], [14, 3], [15, 3], [16, 6]
+            ];
+            var data2 = [
+                [0, 1], [1, 0], [2, 2], [3, 0], [4, 1], [5, 3], [6, 1], [7, 5], [8, 2], [9, 3], [10, 2], [11, 1], [12, 0], [13, 2], [14, 8], [15, 0], [16, 0]
+            ];
+            $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
+                data1, data2
+            ], {
+                series: {
+                    lines: {
+                        show: false,
+                        fill: true
+                    },
+                    splines: {
+                        show: true,
+                        tension: 0.4,
+                        lineWidth: 1,
+                        fill: 0.4
+                    },
+                    points: {
+                        radius: 0,
+                        show: true
+                    },
+                    shadowSize: 2
+                },
+                grid: {
+                    hoverable: true,
+                    clickable: true,
+                    tickColor: "#d5d5d5",
+                    borderWidth: 1,
+                    color: '#d5d5d5'
+                },
+                colors: ["#007600", "#1C84C6"],
+                xaxis: {},
+                yaxis: {
+                    ticks: 4
+                },
+                tooltip: false
+            });
+
+            var doughnutData = {
+                labels: ["App", "Software", "Laptop"],
+                datasets: [{
+                    data: [300, 50, 100],
+                    backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"]
+                }]
+            };
+
+
+            var doughnutOptions = {
+                responsive: false,
+                legend: {
+                    display: false
+                }
+            };
+
+
+            var ctx4 = document.getElementById("doughnutChart").getContext("2d");
+            new Chart(ctx4, {
+                type: 'doughnut',
+                data: doughnutData,
+                options: doughnutOptions
+            });
+
+            var doughnutData = {
+                labels: ["App", "Software", "Laptop"],
+                datasets: [{
+                    data: [70, 27, 85],
+                    backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"]
+                }]
+            };
+
+
+            var doughnutOptions = {
+                responsive: false,
+                legend: {
+                    display: false
+                }
+            };
+
+
+            var ctx4 = document.getElementById("doughnutChart2").getContext("2d");
+            new Chart(ctx4, {
+                type: 'doughnut',
+                data: doughnutData,
+                options: doughnutOptions
+            });
+
+
+//            c3.generate({
+//                bindto: '#scatter',
+//                data: {
+//                    xs: {
+//                        data1: 'data1_x',
+//                        data2: 'data2_x'
+//                    },
+//                    columns: [
+//                        ["data1_x", 3.2, 3.2, 3.1, 2.3, 2.8, 2.8, 3.3, 2.4, 2.9, 2.7, 2.0, 3.0, 2.2, 2.9, 2.9, 3.1, 3.0, 2.7, 2.2, 2.5, 3.2, 2.8, 2.5, 2.8, 2.9, 3.0, 2.8, 3.0, 2.9, 2.6, 2.4, 2.4, 2.7, 2.7, 3.0, 3.4, 3.1, 2.3, 3.0, 2.5, 2.6, 3.0, 2.6, 2.3, 2.7, 3.0, 2.9, 2.9, 2.5, 2.8],
+//                        ["data2_x", 3.3, 2.7, 3.0, 2.9, 3.0, 3.0, 2.5, 2.9, 2.5, 3.6, 3.2, 2.7, 3.0, 2.5, 2.8, 3.2, 3.0, 3.8, 2.6, 2.2, 3.2, 2.8, 2.8, 2.7, 3.3, 3.2, 2.8, 3.0, 2.8, 3.0, 2.8, 3.8, 2.8, 2.8, 2.6, 3.0, 3.4, 3.1, 3.0, 3.1, 3.1, 3.1, 2.7, 3.2, 3.3, 3.0, 2.5, 3.0, 3.4, 3.0],
+//                        ["data1", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3],
+//                        ["data2", 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8]
+//                    ],
+//                    colors: {
+//                        data1: '#1ab394',
+//                        data2: '#BABABA'
+//                    },
+//                    type: 'scatter'
+//                }
+//            });
+//
+//            c3.generate({
+//                bindto: '#stocked',
+//                data: {
+//                    columns: [
+//                        ['data1', 30, 200, 100, 400, 150, 250],
+//                        ['data2', 50, 20, 10, 40, 15, 25]
+//                    ],
+//                    colors: {
+//                        data1: '#1ab394',
+//                        data2: '#BABABA'
+//                    },
+//                    type: 'bar',
+//                    groups: [
+//                        ['data1', 'data2']
+//                    ]
+//                }
+//            });
+
+//            c3.generate({
+//                bindto: '#gauge',
+//                data: {
+//                    url: 'http://c3js.org/data/c3_test.json',
+//                    mimeType: 'json'
+//                },
+//                color: {
+//                    pattern: ['#1ab394', '#BABABA']
+//
+//                }
+//            });
+
+//            c3.generate({
+//                bindto: '#pie',
+//                data: {
+//                    columns: [
+//                        ['data1', 30],
+//                        ['data2', 120]
+//                    ],
+//                    colors: {
+//                        data1: '#1ab394',
+//                        data2: '#BABABA'
+//                    },
+//                    type: 'pie'
+//                }
+//            });
+
+        });
+        
+            
+        $(document).ready(function() {
+            /* ---- particles.js config ---- */
+
+            particlesJS("particles-js", {
+              "particles": {
+                "number": {
+                  "value": 398,
+                  "density": {
+                    "enable": true,
+                    "value_area": 1657.2100474277727
+                  }
+                },
+                "color": {
+                  "value": "#ffffff"
+                },
+                "shape": {
+                  "type": "circle",
+                  "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                  },
+                  "polygon": {
+                    "nb_sides": 5
+                  },
+                  "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                  }
+                },
+                "opacity": {
+                  "value": 0.5,
+                  "random": false,
+                  "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                  }
+                },
+                "size": {
+                  "value": 3,
+                  "random": true,
+                  "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                  }
+                },
+                "line_linked": {
+                  "enable": true,
+                  "distance": 150,
+                  "color": "#ffffff",
+                  "opacity": 0.4,
+                  "width": 1
+                },
+                "move": {
+                  "enable": true,
+                  "speed": 3,
+                  "direction": "none",
+                  "random": true,
+                  "straight": false,
+                  "out_mode": "out",
+                  "bounce": false,
+                  "attract": {
+                    "enable": true,
+                    "rotateX": 4329.212564336912,
+                    "rotateY": 1200
+                  }
+                }
+              },
+              "interactivity": {
+                "detect_on": "window",
+                "events": {
+                  "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                  },
+                  "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                  },
+                  "resize": true
+                },
+                "modes": {
+                  "grab": {
+                    "distance": 203.7962037962038,
+                    "line_linked": {
+                      "opacity": 0.8418939375541366
+                    }
+                  },
+                  "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                  },
+                  "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                  },
+                  "push": {
+                    "particles_nb": 4
+                  },
+                  "remove": {
+                    "particles_nb": 2
+                  }
+                }
+              },
+              "retina_detect": true
+            });
+
+
+            /* ---- stats.js config ---- */
+
+            var count_particles, stats, update;
+            stats = new Stats;
+            stats.setMode(0);
+            stats.domElement.style.position = 'absolute';
+            stats.domElement.style.left = '0px';
+            stats.domElement.style.top = '0px';
+            document.body.appendChild(stats.domElement);
+            count_particles = document.querySelector('.js-count-particles');
+            update = function() {
+              stats.begin();
+              stats.end();
+              if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+              }
+              requestAnimationFrame(update);
+            };
+            requestAnimationFrame(update);
+        });
+        
+    </script>
+
+</body>
+
+</html>
