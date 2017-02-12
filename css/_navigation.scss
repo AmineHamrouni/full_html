@@ -578,6 +578,9 @@ body.canvas-menu.mini-navbar .navbar-default .nav li .profile-element a span {
     border: 6px solid rgba(255, 255, 255, 0.69);
     border-radius: 50%;
     overflow: hidden;
+    img {
+        max-width: 100%;
+    }
 }
 
 .profile-element__name,
@@ -585,7 +588,13 @@ body.canvas-menu.mini-navbar .navbar-default .nav li .profile-element a span {
     color: #fff;
 }
 
-.profile-element__title {}
+.profile-element__name {
+    font-size: 20px;
+}
+
+.profile-element__title {
+    font-size: 10px;
+}
 
 .canvas-menu.mini-navbar .nav-second-level li a,
 .fixed-sidebar.mini-navbar .nav-second-level li a {

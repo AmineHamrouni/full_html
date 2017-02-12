@@ -195,6 +195,16 @@ body.rtls {
     .slick-slider {
         direction: ltr;
     }
+    // datepicker
+    .datepicker {
+        direction: rtl;
+        right: auto;
+    }
+    // tabs
+    .tabs-container .nav-tabs > li {
+        float: right;
+        margin-bottom: -1px;
+    }
 }
 
 @media (max-width: 992px) {

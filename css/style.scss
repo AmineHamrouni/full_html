@@ -14,7 +14,8 @@
 
 // Theme Elements
 @import "fonts";
-@import "plugins/font-awesome/scss/font-awesome";
+//@import "plugins/font-awesome/scss/font-awesome";
+@import "plugins/bourbon/bourbon";
 @import "typography";
 @import "navigation";
 @import "top_navigation";
@@ -46,6 +47,7 @@
 
 // Custom style
 // Your custom style to override base style
+@import "flowchart";
 @import "custom";
 
 // Clear layout on print mode

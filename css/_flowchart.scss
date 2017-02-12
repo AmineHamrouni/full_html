@@ -1,0 +1,181 @@
+$flow_success: #19b293;
+$flow_active: #258ec7;
+$flow_wait: #f7ac59;
+$flow_refused: #f75959;
+$flow_inactive: #dbdbdb;
+
+$flow_step_bg: #f3f3f4;
+
+$flow_start_size: 42px;
+$flow_end_size: 20px;
+
+$flow_status_size: 40px;
+
+.flowchart {
+    margin-top: 30px;
+    .nav-tabs {
+        border-bottom: none;
+        //Normalizing the old style
+        margin-bottom: 25px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        > li {
+            margin-bottom: 0;
+            //Normalizing the old style
+            float: none;
+            flex: 1;
+            span {
+                display: block;
+                text-align: center;
+            }
+            > a {
+                color: #A7B1C2;
+                font-weight: 600;
+                padding: 10px;
+                margin-left: 0;
+                margin-right: 0;
+                border-radius: 0;
+                border: none;
+                background-color: $flow_inactive;
+                color: white;
+                &:hover {
+                    background: $flow_inactive;
+                    border-color: transparent;
+                }
+                //Normalizing the old style
+                border-radius: 50%;
+                border: none;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                position: relative;
+                transition: .2s ease-in-out;
+                i {
+                    margin-left: 0;
+                    //Normalizing the old style
+                }
+            }
+            &.active {
+                a {
+                    border: none;
+                    //Normalizing the old style
+                    color: #555555;
+                    border: 3px solid rgba(85, 85, 85, 0.22);
+                    &:hover, &:focus {
+                        border: none;
+                        //Normalizing the old style
+                        border: 3px solid rgba(85, 85, 85, 0.32);
+                    }
+                }
+                
+            }
+        }
+    }
+    &__nav-tabs {}
+    &__status {
+        a {
+            width: $flow_status_size;
+            height: $flow_status_size;
+        }
+        display: flex !important;
+        align-items: center;
+        flex-direction: column;
+        &:after {
+            content: '';
+            width: 100%;
+            height: 6px;
+            background-color: #E0E0E0;
+            position: absolute;
+            top: $flow_status_size / 2 - 1;
+            right: 50%;
+        }
+        &:before {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background-color: #E0E0E0;
+            position: absolute;
+            top: $flow_status_size / 2 + 1;
+            right: 50%;
+            z-index: 1;
+            
+            animation-name: all-width;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-fill-mode: forwards;
+        }
+
+        
+        &:last-child {
+            &:after, &:before {
+                display: none;
+            }
+        }
+        &--done {
+            a {
+                background-color: $flow_success !important;
+                color: white !important;
+            }
+            &:before {
+                background-color:  $flow_success;
+            }
+        }
+        
+        &--wait {
+            a {
+                background-color: $flow_wait !important;
+                color: white !important;
+            }
+        }
+        
+        &--refused {
+            a {
+                background-color: $flow_refused !important;
+                color: white !important;
+            }
+        }
+        
+        &:nth-child(1){
+            &:before {
+                animation-delay: 0s;
+            }
+        }
+        &:nth-child(2){
+            &:before {
+                animation-delay: 1s;
+            }
+        }
+        
+        span {
+            margin-top: 5px;
+            padding: 5px 10px;
+            background-color: #fff;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+    }
+    
+    &__tab-content {
+        width: 80%;
+        margin: 10px auto;
+        max-width: 400px;
+    }
+    &__tab-pane {
+        .panel-heading {
+            background: #258dc8;
+            background-image: linear-gradient(to right, #42A5F5 0%, #5C6BC0 100%);
+            color: white;
+        }
+    }
+}
+
+@keyframes all-width {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

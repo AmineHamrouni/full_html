@@ -12,18 +12,43 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/plugins/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet">
 
-    <!-- Toastr style -->
-    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <!-- Gritter -->
-    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
 
-    <!-- c3 Charts -->
-    <link href="css/plugins/c3/c3.min.css" rel="stylesheet">
+    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+
+    <link href="css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+
+    <link href="css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+
+    <link href="css/plugins/cropper/cropper.min.css" rel="stylesheet">
+
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
+
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+
+    <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
+
+    <link href="css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+
+    <link href="css/plugins/dualListbox/bootstrap-duallistbox.min.css" rel="stylesheet">
     
-    <link href="css/plugins/slick/slick.css" rel="stylesheet">
-    <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
-
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">    
     <!-- ٍSlick -->
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -134,32 +159,35 @@
             <!--topnavbar-->
             <div class="row border-bottom white-bg dashboard-header header-style">
                 <div class="header-style__title ui-sortable">
-                    <h2>إستعلام عن حضوري وإنصرافي</h2>
-                    <ol class="breadcrumb">
-                        <li>
-                            <a href="index.html">لوحة التحكم</a>
-                        </li>
-                        <li class="active">
-                            <strong>إستعلام عن حضوري وإنصرافي</strong>
-                        </li>
-                    </ol>
+<!--
+                   <div class="header-style__actions">
+                        <a class="navbar-minimaliz btn btn-primary " href="#">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <a class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-exapnded="false" aria-controls="collapseExample">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                      </div>
+-->
+                      
+                      <div class="header-style__title">
+                          <h2>تقديم طلب إجازة</h2>
+<!--
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="index.html">لوحة التحكم</a>
+                                </li>
+                                <li class="active">
+                                    <strong>إستعلام عن حضوري وإنصرافي</strong>
+                                </li>
+                            </ol>
+-->
+                      </div>
+                    
                 </div>
                 <div class="header-style__particles" id="particles-js"></div>
             </div>
             <div class="page-wrapper__inner">
-
-                <div class="row wrapper border-bottom white-bg page-heading">
-                    <div class="col-lg-10">
-                        <ol class="breadcrumb">
-                            <li>
-                                <a href="index.html">لوحة التحكم</a>
-                            </li>
-                            <li class="active">
-                                <strong>إستعلام عن حضوري وإنصرافي</strong>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
 
                 <div class="row">
                     <div class="col-lg-12">
@@ -171,60 +199,87 @@
                                             <h5>كشف الحضور والانصراف الخاص بك</h5>
                                         </div>
                                         <div class="ibox__content">
-                                            حنمححخيض
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <form class="form-horizontal">
+                                                        <p>إملأ البيانات بتمعن.</p>
+                                                        <div class="form-group">
+                                                            <label class="">إختر سبب الإجازة</label>
+                                                            <div>
+                                                                <select class="select2 form-control">
+                                                                    <option value="1">إجازة عادية</option>
+                                                                    <option value="2">إجازة إضطرارية</option>
+                                                                    <option value="3">إجازة عادية</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <label class="">الموظف المعوض</label>
+                                                            <div>
+                                                                <select class="select2 form-control">
+                                                                    <option value="1">محمد عبد الله</option>
+                                                                    <option value="2">عبد الله أحمد</option>
+                                                                    <option value="3">أحمد محمد</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group" id="data_5">
+                                                            <label class="">إختر فترة الإجازة</label>
+                                                            <div class="input-daterange input-group" id="datepicker">
+                                                                <input type="text" class="input-sm form-control" name="start" value="05/14/2014"/>
+                                                                <span class="input-group-addon">إلى</span>
+                                                                <input type="text" class="input-sm form-control" name="end" value="05/22/2014" />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="form-group" id="">
+                                                            <label class="">إختر فترة الإجازة</label>
+                                                            <form action="/upload-target" class="dropzone"></form>
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <button class="btn btn-sm btn-success" type="submit">إرسال</button>
+                                                            <button class="btn btn-sm btn-default" type="submit">تفريغ البيانات</button>
+                                                        </div>
+                                                        
+                                                    </form>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    2
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                               <div class="col-lg-3">
-                            <div class="ibox box--style-1">
-                                <div class="ibox__title">
-                                    <h5>نصائح أمنية</h5>
-                                </div>
-                                <div class="slick_demo_1 slick_custom_buttons">
 
-                                    <div>
-                                        <div class="ibox__content">
-    <!--                                        <h2>Slide 1</h2>-->
-                                            <p>
-                                                اقرأ بتمعن كافة التنبيهات التي تصلك على قائمة التنبيهات.
-                                            </p>
+                                    <div class="ibox box--style-1">
+                                        <div class="ibox__title">
+                                            <h5>نصائح أمنية</h5>
+                                        </div>
+                                        <div class="slick_demo_2 slick_custom_buttons">
+
+                                            <div>
+                                                <div class="ibox__content">
+            <!--                                        <h2>Slide 1</h2>-->
+                                                    <p>
+                                                        اقرأ بتمعن كافة التنبيهات التي تصلك على قائمة التنبيهات.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="ibox__content">
+                                                    <p>
+                                                        لا تحمل أي ملف أو تطبيق من الانترنت بدون التثبت من مصداقيته وخلوه من الفيروسات عن طريق مكافح الفيروسات.
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div class="ibox__content">
-                                            <p>
-                                                لا تحمل أي ملف أو تطبيق من الانترنت بدون التثبت من مصداقيته وخلوه من الفيروسات عن طريق مكافح الفيروسات.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="ibox box--style-1">
-                                <div class="ibox__title">
-                                    <h5>نصائح أمنية</h5>
                                 </div>
-                                <div class="slick_demo_2 slick_custom_buttons">
-
-                                    <div>
-                                        <div class="ibox__content">
-    <!--                                        <h2>Slide 1</h2>-->
-                                            <p>
-                                                اقرأ بتمعن كافة التنبيهات التي تصلك على قائمة التنبيهات.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="ibox__content">
-                                            <p>
-                                                لا تحمل أي ملف أو تطبيق من الانترنت بدون التثبت من مصداقيته وخلوه من الفيروسات عن طريق مكافح الفيروسات.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
                             </div>
                         </div>
                         <div class="footer fixed">
@@ -246,212 +301,373 @@
     <!-- Mainly scripts -->
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <!-- Flot -->
-    <script src="js/plugins/flot/jquery.flot.js"></script>
-    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
-    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
-    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
-
-    <!-- Peity -->
-    <script src="js/plugins/peity/jquery.peity.min.js"></script>
-    <script src="js/demo/peity-demo.js"></script>
-
-    <!-- d3 and c3 charts -->
-    <script src="js/plugins/d3/d3.min.js"></script>
-    <script src="js/plugins/c3/c3.min.js"></script>
-
 
     <!-- Custom and plugin javascript -->
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-    <!-- jQuery UI -->
-    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Chosen -->
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
 
-    <!-- GITTER -->
-    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+   <!-- JSKnob -->
+   <script src="js/plugins/jsKnob/jquery.knob.js"></script>
 
-    <!-- Sparkline -->
-    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+   <!-- Input Mask-->
+    <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
-    <!-- Sparkline demo data  -->
-    <script src="js/demo/sparkline-demo.js"></script>
+   <!-- Data picker -->
+   <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
 
-    <!-- ChartJS-->
-    <script src="js/plugins/chartJs/Chart.min.js"></script>
+   <!-- NouSlider -->
+   <script src="js/plugins/nouslider/jquery.nouislider.min.js"></script>
 
-    <!-- Toastr -->
-    <script src="js/plugins/toastr/toastr.min.js"></script>
+   <!-- Switchery -->
+   <script src="js/plugins/switchery/switchery.js"></script>
 
-    <!-- slick carousel-->
-    <script src="js/plugins/slick/slick.min.js"></script>
-    
-        <!-- Particles -->
-    <script src="js/plugins/particles/particles.min.js"></script>
+    <!-- IonRangeSlider -->
+    <script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- MENU -->
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Color picker -->
+    <script src="js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+
+    <!-- Clock picker -->
+    <script src="js/plugins/clockpicker/clockpicker.js"></script>
+
+    <!-- Image cropper -->
+    <script src="js/plugins/cropper/cropper.min.js"></script>
+
+    <!-- Date range use moment.js same as full calendar plugin -->
+    <script src="js/plugins/fullcalendar/moment.min.js"></script>
+
+    <!-- Date range picker -->
+    <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+
+    <!-- Select2 -->
+    <script src="js/plugins/select2/select2.full.min.js"></script>
+
+    <!-- TouchSpin -->
+    <script src="js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
+
+    <!-- Tags Input -->
+    <script src="js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+
+    <!-- Dual Listbox -->
+    <script src="js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
 
     <script>
         $(document).ready(function(){
 
-            $('.slick_demo_1').slick({
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
-                adaptiveHeight: true
-            });
-            
-            $('.slick_demo_2').slick({
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'ease-in-out',
-                adaptiveHeight: true
+            $('.tagsinput').tagsinput({
+                tagClass: 'label label-primary'
             });
 
-        });
-        
-        $(document).ready(function() {
-            /* ---- particles.js config ---- */
-
-            particlesJS("particles-js", {
-              "particles": {
-                "number": {
-                  "value": 398,
-                  "density": {
-                    "enable": true,
-                    "value_area": 1657.2100474277727
-                  }
-                },
-                "color": {
-                  "value": "#ffffff"
-                },
-                "shape": {
-                  "type": "circle",
-                  "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                  },
-                  "polygon": {
-                    "nb_sides": 5
-                  },
-                  "image": {
-                    "src": "img/github.svg",
-                    "width": 100,
-                    "height": 100
-                  }
-                },
-                "opacity": {
-                  "value": 0.5,
-                  "random": false,
-                  "anim": {
-                    "enable": true,
-                    "speed": 1,
-                    "opacity_min": 0.1,
-                    "sync": false
-                  }
-                },
-                "size": {
-                  "value": 3,
-                  "random": true,
-                  "anim": {
-                    "enable": false,
-                    "speed": 40,
-                    "size_min": 0.1,
-                    "sync": false
-                  }
-                },
-                "line_linked": {
-                  "enable": true,
-                  "distance": 150,
-                  "color": "#ffffff",
-                  "opacity": 0.4,
-                  "width": 1
-                },
-                "move": {
-                  "enable": true,
-                  "speed": 3,
-                  "direction": "none",
-                  "random": true,
-                  "straight": false,
-                  "out_mode": "out",
-                  "bounce": false,
-                  "attract": {
-                    "enable": true,
-                    "rotateX": 4329.212564336912,
-                    "rotateY": 1200
-                  }
+            var $image = $(".image-crop > img")
+            $($image).cropper({
+                aspectRatio: 1.618,
+                preview: ".img-preview",
+                done: function(data) {
+                    // Output the result data for cropping image.
                 }
-              },
-              "interactivity": {
-                "detect_on": "window",
-                "events": {
-                  "onhover": {
-                    "enable": true,
-                    "mode": "grab"
-                  },
-                  "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                  },
-                  "resize": true
-                },
-                "modes": {
-                  "grab": {
-                    "distance": 203.7962037962038,
-                    "line_linked": {
-                      "opacity": 0.8418939375541366
+            });
+
+            var $inputImage = $("#inputImage");
+            if (window.FileReader) {
+                $inputImage.change(function() {
+                    var fileReader = new FileReader(),
+                            files = this.files,
+                            file;
+
+                    if (!files.length) {
+                        return;
                     }
-                  },
-                  "bubble": {
-                    "distance": 400,
-                    "size": 40,
-                    "duration": 2,
-                    "opacity": 8,
-                    "speed": 3
-                  },
-                  "repulse": {
-                    "distance": 200,
-                    "duration": 0.4
-                  },
-                  "push": {
-                    "particles_nb": 4
-                  },
-                  "remove": {
-                    "particles_nb": 2
-                  }
+
+                    file = files[0];
+
+                    if (/^image\/\w+$/.test(file.type)) {
+                        fileReader.readAsDataURL(file);
+                        fileReader.onload = function () {
+                            $inputImage.val("");
+                            $image.cropper("reset", true).cropper("replace", this.result);
+                        };
+                    } else {
+                        showMessage("Please choose an image file.");
+                    }
+                });
+            } else {
+                $inputImage.addClass("hide");
+            }
+
+            $("#download").click(function() {
+                window.open($image.cropper("getDataURL"));
+            });
+
+            $("#zoomIn").click(function() {
+                $image.cropper("zoom", 0.1);
+            });
+
+            $("#zoomOut").click(function() {
+                $image.cropper("zoom", -0.1);
+            });
+
+            $("#rotateLeft").click(function() {
+                $image.cropper("rotate", 45);
+            });
+
+            $("#rotateRight").click(function() {
+                $image.cropper("rotate", -45);
+            });
+
+            $("#setDrag").click(function() {
+                $image.cropper("setDragMode", "crop");
+            });
+
+            $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+
+            $('#data_2 .input-group.date').datepicker({
+                startView: 1,
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true,
+                format: "dd/mm/yyyy"
+            });
+
+            $('#data_3 .input-group.date').datepicker({
+                startView: 2,
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true
+            });
+
+            $('#data_4 .input-group.date').datepicker({
+                minViewMode: 1,
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true,
+                todayHighlight: true
+            });
+
+            $('#data_5 .input-daterange').datepicker({
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true
+            });
+
+            var elem = document.querySelector('.js-switch');
+            var switchery = new Switchery(elem, { color: '#1AB394' });
+
+            var elem_2 = document.querySelector('.js-switch_2');
+            var switchery_2 = new Switchery(elem_2, { color: '#ED5565' });
+
+            var elem_3 = document.querySelector('.js-switch_3');
+            var switchery_3 = new Switchery(elem_3, { color: '#1AB394' });
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green'
+            });
+
+            $('.demo1').colorpicker();
+
+            var divStyle = $('.back-change')[0].style;
+            $('#demo_apidemo').colorpicker({
+                color: divStyle.backgroundColor
+            }).on('changeColor', function(ev) {
+                        divStyle.backgroundColor = ev.color.toHex();
+                    });
+
+            $('.clockpicker').clockpicker();
+
+            $('input[name="daterange"]').daterangepicker();
+
+            $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+
+            $('#reportrange').daterangepicker({
+                format: 'MM/DD/YYYY',
+                startDate: moment().subtract(29, 'days'),
+                endDate: moment(),
+                minDate: '01/01/2012',
+                maxDate: '12/31/2015',
+                dateLimit: { days: 60 },
+                showDropdowns: true,
+                showWeekNumbers: true,
+                timePicker: false,
+                timePickerIncrement: 1,
+                timePicker12Hour: true,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+                opens: 'right',
+                drops: 'down',
+                buttonClasses: ['btn', 'btn-sm'],
+                applyClass: 'btn-primary',
+                cancelClass: 'btn-default',
+                separator: ' to ',
+                locale: {
+                    applyLabel: 'Submit',
+                    cancelLabel: 'Cancel',
+                    fromLabel: 'From',
+                    toLabel: 'To',
+                    customRangeLabel: 'Custom',
+                    daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+                    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                    firstDay: 1
                 }
-              },
-              "retina_detect": true
+            }, function(start, end, label) {
+                console.log(start.toISOString(), end.toISOString(), label);
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            });
+
+            $(".select2_demo_1").select2();
+            $(".select2_demo_2").select2();
+            $(".select2_demo_3").select2({
+                placeholder: "Select a state",
+                allowClear: true
             });
 
 
-            /* ---- stats.js config ---- */
+            $(".touchspin1").TouchSpin({
+                buttondown_class: 'btn btn-white',
+                buttonup_class: 'btn btn-white'
+            });
 
-            var count_particles, stats, update;
-            stats = new Stats;
-            stats.setMode(0);
-            stats.domElement.style.position = 'absolute';
-            stats.domElement.style.left = '0px';
-            stats.domElement.style.top = '0px';
-            document.body.appendChild(stats.domElement);
-            count_particles = document.querySelector('.js-count-particles');
-            update = function() {
-              stats.begin();
-              stats.end();
-              if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-              }
-              requestAnimationFrame(update);
-            };
-            requestAnimationFrame(update);
+            $(".touchspin2").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10,
+                postfix: '%',
+                buttondown_class: 'btn btn-white',
+                buttonup_class: 'btn btn-white'
+            });
+
+            $(".touchspin3").TouchSpin({
+                verticalbuttons: true,
+                buttondown_class: 'btn btn-white',
+                buttonup_class: 'btn btn-white'
+            });
+
+            $('.dual_select').bootstrapDualListbox({
+                selectorMinimalHeight: 160
+            });
+
+
         });
-        
+
+        $('.chosen-select').chosen({width: "100%"});
+
+        $("#ionrange_1").ionRangeSlider({
+            min: 0,
+            max: 5000,
+            type: 'double',
+            prefix: "$",
+            maxPostfix: "+",
+            prettify: false,
+            hasGrid: true
+        });
+
+        $("#ionrange_2").ionRangeSlider({
+            min: 0,
+            max: 10,
+            type: 'single',
+            step: 0.1,
+            postfix: " carats",
+            prettify: false,
+            hasGrid: true
+        });
+
+        $("#ionrange_3").ionRangeSlider({
+            min: -50,
+            max: 50,
+            from: 0,
+            postfix: "°",
+            prettify: false,
+            hasGrid: true
+        });
+
+        $("#ionrange_4").ionRangeSlider({
+            values: [
+                "January", "February", "March",
+                "April", "May", "June",
+                "July", "August", "September",
+                "October", "November", "December"
+            ],
+            type: 'single',
+            hasGrid: true
+        });
+
+        $("#ionrange_5").ionRangeSlider({
+            min: 10000,
+            max: 100000,
+            step: 100,
+            postfix: " km",
+            from: 55000,
+            hideMinMax: true,
+            hideFromTo: false
+        });
+
+        $(".dial").knob();
+
+        var basic_slider = document.getElementById('basic_slider');
+
+        noUiSlider.create(basic_slider, {
+            start: 40,
+            behaviour: 'tap',
+            connect: 'upper',
+            range: {
+                'min':  20,
+                'max':  80
+            }
+        });
+
+        var range_slider = document.getElementById('range_slider');
+
+        noUiSlider.create(range_slider, {
+            start: [ 40, 60 ],
+            behaviour: 'drag',
+            connect: true,
+            range: {
+                'min':  20,
+                'max':  80
+            }
+        });
+
+        var drag_fixed = document.getElementById('drag-fixed');
+
+        noUiSlider.create(drag_fixed, {
+            start: [ 40, 60 ],
+            behaviour: 'drag-fixed',
+            connect: true,
+            range: {
+                'min':  20,
+                'max':  80
+            }
+        });
+
 
     </script>
+
 
 </body>
 
