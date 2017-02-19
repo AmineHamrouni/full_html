@@ -790,6 +790,9 @@ div.dt-button-info {
   margin-top: 10px;
   background-image: $nav-profil-pattern;
   background-size: cover;
+    img {
+        max-width: 128px;
+    }
 }
 
 .widget .flot-chart {
@@ -2496,3 +2499,4 @@ body.tour-open .animated {
 
   }
 }
+

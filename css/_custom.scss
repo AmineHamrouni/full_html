@@ -1,3 +1,5 @@
+@import "weather";
+
 // news-bar in dashboard
 
 #s4-bodyContainer {
@@ -126,29 +128,32 @@ $box-style_dark: #009688;
 }
 
 .ibox {
-    .ibox__title {
+    &__title {
         @include linearGradient(right, $blueLagoon_light, $blueLagoon_dark);
-//        background-color: transparent;
-//        color: #fff;
-//        padding: 10px;
-//        min-height: 0;
-//        border-top: none;
-//        transition: all .5s ease-in-out;
-//        h5 {
-//            float: none;
-//            margin: 0;
-//            font-size: 10px;
-//        }
     }
-    .ibox__content {
-
+    &__content {
+        ol, ul {
+            padding-right: 10px;
+        }
+        li {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
     }
+    &
     .slick_custom_buttons .slick-prev, .slick_custom_buttons .slick-next {
         top: auto;
         bottom: 10px;
     }
     .slick-prev:before, .slick-next:before {
         //color: rgba(255, 255, 255, 0.45) !important;
+    }
+    &--security {
+        .ibox__title {
+            background: #00c3ff; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #00c3ff , #ffff1c); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #00c3ff , #ffff1c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
     }
 }
 
@@ -211,49 +216,45 @@ textarea {
     max-width: 100%;
 }
 
-//Weather Widget
-.weather-widget {
-    background-color: #000;
-    //height: 150px;
-//    background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/17/Farasan_Island_3.jpg);
-    background-image: url(https://static.pexels.com/photos/51099/pexels-photo-51099.jpeg);
-    background-size: cover;
-    background-position: 0px -110px;
-    background-position: 0px -350px;
-    background-repeat: no-repeat;
+// Profile Widget
+.profile {
+    &__img-container {
+        padding: 0;
+    }
+    &__content {}
+}
+
+// Progress Bar
+.progress {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+//Form
+.form-flex {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    &__wrapper {
+    > * {
+        &:nth-child(1) {
+            flex: 1;
+            max-width: 100px;
+            border-left-width: 0 !important;
+        }
+        &:nth-child(2) {
+            flex: 3;
+        }
+    }
+}
+
+//Wizard
+.wizard {
+    > .content {
+        background: #f7f7f7;
+        border: 1px solid #eee;
+    }
+    ul {
         display: flex;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, .9);
-        padding: 10px;
-        margin: 20px 0px;
-        min-width: 350px;
-        border-radius: 5px;
-    }
-    &__place {
-        font-size: 22px;
-        font-weight: bold;
-        color: #000;
-        border-bottom: 1px solid rgba(85, 85, 85, 0.32);
-        padding-bottom: 20px;
-    }
-    &__details {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    &__time {
-        font-size: 22px;
-        border-left: 1px solid rgba(85, 85, 85, 0.32);
-        padding-left: 30px;
-    }
-    &__weather {
-        font-size: 42px;
+        > li {
+            flex: 1;
+        }
     }
 }

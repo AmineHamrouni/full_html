@@ -205,6 +205,14 @@ body.rtls {
         float: right;
         margin-bottom: -1px;
     }
+    //ibox__tools
+    .ibox__tools {
+        float: left;
+    }
+    //JQuery Steps
+    .wizard > .steps > ul > li, .wizard > .actions > ul > li {
+        float: right;
+    }
 }
 
 @media (max-width: 992px) {

@@ -556,7 +556,7 @@
      //min-height: 48px;
      background-image: linear-gradient(to right, #23c6c8 0%, #1c84c6 100%);
      color: white;
-     display: flex;
+     //display: flex;
      align-items: center;
  }
  
@@ -570,6 +570,8 @@
      border-style: solid;
      min-height: 120px;
      transition: .5s ease-in-out;
+     //Force font family for the chart graphs
+     font-family: 'Droid Arabic Kufi', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
      &:hover {
          border-color: rgba($border-color, .9);
      }
@@ -646,17 +648,17 @@
  
  .ibox__tools {
      display: block;
-     float: none;
+     float: right;
      margin-top: 0;
      position: relative;
      padding: 0;
      text-align: left;
- }
- 
- .ibox__tools a {
-     cursor: pointer;
-     margin-left: 5px;
-     color: #c4c4c4;
+     a {
+         cursor: pointer;
+         margin-left: 5px;
+         //color: #c4c4c4;
+         color: #fff;
+     }
  }
  
  .ibox__tools a.btn-primary {
