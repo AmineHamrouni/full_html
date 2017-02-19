@@ -213,6 +213,16 @@ body.rtls {
     .wizard > .steps > ul > li, .wizard > .actions > ul > li {
         float: right;
     }
+    
+    // fix the ".input-group-addon:first-child" in the RTL mode
+    .input-group-addon:first-child {
+        border: 1px solid #ccc;
+        border-left: 0;
+    }
+    .input-group-addon:not(:first-child) {
+        border: 1px solid #ccc;
+        border-right: 0;
+    }
 }
 
 @media (max-width: 992px) {

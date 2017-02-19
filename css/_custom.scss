@@ -258,3 +258,20 @@ textarea {
         }
     }
 }
+
+//toast
+.toast-close-button {
+    width: auto !important;
+}
+
+//
+.has-success {
+    em {
+        display: block;
+        width: 100%;
+        background: pink;
+        position: absolute;
+        top: 100%;
+        right: 0;   
+    }
+}
