@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $("#form").steps({
         bodyTag: "fieldset",
         errorLabelContainer: "#messageBox",
@@ -66,13 +67,6 @@ $(document).ready(function () {
             form.submit();
         }
     }).validate({
-//        errorElement: "em",
-//        success: function (label) {
-//            label.text("ok!").parent().addClass("has-success");
-//        },
-//        error: function (label) {
-//            label.text("dwdwdwdwdw!").parent().addClass("has-error");
-//        },
         rules: {
             confirm: {
                 equalTo: "#password"
@@ -104,38 +98,61 @@ $(document).ready(function () {
         }
     });
 
-//    $(".selector2").validate({
-//        success: function (label) {
-//            label.text("ok!").parent().addClass("has-success");
-//        },
-//        error: function (label) {
-//            label.text("ok!").parent().addClass("has-error");
-//        },
-//        rules: {
-//            // at least 15€ when bonus material is included
-//            pay_what_you_want: {
-//                required: true
-//                min: {
-//                    // min needs a parameter passed to it
-//                    param: 15,
-//                    depends: function (element) {
-//                        return $("#bonus-material").is(":checked");
-//                    }
-//                }
-//            }
-//        }
-//    });
+    //Vacation Credit Chart
 
-    //Vacation Credit
-
-    $("#sparkline7").sparkline([52, 12, 44], {
-        type: 'pie',
-        height: '150px',
-        sliceColors: ['#1ab394', '#b3b3b3', '#e4f0fb']
-    });
-
+    //Select2 init
     $(".select2").select2({
         dir: "rtl"
     });
 
+    function progressBar(total, actual) {
+
+        var reste, widthBar;
+
+        reste = total - actual;
+        widthBar = reste / widthBar * 100;
+
+        return widthBar;
+    }
+
+    var vacation = {
+        oldCredit: 80,
+        newCredit: 45,
+        annualCredit: 36,
+        totalCredit: function () {
+            return this.oldCredit + this.newCredit;
+        },
+        type: 0,
+        startDate: 0,
+        endDate: 0
+    };
+
+    //Vacation Credit Chart
+    $("#vacationChart").sparkline([vacation.oldCredit, vacation.newCredit], {
+        type: 'pie',
+        height: '150px',
+        sliceColors: ['#23c6c8', '#1c84c6', '#e4f0fb']
+    });
+
+    //Vacation Credit Chart Labels
+    var lblNewCredit = document.getElementById("lblNewCredit");
+    var lblOldCredit = document.getElementById("lblOldCredit");
+    
+    lblOldCredit.innerHTML = vacation.oldCredit;
+    lblNewCredit.innerHTML = vacation.newCredit;
+    
+    
+    
+    //TouchSpin number of days
+    $("input[name='demo_vertical2']").TouchSpin({
+        initval: 5,
+        min: 5,
+        max: 36,
+        step: 1,
+        decimals: 0,
+        boostat: 5,
+        maxboostedstep: 10,
+        postfix: 'يوم'
+    });
+    
 });
