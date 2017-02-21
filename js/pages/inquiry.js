@@ -116,7 +116,7 @@ $(document).ready(function () {
     }
 
     var vacation = {
-        oldCredit: 80,
+        oldCredit: 120,
         newCredit: 45,
         annualCredit: 36,
         totalCredit: function () {
@@ -126,6 +126,10 @@ $(document).ready(function () {
         startDate: 0,
         endDate: 0
     };
+    
+    var elVacationStart = document.getElementById("vacationStart");
+    
+    vacatione.startDate = elVacationStart.value;
 
     //Vacation Credit Chart
     $("#vacationChart").sparkline([vacation.oldCredit, vacation.newCredit], {
@@ -141,8 +145,6 @@ $(document).ready(function () {
     lblOldCredit.innerHTML = vacation.oldCredit;
     lblNewCredit.innerHTML = vacation.newCredit;
     
-    
-    
     //TouchSpin number of days
     $("input[name='demo_vertical2']").TouchSpin({
         initval: 5,
@@ -154,5 +156,10 @@ $(document).ready(function () {
         maxboostedstep: 10,
         postfix: 'يوم'
     });
+    
+    //report
+    var elReport = document.getElementById("report");
+    
+    elReport.innerHTML = "<p>" + vacation.
     
 });
