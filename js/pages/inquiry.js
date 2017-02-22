@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    //Form Init
     $("#form").steps({
         bodyTag: "fieldset",
         errorLabelContainer: "#messageBox",
@@ -98,68 +98,134 @@ $(document).ready(function () {
         }
     });
 
-    //Vacation Credit Chart
-
     //Select2 init
     $(".select2").select2({
         dir: "rtl"
     });
 
-    function progressBar(total, actual) {
-
-        var reste, widthBar;
-
-        reste = total - actual;
-        widthBar = reste / widthBar * 100;
-
-        return widthBar;
-    }
-
+    //Vacation Object
     var vacation = {
-        oldCredit: 120,
-        newCredit: 45,
-        annualCredit: 36,
-        totalCredit: function () {
-            return this.oldCredit + this.newCredit;
+        totalCredit: 120,
+        inProgressCredit: 10,
+        oldCredit: 20,
+        newCredit: 0,
+        restCredit: function () {
+            return this.totalCredit - this.oldCredit - this.newCredit - this.inProgressCredit;
         },
         type: 0,
         startDate: 0,
         endDate: 0
     };
-    
-    var elVacationStart = document.getElementById("vacationStart");
-    
-    vacatione.startDate = elVacationStart.value;
 
-    //Vacation Credit Chart
-    $("#vacationChart").sparkline([vacation.oldCredit, vacation.newCredit], {
+    var elVacationStart = document.getElementById("vacationStart");
+    var elVacationEnd = document.getElementById("vacationEnd");
+
+    vacation.startDate = elVacationStart.value;
+    vacation.endDate = elVacationEnd.value;
+
+    //Init Vacation Credit Chart
+    $("#vacationChart").sparkline([vacation.restCredit(), vacation.oldCredit, vacation.inProgressCredit, vacation.newCredit], {
         type: 'pie',
         height: '150px',
-        sliceColors: ['#23c6c8', '#1c84c6', '#e4f0fb']
+        sliceColors: ['#e8ecff', '#23c6c8', '#1c84c6', '#f8ac59', '#ED5565']
     });
 
-    //Vacation Credit Chart Labels
-    var lblNewCredit = document.getElementById("lblNewCredit");
-    var lblOldCredit = document.getElementById("lblOldCredit");
-    
-    lblOldCredit.innerHTML = vacation.oldCredit;
-    lblNewCredit.innerHTML = vacation.newCredit;
-    
+    //Vacation Labels
+    var lblRestCredit = document.getElementById("lblRestCredit");
+    var lblAnnualCredit = document.getElementById("lblAnnualCredit");
+    var lblProgressVacation = document.getElementById("lblProgressVacation");
+
+    lblAnnualCredit.innerHTML = vacation.totalCredit;
+    lblRestCredit.innerHTML = vacation.restCredit();
+    lblProgressVacation.innerHTML = vacation.inProgressCredit;
+
     //TouchSpin number of days
-    $("input[name='demo_vertical2']").TouchSpin({
-        initval: 5,
-        min: 5,
-        max: 36,
+    var elvacationDuration = $("input[name='vacationDuration']"),
+        lblNewVacation;
+
+    elvacationDuration.prop("disabled", true);
+
+    elvacationDuration.TouchSpin({
+        verticalbuttons: true,
+        initval: 0,
+        min: 0,
+        max: 0,
         step: 1,
         decimals: 0,
         boostat: 5,
         maxboostedstep: 10,
         postfix: 'يوم'
     });
-    
-    //report
-    var elReport = document.getElementById("report");
-    
-    elReport.innerHTML = "<p>" + vacation.
-    
+
+    lblNewVacation = $('#lblNewVacation');
+    lblNewVacation.html($('#vacationDuration').val());
+
+    // on hanging vacationType:
+    // 1 - change the max/min number of days
+    // 2 - change the help message
+
+    var helpMsg, elVacationType, maxVal, minVal, initValD;
+
+    $("#vacationType").change(function () {
+
+        elVacationType = $("#vacationType").val();
+
+        if (elVacationType == 1) {
+            helpMsg = 'عدد الأيام لا يمكن أن يكون أقل من 5 أيام';
+            elvacationDuration.prop("disabled", false);
+            initValD = 5;
+            minVal = 5;
+            maxVal = 36;
+        }
+
+        if (elVacationType == 2) {
+            helpMsg = 'عدد الأيام لا يمكن أن يكون أكثر من 5 أيام';
+            elvacationDuration.prop("disabled", false);
+            initValD = 1;
+            minVal = 1;
+            maxVal = 5;
+        }
+
+        if (elVacationType == 0) {
+            helpMsg = 'نرجو إختيار نوع الإجازة';
+            $("input[name='vacationDuration']").show().prop("disabled", true);
+            initValD = 0;
+            minVal = 0;
+            maxVal = 0;
+        }
+
+        elvacationDuration.trigger("touchspin.updatesettings", {
+            max: maxVal,
+            min: minVal,
+            initval: initValD
+        });
+
+        lblNewVacation.html($('#vacationDuration').val());
+        vacation.newCredit = $('#vacationDuration').val();
+        
+        //Init Vacation Credit Chart
+        $("#vacationChart").sparkline([vacation.restCredit(), vacation.oldCredit, vacation.inProgressCredit, vacation.newCredit], {
+            type: 'pie',
+            height: '150px',
+            sliceColors: ['#e8ecff', '#23c6c8', '#1c84c6', '#f8ac59', '#ED5565']
+        });
+
+        $("input[name='vacationDuration']").change(function () {
+            lblNewVacation.html($('#vacationDuration').val());
+            vacation.newCredit = $('#vacationDuration').val();
+            console.log(vacation.newCredit);
+            //Init Vacation Credit Chart
+            $("#vacationChart").sparkline([vacation.restCredit(), vacation.oldCredit, vacation.inProgressCredit, vacation.newCredit], {
+                type: 'pie',
+                height: '150px',
+                sliceColors: ['#e8ecff', '#23c6c8', '#1c84c6', '#f8ac59', '#ED5565']
+            });
+
+        });
+
+
+
+    });
+
+
 });
