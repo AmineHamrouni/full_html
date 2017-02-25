@@ -2585,9 +2585,10 @@ body.tour-open .animated {
         }
     }
     &__btn {
-        position: absolute;
-        right: 50%;
-        transform: translateX(50%);
+      position: absolute;
+      right: 50%;
+      top: 50%;
+      transform: translate(50%, -50%);
         .switchery {
             height: 20px;
             width: 35px;

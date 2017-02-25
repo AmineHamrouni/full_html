@@ -66,6 +66,9 @@
 
     <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
 
+    <link href="js/plugins/calendars/jquery.calendars.picker.css" rel="stylesheet">
+<!--    <link href="http://keith-wood.name/css/jquery.calendars.picker.css" rel="stylesheet">-->
+
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -260,7 +263,7 @@
                                                     <label class="col-sm-4">نهاية الإجازة</label>
                                                     <div class="col-sm-8">
                                                         <div class="input-group date">
-                                                            <input type="text" id="vacationEnd" name="vacationEnd" class="form-control" value="2017-02-22" disabled>
+                                                            <input type="text" id="vacationEnd" name="vacationEnd" class="form-control" value="إختر بداية الإجازة" disabled>
                                                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                                         </div>
                                                     </div>
@@ -463,19 +466,6 @@
 
                             <div>
                                 <div class="ibox__content">
-    <!--
-                                    <div class="form-group">
-                                        <label class="font-noraml col-sm-4">إختيار السنة</label>
-                                        <div class="col-sm-8">
-                                            <select class="select2 form-control">
-                                                <option value="all">كل السنوات</option>
-                                                <option value="2015">2015</option>
-                                                <option value="2016">2016</option>
-                                                <option value="2017">2017</option>
-                                            </select>
-                                        </div>
-                                    </div>
-    -->
                                     <table class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
@@ -510,82 +500,6 @@
                             </div>
 
                         </div>
-<!--
-                       
-                        <div class="ibox">
-                            <div class="ibox__title">
-                                <h5>إرشادات عامة</h5>
-                            </div>
-
-                            <div>
-                                <div class="ibox__content">
-                                    <ol>
-                                        <li>
-                                            الرصيد القديم عبارة عن رصيد الإجازات المستحق للموظف حتى تاريخ 1437/12/30.
-                                        </li>
-                                        <li>
-                                            يجب على الموظف الحصول على 36 يوم على الأقل خلال العام من الرصيد القديم وفي حالة عدم حصوله يتم خصمها تلقائيا بنهاية العام.
-                                        </li>
-                                        <li>
-                                            الرصيد الجديد يتولد تلقائيا خلال العام 36 يوم إذا لم يحصل عليها الموظف تلغي تلقائيا بعد بداية العام التالي.
-                                        </li>
-
-                                        <li>
-                                            الرصيد الجديد يتولد تلقائيا خلال العام 36 يوم إذا لم يحصل عليها الموظف تلغي تلقائيا بعد بداية العام التالي.
-                                        </li>
-
-                                        <li>
-                                            يحق للموظف تأجيل التمتع بإجازته السنوية الجديدة لمدة أقصاها 60 يوم من بداية العام التالي.
-                                        </li>
-
-                                        <li>
-                                            يتم فتح الرصيد الجديد بعد شهر 6 من هذا العام.
-                                        </li>
-
-                                        <li>
-                                            على جميع المدراء عمل جدولة لإجازات الموظفين وإرسالها لإدارة الموارد البشرية.
-                                        </li>
-
-                                    </ol>
-                                </div>
-                            </div>
-
-                        </div>
-                        
--->
-
-<!--
-                        <div class="ibox">
-                            <div class="ibox__title">
-                                <h5>نصائح أمنية</h5>
-                            </div>
-                            <div class="slick_instructions slick_custom_buttons">
-
-                                <div>
-                                    <div class="ibox__content">
-                                        <p>
-                                            اقرأ بتمعن كافة التنبيهات التي تصلك على قائمة التنبيهات.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="ibox__content">
-                                        <p>
-                                            لا تحمل أي ملف أو تطبيق من الانترنت بدون التثبت من مصداقيته وخلوه من الفيروسات عن طريق مكافح الفيروسات.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <div class="ibox__content">
-                                        <p>
-                                            لا تقم بتنزيل أي ملف او الضغط على أي رابط يصلك من مصدر غير موثوق او مرسل من شخص غير معروف لديك </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
--->
 
                         <div class="ibox box--style float-e-margins">
                             <div class="ibox__title back-change">
@@ -776,12 +690,14 @@
     <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
     <script src="js/plugins/morris/morris.js"></script>
     
-    <script src="http://keith-wood.name/js/jquery.plugin.js"></script>
+    <script src="js/plugins/calendars/jquery.plugin.js"></script>
 <!--    <script src="http://keith-wood.name/js/jquery.datepick-ar.js"></script>-->
-    <script src="http://keith-wood.name/js/jquery.calendars.js"></script>
-    <script src="http://keith-wood.name/js/jquery.calendars.plus.js"></script>
-    <script src="http://keith-wood.name/js/jquery.calendars.picker.js"></script>
-    <script src="http://keith-wood.name/js/jquery.calendars.islamic.js"></script>
+    <script src="js/plugins/calendars/jquery.calendars.js"></script>
+    <script src="js/plugins/calendars/jquery.calendars.plus.js"></script>
+    <script src="js/plugins/calendars/jquery.calendars.picker.js"></script>
+    <script src="js/plugins/calendars/jquery.calendars.ummalqura.js"></script>
+<!--    <script src="http://keith-wood.name/js/jquery.datepick-ar.js"></script>-->
+    
     
     <!-- Inquiry JS -->
     <script src="js/pages/inquiry.js?v=1.0"></script>
