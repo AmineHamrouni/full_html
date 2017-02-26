@@ -52,9 +52,9 @@
     <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
 
     <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
-    
+
     <link href="css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
-    
+
     <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
 
     <link href="css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
@@ -67,7 +67,7 @@
     <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
 
     <link href="js/plugins/calendars/jquery.calendars.picker.css" rel="stylesheet">
-<!--    <link href="http://keith-wood.name/css/jquery.calendars.picker.css" rel="stylesheet">-->
+    <!--    <link href="http://keith-wood.name/css/jquery.calendars.picker.css" rel="stylesheet">-->
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -235,7 +235,7 @@
                                                         <div class="toggle__btn">
                                                             <input type="checkbox" class="toggle__switch typeSwitch js-switch-small" />
                                                         </div>
-                                                    </div>                                                
+                                                    </div>
                                                 </div>
                                                 <div class="hr-line-dashed m-sm"></div>
                                                 <div class="form-group">
@@ -276,8 +276,8 @@
                                                         <span id="vacationDurHelp" class="help-block">عدد الأيام لا يمكن أن يكون أقل من 5 أيام</span>
                                                     </div>
                                                 </div>
-                                                
-                                                
+
+
 
                                             </div>
 
@@ -287,28 +287,28 @@
                                                     <div class="text-right m-sm text-navy">
                                                         <small>الرصيد السنوي</small>
                                                         <div class="stat-percent font-bold">
-                                                            <span id="lblAnnualCredit">الخدمة غير متوفرة</span> <i class="fa fa-bolt"></i>
+                                                            <span id="lblAnnualCredit">--</span> <i class="fa fa-bolt"></i>
                                                         </div>
                                                     </div>
                                                     <div class="hr-line-dashed m-sm"></div>
                                                     <div class="text-right m-sm text-blue">
                                                         <small>الرصيد المتبقي</small>
                                                         <div class="stat-percent font-bold">
-                                                            <span id="lblRestCredit">الخدمة غير متوفرة</span> <i class="fa fa-bolt"></i>
+                                                            <span id="lblRestCredit">--</span> <i class="fa fa-bolt"></i>
                                                         </div>
                                                     </div>
                                                     <div class="hr-line-dashed m-sm"></div>
                                                     <div class="text-right m-sm text-warning">
                                                         <small>رصيد الطلبات الجارية</small>
                                                         <div class="stat-percent font-bold">
-                                                            <span id="lblProgressVacation">الخدمة غير متوفرة</span> <i class="fa fa-bolt"></i>
+                                                            <span id="lblProgressVacation">--</span> <i class="fa fa-bolt"></i>
                                                         </div>
                                                     </div>
                                                     <div class="hr-line-dashed m-sm"></div>
                                                     <div class="text-right m-sm">
                                                         <small>الرصيد المطلوب</small>
                                                         <div class="stat-percent font-bold">
-                                                            <span id="lblNewVacation">الخدمة غير متوفرة</span> <i class="fa fa-bolt"></i>
+                                                            <span id="lblNewVacation">--</span> <i class="fa fa-bolt"></i>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -323,7 +323,7 @@
                                         <h4>اختر نائب</h4>
                                         <div class="row">
                                             <div class="col-sm-8 border-left">
-                                                
+
                                                 <div class="form-group">
                                                     <label>إختر الموظف المعوض</label>
                                                     <select id="replaceEmp" name="replaceEmp" class="select2 form-control">
@@ -333,28 +333,12 @@
                                                     </select>
                                                 </div>
                                                 <div class="hr-line-dashed m-sm"></div>
-<!--
                                                 <div class="form-group">
-                                                    <label>Last name *</label>
-                                                    <input id="surname" name="surname" type="text" class="form-control required">
-                                                </div>
--->
-<!--
-                                                <div class="form-group">
-                                                    <label>Email *</label>
-                                                    <input id="email" name="email" type="text" class="form-control required email">
-                                                </div>
--->
-                                                <div class="form-group">
-                                                    <label>Address *</label>
-                                                    <input id="address" name="address" type="text" class="form-control">
+                                                    <label>سبب الإجازة *</label>
+                                                    <textarea id="address" name="address" type="text" class="form-control" cols="30" rows="10"></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
-<!--
-                                               <h4>Not a member?</h4>
-                                                <p>You can create an account:</p>
--->
                                                 <p class="text-center">
                                                     <a href=""><i class="fa fa-user big-icon"></i></a>
                                                 </p>
@@ -362,34 +346,70 @@
                                         </div>
                                     </fieldset>
 
-                                    <h1>رؤية الطلب</h1>
+                                    <h1>تأكيد الطلب</h1>
                                     <fieldset>
                                         <div id="report" class="">
-                                            <h2>تقديم الطلب بنجاح!</h2>
-                                            <div class="hr-line-dashed m-sm"></div>
-                                            <div class="btn btn-success">طباعة</div>
-                                        </div>
-                                    </fieldset>
-                                    
-                                    <h1>إنهاء الطلب</h1>
-                                    <fieldset>
-                                        <div class="text-center">
-                                            <h2>تقديم الطلب بنجاح!</h2>
-                                            <div class="hr-line-dashed m-sm"></div>
-                                            <div class="btn btn-success">طباعة</div>
+                                            <h4>رؤية الطلب قبل التأكيد</h4>
+                                            <div class="hr-line-dashed"></div>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <strong>نوع الإجازة:</strong>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <span id="repType">--</span>
+                                                </div>
+                                            </div>
+                                            <div class="hr-line-dashed"></div>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <strong>تاريخ بداية الإجازة:</strong>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <span id="repStartDate">--</span>
+                                                </div>
+                                            </div>
+                                            <div class="hr-line-dashed"></div>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <strong>تاريخ نهاية الإجازة:</strong>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <span id="repEndDate">--</span>
+                                                </div>
+                                            </div>
+                                            <div class="hr-line-dashed"></div>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <strong>مدة الإجازة:</strong>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <span id="repDuration">--</span>
+                                                </div>
+                                            </div>
+                                            <div class="hr-line-dashed"></div>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <strong>سبب الإجازة:</strong>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <span id="repCause">--</span>
+                                                </div>
+                                            </div>
+                                            <div class="hr-line-dashed"></div>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <strong>الموظف المعوض:</strong>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <span id="repEmployee">--</span>
+                                                </div>
+                                            </div>
+                                            <div class="hr-line-dashed"></div>
                                         </div>
                                     </fieldset>
 
-<!--
-                                    <h1>Finish</h1>
-                                    <fieldset>
-                                        <h2>Terms and Conditions</h2>
-                                        <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">
-                                        <label for="acceptTerms">I agree with the Terms and Conditions.</label>
-                                    </fieldset>
--->
                                 </form>
-                                
+
                             </div>
                         </div>
 
@@ -419,9 +439,6 @@
                                             <option value="2017">2017</option>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <hr style="width: 100%;">
                                 </div>
                                 <table class="table table-bordered table-hover">
                                     <thead>
@@ -459,24 +476,24 @@
                     </div>
 
                     <div class="col-lg-4">
-                           <div class="ibox">
-                              <div class="ibox__title">
-                                  <h5>الدعم الفني</h5>
-                              </div>
-                              <div class="ibox__content text-center">
+                        <div class="ibox">
+                            <div class="ibox__title">
+                                <h5>الدعم الفني</h5>
+                            </div>
+                            <div class="ibox__content text-center">
 
 
 
-                                  <h3><i class="fa fa-phone"></i> 1231</h3>
-                                  <span class="small">
-                                      في حال وجود أي إشكال أو طلب توضيح, نرجو الإتصال بنا.
+                                <h3><i class="fa fa-phone"></i> 1231</h3>
+                                <span class="small">
+                                      في حال وجود أي إشكال تقني أو طلب توضيح, نرجو الإتصال بنا.
                                   </span>
 
 
-                              </div>
-                          </div>
+                            </div>
+                        </div>
 
-                       <div class="ibox">
+                        <div class="ibox">
                             <div class="ibox__title">
                                 <h5>طلبات جارية</h5>
                             </div>
@@ -541,9 +558,6 @@
                                             <option value="2017">2017</option>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <hr style="width: 100%;">
                                 </div>
                                 <table class="table table-bordered table-hover">
                                     <thead>
@@ -671,15 +685,15 @@
 
     <!-- Date range use moment.js same as full calendar plugin -->
     <script src="js/plugins/fullcalendar/moment.min.js"></script>
-    
+
     <!-- NouSlider -->
     <script src="js/plugins/nouslider/jquery.nouislider.min.js"></script>
-    
+
     <!-- Date range picker -->
     <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
-    
-   <!-- Switchery -->
-   <script src="js/plugins/switchery/switchery.js"></script>
+
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
 
 
     <!-- Select2 -->
@@ -706,16 +720,16 @@
     <!-- Morris -->
     <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
     <script src="js/plugins/morris/morris.js"></script>
-    
+
     <script src="js/plugins/calendars/jquery.plugin.js"></script>
-<!--    <script src="http://keith-wood.name/js/jquery.datepick-ar.js"></script>-->
+    <!--    <script src="http://keith-wood.name/js/jquery.datepick-ar.js"></script>-->
     <script src="js/plugins/calendars/jquery.calendars.js"></script>
     <script src="js/plugins/calendars/jquery.calendars.plus.js"></script>
     <script src="js/plugins/calendars/jquery.calendars.picker.js"></script>
     <script src="js/plugins/calendars/jquery.calendars.ummalqura.js"></script>
-<!--    <script src="http://keith-wood.name/js/jquery.datepick-ar.js"></script>-->
-    
-    
+    <!--    <script src="http://keith-wood.name/js/jquery.datepick-ar.js"></script>-->
+
+
     <!-- Inquiry JS -->
     <script src="js/pages/inquiry.js?v=1.0"></script>
 
