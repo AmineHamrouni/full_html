@@ -402,7 +402,7 @@
                     <a href="#" class="btn btn-xs btn-primary" id="darkVersion">Dark version</a>
                     <a href="#" class="btn btn-xs btn-primary" id="leftVersion">Left version</a>
                     </div>
-                    <div class="ibox-content" id="ibox-content">
+                    <div class="ibox__content" id="ibox__content">
 
                         <div id="vertical-timeline" class="vertical-container dark-timeline center-orientation">
                             <div class="vertical-timeline-block">
@@ -530,14 +530,14 @@
             // Local script for demo purpose only
             $('#lightVersion').click(function(event) {
                 event.preventDefault()
-                $('#ibox-content').removeClass('ibox-content');
+                $('#ibox__content').removeClass('ibox__content');
                 $('#vertical-timeline').removeClass('dark-timeline');
                 $('#vertical-timeline').addClass('light-timeline');
             });
 
             $('#darkVersion').click(function(event) {
                 event.preventDefault()
-                $('#ibox-content').addClass('ibox-content');
+                $('#ibox__content').addClass('ibox__content');
                 $('#vertical-timeline').removeClass('light-timeline');
                 $('#vertical-timeline').addClass('dark-timeline');
             });

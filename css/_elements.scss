@@ -1006,7 +1006,7 @@ div.dt-button-info {
 
 /* UI Sortable */
 
-.ui-sortable .ibox-title {
+.ui-sortable .ibox__title {
     cursor: move;
 }
 
@@ -2509,7 +2509,7 @@ body.tour-open .animated {
     overflow: hidden
 }
 
-.resizable-panels .ibox .ibox-content {
+.resizable-panels .ibox .ibox__content {
     height: calc(100% - 49px);
 }
 

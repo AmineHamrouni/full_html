@@ -89,11 +89,11 @@ body.skin-1 {
   background: $skin-1-page-bg;
 }
 
-.skin-1 .ibox-title, .skin-1 .ibox-content {
+.skin-1 .ibox__title, .skin-1 .ibox__content {
   border-width: 1px;
 }
 
-.skin-1 .ibox-content:last-child {
+.skin-1 .ibox__content:last-child {
   border-style: solid solid solid solid;
 }
 
@@ -262,13 +262,13 @@ body.skin-2 #wrapper {
   padding: 0 30px 25px 30px;
 }
 
-.skin-2 .ibox-title {
+.skin-2 .ibox__title {
   background: rgba(255, 255, 255, 0.7);
   border: none;
   margin-bottom: 1px;
 }
 
-.skin-2 .ibox-content {
+.skin-2 .ibox__content {
   background: rgba(255, 255, 255, 0.4);
   border: none !important;
 }
@@ -282,11 +282,11 @@ body.skin-2 #wrapper {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#f6f6f6, endColorstr=#d5d5d5)";
 }
 
-.skin-2 .ibox-title, .skin-2 .ibox-content {
+.skin-2 .ibox__title, .skin-2 .ibox__content {
   border-width: 1px;
 }
 
-.skin-2 .ibox-content:last-child {
+.skin-2 .ibox__content:last-child {
   border-style: solid solid solid solid;
 }
 
@@ -420,11 +420,11 @@ body.skin-3 {
   background: $skin-3-page-bg;
 }
 
-.skin-3 .ibox-title, .skin-3 .ibox-content {
+.skin-3 .ibox__title, .skin-3 .ibox__content {
   border-width: 1px;
 }
 
-.skin-3 .ibox-content:last-child {
+.skin-3 .ibox__content:last-child {
   border-style: solid solid solid solid;
 }
 

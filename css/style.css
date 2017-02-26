@@ -1756,7 +1756,7 @@ div.dt-button-info {
   box-shadow: none; }
 
 /* UI Sortable */
-.ui-sortable .ibox-title {
+.ui-sortable .ibox__title {
   cursor: move; }
 
 .ui-sortable-placeholder {
@@ -2968,7 +2968,7 @@ body.tour-open .animated {
   float: left;
   overflow: hidden; }
 
-.resizable-panels .ibox .ibox-content {
+.resizable-panels .ibox .ibox__content {
   height: calc(100% - 49px); }
 
 .ui-resizable-helper {
@@ -4248,10 +4248,10 @@ a.close-canvas-menu:hover {
   -moz-border-radius: 24px;
   border-radius: 24px; }
 
-.fullscreen-ibox-mode .animated {
+.fullscreen-ibox__mode .animated {
   animation: none; }
 
-body.fullscreen-ibox-mode {
+body.fullscreen-ibox__mode {
   overflow-y: hidden; }
 
 .ibox.fullscreen {
@@ -4928,7 +4928,7 @@ dd.project-people {
 @media (max-width: 992px) {
   .chat-users, .chat-statistic {
     margin-left: 0; } }
-.chat-view .ibox-content {
+.chat-view .ibox__content {
   padding: 0; }
 
 .chat-message {
@@ -5070,7 +5070,7 @@ dd.project-people {
   text-align: center;
   margin: 40px 0 100px 0; }
 
-.article .ibox-content {
+.article .ibox__content {
   padding: 40px; }
 
 /* ISSUE TRACKER */
@@ -5342,7 +5342,7 @@ table.shoping-cart-table {
   top: -32px;
   right: 0; }
 
-.product-detail .ibox-content {
+.product-detail .ibox__content {
   padding: 30px 30px 50px 30px; }
 
 .image-imitation {
@@ -6993,13 +6993,11 @@ body.rtls {
     margin: 0 220px 0 0; }
   body.rtls .nav-second-level li a {
     padding: 7px 35px 7px 10px; }
-  body.rtls .ibox-title h5 {
-    float: right; }
   body.rtls .pull-right {
     float: left !important; }
   body.rtls .pull-left {
     float: right !important; }
-  body.rtls .ibox-tools {
+  body.rtls .ibox__tools {
     float: left; }
   body.rtls .stat-percent {
     float: left; }
@@ -7420,10 +7418,10 @@ body.skin-1 {
 .skin-1 #page-wrapper {
   background: #f4f6fa; }
 
-.skin-1 .ibox-title, .skin-1 .ibox-content {
+.skin-1 .ibox__title, .skin-1 .ibox__content {
   border-width: 1px; }
 
-.skin-1 .ibox-content:last-child {
+.skin-1 .ibox__content:last-child {
   border-style: solid solid solid solid; }
 
 .skin-1 .nav > li.active {
@@ -7548,12 +7546,12 @@ body.skin-2 #wrapper {
 .skin-2 .dashoard-1 .wrapper-content {
   padding: 0 30px 25px 30px; }
 
-.skin-2 .ibox-title {
+.skin-2 .ibox__title {
   background: rgba(255, 255, 255, 0.7);
   border: none;
   margin-bottom: 1px; }
 
-.skin-2 .ibox-content {
+.skin-2 .ibox__content {
   background: rgba(255, 255, 255, 0.4);
   border: none !important; }
 
@@ -7565,10 +7563,10 @@ body.skin-2 #wrapper {
   background: radial-gradient(ellipse at center, #f6f6f6 20%, #d5d5d5 100%);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#f6f6f6, endColorstr=#d5d5d5)"; }
 
-.skin-2 .ibox-title, .skin-2 .ibox-content {
+.skin-2 .ibox__title, .skin-2 .ibox__content {
   border-width: 1px; }
 
-.skin-2 .ibox-content:last-child {
+.skin-2 .ibox__content:last-child {
   border-style: solid solid solid solid; }
 
 .skin-2 .nav > li.active {
@@ -7666,10 +7664,10 @@ body.skin-3 {
 .skin-3 #page-wrapper {
   background: #f4f6fa; }
 
-.skin-3 .ibox-title, .skin-3 .ibox-content {
+.skin-3 .ibox__title, .skin-3 .ibox__content {
   border-width: 1px; }
 
-.skin-3 .ibox-content:last-child {
+.skin-3 .ibox__content:last-child {
   border-style: solid solid solid solid; }
 
 .skin-3 .nav > li.active {
@@ -7732,9 +7730,9 @@ body.md-skin {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
 .md-skin .ibox.border-bottom {
   border-bottom: none !important; }
-.md-skin .ibox-title, .md-skin .ibox-content {
+.md-skin .ibox__title, .md-skin .ibox__content {
   border-style: none; }
-.md-skin .ibox-title h5 {
+.md-skin .ibox__title h5 {
   font-size: 16px;
   font-weight: 400; }
 .md-skin a.close-canvas-menu {
@@ -7978,7 +7976,7 @@ body.md-skin {
   .fixed-sidebar.body-small.mini-navbar .navbar-static-side {
     display: block; }
 
-  .ibox-tools {
+  .ibox__tools {
     float: none;
     text-align: right;
     display: block; }
@@ -8019,7 +8017,7 @@ body.md-skin {
   .nav.navbar-top-links li.dropdown {
     display: none; }
 
-  .ibox-tools {
+  .ibox__tools {
     float: none;
     text-align: left;
     display: inline-block; } }
@@ -8382,10 +8380,10 @@ body.md-skin {
   z-index: 1; }
 .slick_custom_buttons .slick-slide {
   direction: rtl; }
-.slick_custom_buttons .ibox-content h2 {
+.slick_custom_buttons .ibox__content h2 {
   width: calc(100% - 55px); }
 
-.ibox--style .ibox__title {
+.ibox__-style .ibox__title {
   background-image: linear-gradient(to right, #8BC34A 0%, #009688 100%); }
 
 .ibox__title {

@@ -547,7 +547,7 @@
      -moz-border-left-colors: none;
      -moz-border-right-colors: none;
      -moz-border-top-colors: none;
-     background-color: $ibox-title-bg;
+     background-color: $ibox__title-bg;
      border-color: $border-color;
      border: none;
      color: inherit;
@@ -561,7 +561,7 @@
  }
  
  .ibox__content {
-     background-color: $ibox-content-bg;
+     background-color: $ibox__content-bg;
      color: inherit;
      padding: 15px 20px 20px 20px;
      border-color: $border-color;
@@ -1374,11 +1374,11 @@
  }
  
  // Fullscreen functions
- .fullscreen-ibox-mode .animated {
+ .fullscreen-ibox__mode .animated {
      animation: none;
  }
  
- body.fullscreen-ibox-mode {
+ body.fullscreen-ibox__mode {
      overflow-y: hidden;
  }
  

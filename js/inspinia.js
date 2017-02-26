@@ -43,7 +43,7 @@ $(document).ready(function () {
     $('.fullscreen-link').on('click', function () {
         var ibox = $(this).closest('div.ibox');
         var button = $(this).find('i');
-        $('body').toggleClass('fullscreen-ibox-mode');
+        $('body').toggleClass('fullscreen-ibox__mode');
         button.toggleClass('fa-expand').toggleClass('fa-compress');
         ibox.toggleClass('fullscreen');
         setTimeout(function () {

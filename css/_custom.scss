@@ -109,7 +109,7 @@ $news-bar__time__bg: darken($light-blue, 5%);
     .slick-slide {
         direction: rtl;
     }
-    .ibox-content {
+    .ibox__content {
         h2 {
             width: calc(100% - 55px);
         }
@@ -121,7 +121,7 @@ $news-bar__time__bg: darken($light-blue, 5%);
 $box-style_light : #8BC34A;
 $box-style_dark: #009688;
 
-.ibox--style {
+.ibox__-style {
     .ibox__title {
         background-image: linear-gradient(to right, $box-style_light 0%, $box-style_dark 100%);
     }
