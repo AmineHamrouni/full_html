@@ -3,6 +3,7 @@ $(document).ready(function () {
     $("#form").steps({
         bodyTag: "fieldset",
         errorLabelContainer: "#messageBox",
+        transitionEffect: "slideLeft",
         /* Labels */
         labels: {
             cancel: "إلغاء",
@@ -82,7 +83,13 @@ $(document).ready(function () {
             vacationDuration: {
                 date: true,
                 required: true
-            }
+            },
+            replaceEmp: {
+                required: true
+            },
+            a: {
+                required: true
+            },
         },
         messages: {
             vacationType: {
@@ -95,10 +102,13 @@ $(document).ready(function () {
             vacationEnd: {
                 date: 'أدخل تاريخ مناسب',
                 required: 'هذا الحقل ضروري'
-            }
+            },
+            replaceEmp: {
+                required: 'هذا الحقل ضروري'
+            },
         }
     });
-    
+
     //Report
     /////Variabes
     var repType, repStartDate, repEndDate, repDuration, repCause, repEmployee;
@@ -241,7 +251,7 @@ $(document).ready(function () {
             height: '150px',
             sliceColors: ['#23c6c8', '#e8ecff', '#f8ac59', '#1c84c6', '#ED5565']
         });
-        
+
         /////Get values
         repType.text(labelMsg);
 
@@ -284,23 +294,24 @@ $(document).ready(function () {
         size: 'small'
     });
 
-    var clickCheckbox = document.querySelector('.typeSwitch');
-
-    clickCheckbox.addEventListener('change', function () {
-        if (clickCheckbox.checked) {
-            vacation.sourceCredit = true;
-            console.log(vacation.sourceCredit);
-        } else {
-            vacation.sourceCredit = false;
-            console.log(vacation.sourceCredit);
-        }
-    });
+    //    var clickCheckbox = document.querySelector('.typeSwitch');
+    //
+    //    clickCheckbox.addEventListener('change', function () {
+    //        if (clickCheckbox.checked) {
+    //            vacation.sourceCredit = true;
+    //            console.log(vacation.sourceCredit);
+    //        } else {
+    //            vacation.sourceCredit = false;
+    //            console.log(vacation.sourceCredit);
+    //        }
+    //    });
 
     //*******End Switch Button for the credit type
 
     $('#vacationStart').calendarsPicker({
         calendar: $.calendars.instance('ummalqura'),
         minDate: 0,
+        yearRange: '1',
         isRTL: true
     });
 
@@ -312,6 +323,20 @@ $(document).ready(function () {
         console.log(vacationStart);
 
     });
+
+
+    $('.i-checks').iCheck({
+        checkboxClass: 'icheckbox__square--green',
+        radioClass: 'iradio__square--green'
+    });
     
+    $(".i-checks__label").click(function () {
+        $('.checked').parent().addClass('i-checks__label--active');
+        $('.iradio__square--green').not('.checked').parent().removeClass('i-checks__label--active');
+    });
     
+    $('.iradio__square--green').click(function () {
+        this.parent().addClass('i-checks__label--active');
+    });
+
 });

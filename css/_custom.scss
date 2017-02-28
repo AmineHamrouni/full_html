@@ -117,7 +117,6 @@ $news-bar__time__bg: darken($light-blue, 5%);
 }
 
 // Custom Boxes
-
 $box-style_light : #8BC34A;
 $box-style_dark: #009688;
 
@@ -288,7 +287,6 @@ textarea {
 
 //make select2 height equal to input.form-control
 //$height-input: 34px;
-
 .select2-container .select2-selection--single {
     height: 34px;
 }
@@ -303,7 +301,97 @@ textarea {
 }
 
 // Calendars
-
 .calendars-month span {
   border-radius: 0;
+}
+
+//Error label //JQuery Steps
+.input-group {
+    .error {
+        width: 100%;
+        border-style: solid;
+        border-color: #fbc2c4;
+        border-width: 0 1px 1px 1px;
+        border-radius: 0 0 0 4px;
+        margin: 0 !important;
+        background-color: #fff;
+        padding: 3px 5px;
+    }
+}
+
+.wizard > .steps a,
+.wizard > .steps a:hover,
+.wizard > .steps a:active {
+    display: block;
+    width: auto;
+    margin: 0 0.5em 0.5em;
+    padding: 8px;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.wizard > .content > .body label.error {
+    color: $red;
+}
+
+.wizard > .steps .error a,
+.wizard > .steps .error a:hover,
+.wizard > .steps .error a:active {
+    background: $red;
+    color: #fff;
+}
+
+//iCheck
+.i-checks {
+    &__label {
+        border: 3px solid #ccc;
+        border-radius: 3px;
+        width: 100%;
+        padding: 10px;
+        display: inline-flex !important;
+        flex-direction: row;
+        margin-bottom: 0.5em;
+        transition: .2s ease-in-out;
+        span {
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            &:nth-child(1) {
+                flex: 3;
+            }
+            &:nth-child(2) {
+                flex: 1;
+            }
+        }
+        &__name {
+            flex: 4;
+        }
+        &__credit {
+            flex: 1;
+            max-width: 50px;
+            justify-content: center;
+            border-radius: 50px;
+            color: #fff;
+            background-color: darken($lazur, 5%);
+        }
+        &:hover {
+            border-color: darken($blue, 10%);
+        }
+        &--active {
+            border-color: darken($blue, 5%);
+            background-color: $blue;
+            color: #fff;
+            span {
+                //color: $navy;
+            }
+            &:hover {
+                border-color: darken($navy, 10%);
+            }
+            .i-checks__label__credit {
+                background-color: darken($blue, 10%) !important;
+            }
+        }
+    }
 }
