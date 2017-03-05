@@ -1,114 +1,7 @@
 $(document).ready(function () {
     //Form Init
-    $("#form").steps({
-        bodyTag: "fieldset",
-        errorLabelContainer: "#messageBox",
-        transitionEffect: "slideLeft",
-        /* Labels */
-        labels: {
-            cancel: "إلغاء",
-            current: "المرحلة الحالية:",
-            pagination: "Pagination",
-            finish: "إنهاء",
-            next: "التالي",
-            previous: "السابق",
-            loading: "تحميل ..."
-        },
-        onStepChanging: function (event, currentIndex, newIndex) {
-            // Always allow going backward even if the current step contains invalid fields!
-            if (currentIndex > newIndex) {
-                return true;
-            }
-
-            // Forbid suppressing "Warning" step if the user is to young
-            if (newIndex === 3 && Number($("#age").val()) < 18) {
-                return false;
-            }
-
-            var form = $(this);
-
-            // Clean up if user went backward before
-            if (currentIndex < newIndex) {
-                // To remove error styles
-                $(".body:eq(" + newIndex + ") label.error", form).remove();
-                $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
-            }
-
-            // Disable validation on fields that are disabled or hidden.
-            form.validate().settings.ignore = ":disabled,:hidden";
-
-            // Start validation; Prevent going forward if false
-            return form.valid();
-        },
-        onStepChanged: function (event, currentIndex, priorIndex) {
-            // Suppress (skip) "Warning" step if the user is old enough.
-            if (currentIndex === 2 && Number($("#age").val()) >= 18) {
-                $(this).steps("next");
-            }
-
-            // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
-            if (currentIndex === 2 && priorIndex === 3) {
-                $(this).steps("previous");
-            }
-        },
-        onFinishing: function (event, currentIndex) {
-            var form = $(this);
-
-            // Disable validation on fields that are disabled.
-            // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
-            form.validate().settings.ignore = ":disabled";
-
-            // Start validation; Prevent form submission if false
-            return form.valid();
-        },
-        onFinished: function (event, currentIndex) {
-            var form = $(this);
-
-            // Submit form input
-            form.submit();
-        }
-    }).validate({
-        rules: {
-            vacationType: {
-                required: true
-            },
-            vacationStart: {
-                date: true,
-                required: true
-            },
-            vacationEnd: {
-                date: true,
-                required: true
-            },
-            vacationDuration: {
-                date: true,
-                required: true
-            },
-            replaceEmp: {
-                required: true
-            },
-            a: {
-                required: true
-            },
-        },
-        messages: {
-            vacationType: {
-                required: 'أدخل نوع الإجازة!'
-            },
-            vacationStart: {
-                date: 'أدخل تاريخ مناسب',
-                required: 'هذا الحقل ضروري'
-            },
-            vacationEnd: {
-                date: 'أدخل تاريخ مناسب',
-                required: 'هذا الحقل ضروري'
-            },
-            replaceEmp: {
-                required: 'هذا الحقل ضروري'
-            },
-        }
-    });
-
+    var form = $("#vacationSteps");
+    form.steps();
     //Report
     /////Variabes
     var repType, repStartDate, repEndDate, repDuration, repCause, repEmployee;
@@ -315,13 +208,10 @@ $(document).ready(function () {
         isRTL: true
     });
 
-
-
     $('#vacationStart').change(function () {
         var vacationStart = $("#vacationStart").val();
         $("#vacationEnd").val(vacationStart);
         console.log(vacationStart);
-
     });
 
 
@@ -329,14 +219,48 @@ $(document).ready(function () {
         checkboxClass: 'icheckbox__square--green',
         radioClass: 'iradio__square--green'
     });
-    
+
     $(".i-checks__label").click(function () {
         $('.checked').parent().addClass('i-checks__label--active');
         $('.iradio__square--green').not('.checked').parent().removeClass('i-checks__label--active');
     });
-    
+
     $('.iradio__square--green').click(function () {
         this.parent().addClass('i-checks__label--active');
+    });
+
+    $('#printBtn').click(function () {
+        $("#printReport").print({
+            globalStyles: true,
+            mediaPrint: false,
+            stylesheet: null,
+            noPrintSelector: ".no-print",
+            iframe: true,
+            append: null,
+            prepend: null,
+            manuallyCopyFormValues: true,
+            deferred: $.Deferred(),
+            timeout: 750,
+            title: null,
+            doctype: '<!doctype html>'
+        });
+    });
+
+    $('#printInProgressBtn').click(function () {
+        $("#printInProgress").print({
+            globalStyles: true,
+            mediaPrint: false,
+            stylesheet: null,
+            noPrintSelector: ".no-print",
+            iframe: true,
+            append: null,
+            prepend: null,
+            manuallyCopyFormValues: true,
+            deferred: $.Deferred(),
+            timeout: 750,
+            title: null,
+            doctype: '<!doctype html>'
+        });
     });
 
 });

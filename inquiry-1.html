@@ -75,440 +75,505 @@
 </head>
 
 <body class="jaz rtls fixed-sidebar fixed-nav fixed-nav-basic">
-    <div class="menu menu--opened animated fadeInDown collapse" id="collapseExample">
-        <ul class="menu__items">
-            <li class="menu__item">
-                <a href="" class="menu__item__icon">
-                    <i class="fa fa-user"></i>
-                    <span>بياناتي</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a href="" class="menu__item__icon">
-                    <i class="fa fa-calendar"></i>
-                    <span>إجازاتي</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a href="" class="menu__item__icon">
-                    <i class="fa fa-users"></i>
-                    <span>بيانات الاتصال</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a href="" class="menu__item__icon">
-                    <i class="fa fa-envelope"></i>
-                    <span>بريد الكتروني</span>
-                </a>
-            </li>
-            <li class="menu__close">
-                <button class="close" type="button" data-toggle="collapse" data-target="#collapseExample" aria-exapnded="false" aria-controls="collapseExample">
-                    &times;
-                </button>
-            </li>
-        </ul>
+   <div id="my-form" action="">
+        <div class="menu menu--opened animated fadeInDown collapse" id="collapseExample">
+            <ul class="menu__items">
+                <li class="menu__item">
+                    <a href="" class="menu__item__icon">
+                        <i class="fa fa-user"></i>
+                        <span>بياناتي</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__item__icon">
+                        <i class="fa fa-calendar"></i>
+                        <span>إجازاتي</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__item__icon">
+                        <i class="fa fa-users"></i>
+                        <span>بيانات الاتصال</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__item__icon">
+                        <i class="fa fa-envelope"></i>
+                        <span>بريد الكتروني</span>
+                    </a>
+                </li>
+                <li class="menu__close">
+                    <button class="close" type="button" data-toggle="collapse" data-target="#collapseExample" aria-exapnded="false" aria-controls="collapseExample">
+                        &times;
+                    </button>
+                </li>
+            </ul>
 
-    </div>
-    <div id="wrapper" class="">
-        <!--navigation-->
-        <nav class="navbar-default navbar-static-side nav-style-1" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav metismenu" id="side-menu">
-                    <li class="nav-header">
-                        <div class="dropdown profile-element">
-                            <div class="profile-element__img">
-                                <img alt="image" class="" src="img/doc.jpg" />
-                            </div>
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <div class="clear">
-                                    <h2 class="block m-t-xs profile-element__name">
-                                          <strong class="font-bold">د. سعد المقرن بن مقرن</strong>
-                                   </h2>
-                                    <h4 class="block profile-element__title">وكيل إمارة منطقة جازان
-                                        <!--<b class="caret"></b>-->
-                                    </h4>
+        </div>
+        <div id="wrapper" class="">
+            <!--navigation-->
+            <nav class="navbar-default navbar-static-side nav-style-1" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav metismenu" id="side-menu">
+                        <li class="nav-header">
+                            <div class="dropdown profile-element">
+                                <div class="profile-element__img">
+                                    <img alt="image" class="" src="img/doc.jpg" />
                                 </div>
-                            </a>
-                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                <li><a href="profile.html">الملف الشخصي</a></li>
-                                <li><a href="contacts.html">جهات الاتصال</a></li>
-                                <li><a href="mailbox.html">صندوق البريد</a></li>
-                                <li class="divider"></li>
-                                <li><a href="login.html">خروج</a></li>
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                    <div class="clear">
+                                        <h2 class="block m-t-xs profile-element__name">
+                                              <strong class="font-bold">د. سعد المقرن بن مقرن</strong>
+                                       </h2>
+                                        <h4 class="block profile-element__title">وكيل إمارة منطقة جازان
+                                            <!--<b class="caret"></b>-->
+                                        </h4>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                    <li><a href="profile.html">الملف الشخصي</a></li>
+                                    <li><a href="contacts.html">جهات الاتصال</a></li>
+                                    <li><a href="mailbox.html">صندوق البريد</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="login.html">خروج</a></li>
+                                </ul>
+                            </div>
+                            <div class="logo-element">
+
+                            </div>
+                        </li>
+                        <li class="active fadeIn animated">
+                            <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">لوحة التحكم</span> </a>
+                        </li>
+                        <li class="fadeIn animated">
+                            <a href="mailbox.html"><i class="fa fa-envelope"></i><span class="nav-label">البريد الالكتروني </span><span class="label label-warning pull-right">16/24</span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li><a href="mailbox.html">البريد الالكتروني</a></li>
+                                <li><a href="mail_detail.html">مثال لبريد الكتروني</a></li>
+                                <li><a href="mail_compose.html">إرسال بريد الكتروني</a></li>
+                                <li><a href="email_template.html">المسودات</a></li>
                             </ul>
-                        </div>
-                        <div class="logo-element">
+                        </li>
+                        <li class="fadeIn animated">
+                            <a href="profile.html"><i class="fa fa-user"></i><span class="nav-label">البيانات الشخصية</span></a>
+                        </li>
+                        <li class="fadeIn animated">
+                            <a href="inquiry.html"><i class="fa fa-check-square"></i><span class="nav-label">كشف حضوري وانصرافي</span></a>
+                        </li>
+                        <li class="fadeIn animated">
+                            <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">طلبات الاجازات</span></a>
+                        </li>
+                        <li class="fadeIn animated">
+                            <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">الدورات التدريبية</span></a>
+                        </li>
+                        <li class="fadeIn animated">
+                            <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">الأخبار</span></a>
+                        </li>
+                        <li class="fadeIn animated">
+                            <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">التحويلات الداخلية</span></a>
+                        </li>
+                    </ul>
 
-                        </div>
-                    </li>
-                    <li class="active fadeIn animated">
-                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">لوحة التحكم</span> </a>
-                    </li>
-                    <li class="fadeIn animated">
-                        <a href="mailbox.html"><i class="fa fa-envelope"></i><span class="nav-label">البريد الالكتروني </span><span class="label label-warning pull-right">16/24</span></a>
-                        <ul class="nav nav-second-level collapse">
-                            <li><a href="mailbox.html">البريد الالكتروني</a></li>
-                            <li><a href="mail_detail.html">مثال لبريد الكتروني</a></li>
-                            <li><a href="mail_compose.html">إرسال بريد الكتروني</a></li>
-                            <li><a href="email_template.html">المسودات</a></li>
-                        </ul>
-                    </li>
-                    <li class="fadeIn animated">
-                        <a href="profile.html"><i class="fa fa-user"></i><span class="nav-label">البيانات الشخصية</span></a>
-                    </li>
-                    <li class="fadeIn animated">
-                        <a href="inquiry.html"><i class="fa fa-check-square"></i><span class="nav-label">كشف حضوري وانصرافي</span></a>
-                    </li>
-                    <li class="fadeIn animated">
-                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">طلبات الاجازات</span></a>
-                    </li>
-                    <li class="fadeIn animated">
-                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">الدورات التدريبية</span></a>
-                    </li>
-                    <li class="fadeIn animated">
-                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">الأخبار</span></a>
-                    </li>
-                    <li class="fadeIn animated">
-                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">التحويلات الداخلية</span></a>
-                    </li>
-                </ul>
-
-            </div>
-        </nav>
-        <!--page wrapper-->
-        <div id="page-wrapper" class="gray-bg dashbard-1 page-wrapper--down">
-            <!--topnavbar-->
-            <div class="row header-style navbar-fixed-top">
-                <!--
-              
--->
-
-                <div class="header-style__title ui-sortable">
-                    <div class="header-style__actions">
-                        <a class="navbar-minimaliz btn btn-primary " href="#">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <a class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-exapnded="false" aria-controls="collapseExample">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
-                    </div>
-                    <h2>مرحبا بك في لوحة التحكم الخاصة بك</h2>
                 </div>
-                <div class="header-style__particles" id="particles-js"></div>
-            </div>
+            </nav>
+            <!--page wrapper-->
+            <div id="page-wrapper" class="gray-bg dashbard-1 page-wrapper--down">
+                <!--topnavbar-->
+                <div class="row header-style navbar-fixed-top">
+                    <!--
 
+    -->
 
-            <div class="page-wrapper__inner">
-                <div class="row">
-                    <div class="col-lg-8">
-
-                        <div class="ibox">
-                            <div class="ibox__title">
-                                <h5>تقديم إجازة</h5>
-                            </div>
-                            <div class="ibox__content">
-                                <h2>
-                                    إستمارة تقديم إجازة
-                                </h2>
-                                <p>
-                                    تفضل بتعمير كافة البيانات المطلوبة لتقديم إجازة.
-                                </p>
-
-                                <form id="form" action="#" class="wizard-big">
-                                   <h1>إختر رصيد الإجازات</h1>
-                                    <fieldset>
-                                        <h4>إختر رصيد الإجازات الذي تريد أن يسحب منه رصيد الإجازة الجديدة</h4>
-                                        <div class="hr-line-dashed"></div>
-                                        <div class="row">
-                                            <div class="col-sm-8">
-                                                <div class="form-group">
-                                                    <div class="col-sm-12">
-                                                        <div class="i-checks">
-                                                            <label class="i-checks__label i-checks__label--active">
-                                                                <input class="i-checks__radio" type="radio" value="option1" name="a" checked><i></i>
-                                                                <span class="i-checks__label__name">الرصيد الجديد</span>
-                                                                <span class="i-checks__label__credit">45</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="i-checks">
-                                                            <label class="i-checks__label">
-                                                                <input class="i-checks__radio" type="radio" value="option1" name="a"><i></i>
-                                                                <span class="i-checks__label__name">الرصيد القديم</span>
-                                                                <span class="i-checks__label__credit">120</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </fieldset>
-
-                                    <h1>تفاصيل</h1>
-                                    <fieldset>
-                                        <h4>تفاصيل الإجازة</h4>
-                                        <div class="row">
-                                            <div class="col-sm-8 form-horizontal">
-                                                <div class="hr-line-dashed m-sm"></div>
-                                                <div class="form-group">
-                                                    <label class="col-sm-4">نوع الإجازة</label>
-                                                    <div class="col-sm-8">
-                                                        <select id="vacationType" name="vacationType" class="select2 form-control">
-                                                            <option value="">إختر نوع الإجازة</option>
-                                                            <option value="1">إجازة عادية</option>
-                                                            <option value="2">إجازة إضطرارية</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="hr-line-dashed"></div>
-                                                <div class="form-group" id="">
-                                                    <label class="col-sm-4">بداية الإجازة</label>
-                                                    <div class="col-sm-8">
-                                                        <div class="input-group date">
-                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                                            <input type="text" id="vacationStart" name="vacationStart" class="form-control" placeholder="إختر بداية الإجازة">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="hr-line-dashed"></div>
-                                                <div class="form-group" id="">
-                                                    <label class="col-sm-4">نهاية الإجازة</label>
-                                                    <div class="col-sm-8">
-                                                        <div class="input-group date">
-                                                            <input type="text" id="vacationEnd" name="vacationEnd" class="form-control" placeholder="إختر بداية الإجازة" disabled>
-                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="hr-line-dashed"></div>
-                                                <div class="form-group" id="">
-                                                    <label class="col-sm-4">عدد الأيام</label>
-                                                    <div class="col-sm-8">
-                                                        <input id="vacationDuration" class="form-control" type="text" value="" name="vacationDuration">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-4">
-                                                <div class="text-center h-100">
-                                                    <span id="vacationChart"></span>
-                                                    <div class="text-right m-sm text-navy font-bold">
-                                                        <small>الرصيد السنوي</small>
-                                                        <div class="stat-percent font-bold">
-                                                            <span id="lblAnnualCredit">--</span> <i class="fa fa-bolt"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hr-line-dashed m-sm"></div>
-                                                    <div class="text-right m-sm text-blue font-bold">
-                                                        <small>الرصيد المتبقي</small>
-                                                        <div class="stat-percent font-bold">
-                                                            <span id="lblRestCredit">--</span> <i class="fa fa-bolt"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hr-line-dashed m-sm"></div>
-                                                    <div class="text-right m-sm text-warning font-bold">
-                                                        <small>رصيد الطلبات الجارية</small>
-                                                        <div class="stat-percent font-bold">
-                                                            <span id="lblProgressVacation">--</span> <i class="fa fa-bolt"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hr-line-dashed m-sm"></div>
-                                                    <div class="text-right m-sm font-bold">
-                                                        <small>الرصيد المطلوب</small>
-                                                        <div class="stat-percent font-bold">
-                                                            <span id="lblNewVacation">--</span> <i class="fa fa-bolt"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </fieldset>
-                                    <h1>اختيار نائب</h1>
-                                    <fieldset>
-                                        <h4>اختر نائب</h4>
-                                        <div class="row">
-                                            <div class="col-sm-8 border-left">
-
-                                                <div class="form-group">
-                                                    <label>إختر الموظف المعوض</label>
-                                                    <select id="replaceEmp" name="replaceEmp" class="select2 form-control">
-                                                        <option value="">إختر الموظف المعوض</option>
-                                                        <option value="1">محمد عبد الله</option>
-                                                        <option value="2">عبد الله احمد</option>
-                                                    </select>
-                                                </div>
-                                                <div class="hr-line-dashed m-sm"></div>
-                                                <div class="form-group">
-                                                    <label>سبب الإجازة (إختياري)</label>
-                                                    <textarea id="vacationCause" name="vacationCause" type="text" class="form-control" cols="30" rows="10"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <p class="text-center">
-                                                    <i class="fa fa-user big-icon"></i>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </fieldset>
-
-                                    <h1>تأكيد الطلب</h1>
-                                    <fieldset>
-                                        <div id="report" class="">
-                                            <h4>رؤية الطلب قبل التأكيد</h4>
-                                            <div class="hr-line-dashed"></div>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <strong>نوع الإجازة:</strong>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <span id="repType">--</span>
-                                                </div>
-                                            </div>
-                                            <div class="hr-line-dashed"></div>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <strong>تاريخ بداية الإجازة:</strong>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <span id="repStartDate">--</span>
-                                                </div>
-                                            </div>
-                                            <div class="hr-line-dashed"></div>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <strong>تاريخ نهاية الإجازة:</strong>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <span id="repEndDate">--</span>
-                                                </div>
-                                            </div>
-                                            <div class="hr-line-dashed"></div>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <strong>مدة الإجازة:</strong>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <span id="repDuration">--</span>
-                                                </div>
-                                            </div>
-                                            <div class="hr-line-dashed"></div>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <strong>سبب الإجازة:</strong>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <span id="repCause">--</span>
-                                                </div>
-                                            </div>
-                                            <div class="hr-line-dashed"></div>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <strong>الموظف المعوض:</strong>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <span id="repEmployee">--</span>
-                                                </div>
-                                            </div>
-                                            <div class="hr-line-dashed"></div>
-                                        </div>
-                                    </fieldset>
-
-                                </form>
-
-                            </div>
+                    <div class="header-style__title ui-sortable">
+                        <div class="header-style__actions">
+                            <a class="navbar-minimaliz btn btn-primary " href="#">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <a class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-exapnded="false" aria-controls="collapseExample">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                        </div>
+                        <h2>مرحبا بك في لوحة التحكم الخاصة بك</h2>
+                        <div class="header-style__logout">
+                            <button class="btn btn-danger" type="button"><i class="fa fa-power-off"></i>&nbsp;&nbsp;<span class="bold">تسجيل خروج</span></button>
                         </div>
 
-<!--
-                        <div class="ibox box--style float-e-margins">
-                            <div class="ibox__title back-change">
-                                <h5>الطلبات السابقة</h5>
-                                <div class="ibox__tools">
-                                    <a class="collapse-link">
-                                        <i class="fa fa-chevron-up"></i>
-                                    </a>
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                        <i class="fa fa-wrench"></i>
-                                    </a>
-                                    <a class="close-link">
-                                        <i class="fa fa-times"></i>
-                                    </a>
+                    </div>
+                    <div class="header-style__particles" id="particles-js"></div>
+                </div>
+
+
+                <div class="page-wrapper__inner">
+                    <div class="row">
+                        <div class="col-lg-8">
+
+                            <div class="ibox">
+                                <div class="ibox__title">
+                                    <h5>تقديم إجازة</h5>
+                                </div>
+                                <div class="ibox__content">
+                                    <h2>
+                                        إستمارة تقديم إجازة
+                                    </h2>
+                                    <p>
+                                        تفضل بتعمير كافة البيانات المطلوبة لتقديم إجازة.
+                                    </p>
+
+                                    <div id="vacationSteps" role="form" data-toggle="validator">
+                                        <h1>إختر رصيد الإجازات</h1>
+                                        <div class="fieldset">
+                                            <h4>إختر رصيد الإجازات الذي تريد أن يسحب منه رصيد الإجازة الجديدة</h4>
+                                            <div class="hr-line-dashed"></div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <div class="i-checks">
+                                                                <label class="i-checks__label i-checks__label--active">
+                                                                    <input class="i-checks__radio" type="radio" value="option1" name="a" checked><i></i>
+                                                                    <span class="i-checks__label__name">الرصيد الجديد</span>
+                                                                    <span class="i-checks__label__credit">45</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="i-checks">
+                                                                <label class="i-checks__label">
+                                                                    <input class="i-checks__radio" type="radio" value="option1" name="a"><i></i>
+                                                                    <span class="i-checks__label__name">الرصيد القديم</span>
+                                                                    <span class="i-checks__label__credit">120</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                      <div class="form-group">
+                                                        <label for="inputEmail">Email</label>
+                                                        <input type="email" id="inputEmail" required>
+                                                        <div class="help-block with-errors"></div>
+                                                      </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1>تفاصيل</h1>
+                                        <div class="fieldset">
+                                            <h4>تفاصيل الإجازة</h4>
+                                            <div class="row">
+                                                <div class="col-sm-8 form-horizontal">
+                                                    <div class="hr-line-dashed m-sm"></div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4">نوع الإجازة</label>
+                                                        <div class="col-sm-8">
+                                                            <select id="vacationType" name="vacationType" class="select2 form-control" data-error="Before you wreck yourself" required>
+                                                                <option value="">إختر نوع الإجازة</option>
+                                                                <option value="1">إجازة عادية</option>
+                                                                <option value="2">إجازة إضطرارية</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-8 help-block with-errors"></div>
+                                                    </div>
+                                                    <div class="hr-line-dashed"></div>
+                                                    <div class="form-group" id="">
+                                                        <label class="col-sm-4">بداية الإجازة</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group date">
+                                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                                <input type="text" id="vacationStart" name="vacationStart" class="form-control" placeholder="إختر بداية الإجازة" required>
+                                                                <div class="help-block with-errors"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hr-line-dashed"></div>
+                                                    <div class="form-group" id="">
+                                                        <label class="col-sm-4">نهاية الإجازة</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group date">
+                                                                <input type="text" id="vacationEnd" name="vacationEnd" class="form-control" placeholder="إختر بداية الإجازة" disabled>
+                                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                                    <div class="hr-line-dashed"></div>
+                                                    <div class="form-group" id="">
+                                                        <label class="col-sm-4">عدد الأيام</label>
+                                                        <div class="col-sm-8">
+                                                            <input id="vacationDuration" class="form-control" type="text" value="" name="vacationDuration">
+                                                        </div>
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <div class="text-center h-100">
+                                                        <span id="vacationChart"></span>
+                                                        <div class="text-right m-sm text-navy font-bold">
+                                                            <small>الرصيد السنوي</small>
+                                                            <div class="stat-percent font-bold">
+                                                                <span id="lblAnnualCredit">--</span> <i class="fa fa-bolt"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hr-line-dashed m-sm"></div>
+                                                        <div class="text-right m-sm text-blue font-bold">
+                                                            <small>الرصيد المتبقي</small>
+                                                            <div class="stat-percent font-bold">
+                                                                <span id="lblRestCredit">--</span> <i class="fa fa-bolt"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hr-line-dashed m-sm"></div>
+                                                        <div class="text-right m-sm text-warning font-bold">
+                                                            <small>رصيد الطلبات الجارية</small>
+                                                            <div class="stat-percent font-bold">
+                                                                <span id="lblProgressVacation">--</span> <i class="fa fa-bolt"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hr-line-dashed m-sm"></div>
+                                                        <div class="text-right m-sm font-bold">
+                                                            <small>الرصيد المطلوب</small>
+                                                            <div class="stat-percent font-bold">
+                                                                <span id="lblNewVacation">--</span> <i class="fa fa-bolt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <h1>اختيار نائب</h1>
+                                        <div class="fieldset">
+                                            <h4>اختر نائب</h4>
+                                            <div class="row">
+                                                <div class="col-sm-8 border-left">
+
+                                                    <div class="form-group">
+                                                        <label>إختر الموظف المعوض</label>
+                                                        <select id="replaceEmp" name="replaceEmp" class="select2 form-control" required>
+                                                            <option value="">إختر الموظف المعوض</option>
+                                                            <option value="1">محمد عبد الله</option>
+                                                            <option value="2">عبد الله احمد</option>
+                                                        </select>
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                                    <div class="hr-line-dashed m-sm"></div>
+                                                    <div class="form-group">
+                                                        <label>سبب الإجازة (إختياري)</label>
+                                                        <textarea id="vacationCause" name="vacationCause" type="text" class="form-control" cols="30" rows="10"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <p class="text-center">
+                                                        <i class="fa fa-user big-icon"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1>تأكيد الطلب</h1>
+                                        <div class="fieldset">
+                                            <div id="report" class="">
+                                                <h4>رؤية الطلب قبل التأكيد</h4>
+                                                <div class="hr-line-dashed"></div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <strong>نوع الإجازة:</strong>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <span id="repType">--</span>
+                                                    </div>
+                                                </div>
+                                                <div class="hr-line-dashed"></div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <strong>تاريخ بداية الإجازة:</strong>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <span id="repStartDate">--</span>
+                                                    </div>
+                                                </div>
+                                                <div class="hr-line-dashed"></div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <strong>تاريخ نهاية الإجازة:</strong>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <span id="repEndDate">--</span>
+                                                    </div>
+                                                </div>
+                                                <div class="hr-line-dashed"></div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <strong>مدة الإجازة:</strong>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <span id="repDuration">--</span>
+                                                    </div>
+                                                </div>
+                                                <div class="hr-line-dashed"></div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <strong>سبب الإجازة:</strong>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <span id="repCause">--</span>
+                                                    </div>
+                                                </div>
+                                                <div class="hr-line-dashed"></div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <strong>الموظف المعوض:</strong>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <span id="repEmployee">--</span>
+                                                    </div>
+                                                </div>
+                                                <div class="hr-line-dashed"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="ibox__content">
-                                <div class="form-group">
-                                    <label class="font-noraml col-sm-3">إختيار السنة</label>
-                                    <div class="col-sm-4">
-                                        <select class="select2 form-control">
-                                            <option value="all">كل السنوات</option>
-                                            <option value="2015">2015</option>
-                                            <option value="2016">2016</option>
-                                            <option value="2017">2017</option>
-                                        </select>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <div class="ibox">
+                                <div class="ibox__title">
+                                    <h5>طلبات جارية</h5>
+                                </div>
+
+                                <div>
+                                    <div class="ibox__content">
+                                        <table class="table table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>تاريخ الطلب</th>
+                                                    <th>المدة</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>12/10/2015</td>
+                                                    <td>20 يوم</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>12/10/2015</td>
+                                                    <td>20 يوم</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>12/10/2015</td>
+                                                    <td>20 يوم</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div data-toggle="modal" href="#enCours" class="btn btn-xs btn-info btn-block">كل الطلبات الجارية</div>
+                                        <div id="enCours" class="modal fade" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div id="printInProgress" class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <div class="visible-print-block">
+                                                                    <h2>ertyui</h2>
+                                                                </div>
+                                                                <h3 class="m-t-none m-b">كل الطلبات الجارية</h3>
+                                                                <div>
+                                                                    <table class="table table-bordered table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>#</th>
+                                                                                <th>تاريخ الطلب</th>
+                                                                                <th>المدة</th>
+                                                                                <th>الرصيد</th>
+                                                                                <th>المعوض</th>
+                                                                                <th class="no-print">--</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>1</td>
+                                                                                <td>12/10/2015</td>
+                                                                                <td>20 يوم</td>
+                                                                                <td>القديم</td>
+                                                                                <td>محمد عبد الله</td>
+                                                                                <td class="no-print">
+                                                                                    <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                                    <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2</td>
+                                                                                <td>12/10/2015</td>
+                                                                                <td>20 يوم</td>
+                                                                                <td>القديم</td>
+                                                                                <td>محمد عبد الله</td>
+                                                                                <td class="no-print">
+                                                                                    <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                                    <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>3</td>
+                                                                                <td>12/10/2015</td>
+                                                                                <td>20 يوم</td>
+                                                                                <td>القديم</td>
+                                                                                <td>محمد عبد الله</td>
+                                                                                <td class="no-print">
+                                                                                    <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                                    <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">إغلاق</button>
+                                                        <button id="printInProgressBtn" type="button" class="btn btn-sm btn-primary">طباعة</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <table class="table table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>تاريخ الطلب</th>
-                                            <th>المدة</th>
-                                            <th>الحالة</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>12/10/2015</td>
-                                            <td>20 يوم</td>
-                                            <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>12/10/2015</td>
-                                            <td>20 يوم</td>
-                                            <td class="text-danger"> <i class="fa fa-level-down"></i> رفض </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>12/10/2015</td>
-                                            <td>20 يوم</td>
-                                            <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
--->
-
-                    </div>
-
-                    <div class="col-lg-4">
-<!--
-                        <div class="ibox">
-                            <div class="ibox__title">
-                                <h5>الدعم الفني</h5>
-                            </div>
-                            <div class="ibox__content text-center">
-
-
-
-                                <h3><i class="fa fa-phone"></i> 1231</h3>
-                                <span class="small">
-                                      في حال وجود أي إشكال تقني أو طلب توضيح, نرجو الإتصال بنا.
-                                  </span>
-
 
                             </div>
-                        </div>
--->
 
-                        <div class="ibox">
-                            <div class="ibox__title">
-                                <h5>طلبات جارية</h5>
-                            </div>
-
-                            <div>
+                            <div class="ibox box--style float-e-margins">
+                                <div class="ibox__title back-change">
+                                    <h5>الطلبات السابقة</h5>
+                                    <div class="ibox__tools">
+                                        <a class="collapse-link">
+                                            <i class="fa fa-chevron-up"></i>
+                                        </a>
+                                        <a class="close-link">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
                                 <div class="ibox__content">
+                                    <div class="form-group">
+                                        <label class="font-noraml col-sm-4">إختيار السنة</label>
+                                        <div class="col-sm-8">
+                                            <select class="select2 form-control">
+                                                <option value="all">كل السنوات</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <table class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
@@ -523,96 +588,110 @@
                                                 <td>1</td>
                                                 <td>12/10/2015</td>
                                                 <td>20 يوم</td>
-                                                <td> <i class="fa fa-level-up"></i> قبول </td>
+                                                <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
                                             </tr>
                                             <tr>
                                                 <td>2</td>
                                                 <td>12/10/2015</td>
                                                 <td>20 يوم</td>
-                                                <td> <i class="fa fa-level-down"></i> رفض </td>
+                                                <td class="text-danger"> <i class="fa fa-level-down"></i> رفض </td>
                                             </tr>
                                             <tr>
                                                 <td>3</td>
                                                 <td>12/10/2015</td>
                                                 <td>20 يوم</td>
-                                                <td> <i class="fa fa-level-up"></i> قبول </td>
+                                                <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div class="btn btn-xs btn-primary btn-block">كل الطلبات</div>
-                                </div>
-                            </div>
+                                    <div data-toggle="modal" href="#modal-form" class="btn btn-xs btn-primary btn-block">كل الطلبات</div>
+                                    <div id="modal-form" class="modal fade" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div id="printReport" class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <h3 class="m-t-none m-b">كل الطلبات</h3>
+                                                            <div>
+                                                                <table class="table table-bordered table-hover">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>#</th>
+                                                                            <th>تاريخ الطلب</th>
+                                                                            <th>المدة</th>
+                                                                            <th>الرصيد</th>
+                                                                            <th>المعوض</th>
+                                                                            <th>المدير المباشر</th>
+                                                                            <th class="">الحالة</th>
+                                                                            <th class="no-print">--</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>12/10/2015</td>
+                                                                            <td>20 يوم</td>
+                                                                            <td>القديم</td>
+                                                                            <td>محمد عبد الله</td>
+                                                                            <td>أحمد عبد الله</td>
+                                                                            <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
+                                                                            <td class="no-print">
+                                                                                <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                                <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>12/10/2015</td>
+                                                                            <td>20 يوم</td>
+                                                                            <td>القديم</td>
+                                                                            <td>محمد عبد الله</td>
+                                                                            <td>أحمد عبد الله</td>
+                                                                            <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
+                                                                            <td class="no-print">
+                                                                                <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                                <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3</td>
+                                                                            <td>12/10/2015</td>
+                                                                            <td>20 يوم</td>
+                                                                            <td>القديم</td>
+                                                                            <td>محمد عبد الله</td>
+                                                                            <td>أحمد عبد الله</td>
+                                                                            <td class="text-danger"> <i class="fa fa-level-down"></i> رفض </td>
+                                                                            <td class="no-print">
+                                                                                <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                                <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">إغلاق</button>
+                                                    <button id="printBtn" type="button" class="btn btn-sm btn-primary">طباعة</button>
+                                                </div>
 
-                        </div>
-
-                        <div class="ibox box--style float-e-margins">
-                            <div class="ibox__title back-change">
-                                <h5>الطلبات السابقة</h5>
-                                <div class="ibox__tools">
-                                    <a class="collapse-link">
-                                        <i class="fa fa-chevron-up"></i>
-                                    </a>
-                                    <a class="close-link">
-                                        <i class="fa fa-times"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="ibox__content">
-                                <div class="form-group">
-                                    <label class="font-noraml col-sm-4">إختيار السنة</label>
-                                    <div class="col-sm-8">
-                                        <select class="select2 form-control">
-                                            <option value="all">كل السنوات</option>
-                                            <option value="2015">2015</option>
-                                            <option value="2016">2016</option>
-                                            <option value="2017">2017</option>
-                                        </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <table class="table table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>تاريخ الطلب</th>
-                                            <th>المدة</th>
-                                            <th>الحالة</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>12/10/2015</td>
-                                            <td>20 يوم</td>
-                                            <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>12/10/2015</td>
-                                            <td>20 يوم</td>
-                                            <td class="text-danger"> <i class="fa fa-level-down"></i> رفض </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>12/10/2015</td>
-                                            <td>20 يوم</td>
-                                            <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
                             </div>
+
+
                         </div>
 
-
                     </div>
-
                 </div>
 
             </div>
 
         </div>
-
-    </div>
-
     </div>
 
     <!-- Mainly scripts -->
@@ -648,6 +727,9 @@
 
     <!-- Sparkline -->
     <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- jQuery Print -->
+    <script src="js/plugins/jQuery.print-master/jQuery.print.js"></script>
 
     <!-- ChartJS-->
     <script src="js/plugins/chartJs/Chart.min.js"></script>
@@ -723,10 +805,14 @@
 
     <!-- Steps -->
     <script src="js/plugins/staps/jquery.steps.min.js"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>-->
 
     <!-- Jquery Validate -->
-    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+<!--    <script src="js/plugins/validate/jquery.validate.min.js"></script>-->
     
+    <!-- Bootstrap Validator -->
+    <script src="js/plugins/bootstrap-validator/validator.min.js"></script>
+
     <!-- Morris -->
     <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
     <script src="js/plugins/morris/morris.js"></script>
@@ -745,7 +831,7 @@
 
     <script>
         $(document).ready(function () {
-            
+
             /* ---- particles.js config ---- */
 
             particlesJS("particles-js", {
