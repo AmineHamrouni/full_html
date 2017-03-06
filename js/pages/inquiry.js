@@ -1,7 +1,21 @@
 $(document).ready(function () {
+    //Form Steps
     //Form Init
     var form = $("#vacationSteps");
-    form.steps();
+    form.steps({
+        enableCancelButton: false,
+        enableFinishButton: false,
+        transitionEffect: 3,
+        labels: {
+            cancel: "إلغاء",
+            current: "المرحلة الحالية:",
+            pagination: "Pagination",
+            finish: "إنهاء",
+            next: "التالي",
+            previous: "السابق",
+            loading: "تحميل ..."
+        }
+    });
     //Report
     /////Variabes
     var repType, repStartDate, repEndDate, repDuration, repCause, repEmployee;
@@ -13,7 +27,6 @@ $(document).ready(function () {
     repDuration = $('#repDuration');
     repCause = $('#repCause');
     repEmployee = $('#repEmployee');
-
 
     //Select2 init
     $(".select2").select2({
@@ -33,7 +46,9 @@ $(document).ready(function () {
     };
 
     //Init Vacation Credit Chart
-    $("#vacationChart").sparkline([
+    var vacationChart = $("#vacationChart");
+
+    vacationChart.sparkline([
         vacation.newCredit,
         vacation.restCredit(),
         vacation.oldCredit,
@@ -44,56 +59,74 @@ $(document).ready(function () {
         sliceColors: ['#23c6c8', '#e8ecff', '#f8ac59', '#1c84c6', '#ED5565']
     });
 
-    //Vacation Labels
-    var lblRestCredit = document.getElementById("lblRestCredit");
-    var lblAnnualCredit = document.getElementById("lblAnnualCredit");
-    var lblProgressVacation = document.getElementById("lblProgressVacation");
-
-    lblAnnualCredit.innerHTML = vacation.totalCredit;
-    lblRestCredit.innerHTML = vacation.restCredit();
-    lblProgressVacation.innerHTML = vacation.inProgressCredit;
-
-    //TouchSpin number of days
-    var elvacationDuration = $("input[name='vacationDuration']"),
-        lblNewVacation;
-    // Init the TouchSpin element = disabled
-    elvacationDuration.prop("disabled", true);
-
-    //Init the TouchSpin element
-    elvacationDuration.TouchSpin({
-        verticalbuttons: true,
-        initval: 0,
-        min: 0,
-        max: 0,
-        step: 1,
-        decimals: 0,
-        boostat: 5,
-        maxboostedstep: 10,
-        postfix: 'يوم'
-    });
-
-    lblNewVacation = $('#lblNewVacation');
-    lblNewVacation.html($('#vacationDuration').val());
-
     // on hanging vacationType:
     //// 1 - change the max/min number of days
     /// 2 - change the help message
     //// 3 - update the labels containg the value of the vacation parametre
     /// 4 - update vacation chart
 
-    var helpMsg, elVacationType, maxVal, minVal, initValD, elVacationStart, labelMsg;
+    var helpMsg, elVacationType, maxVal, minVal, initValD, labelMsg;
 
-    elVacationStart = $('#vacationStart');
+    var vacationStart = $("#vacationStart");
+    var vacationEnd = $("#vacationEnd");
+    var vacationDuration = $("#vacationDuration");
+    var vacationType = $("#vacationType");
 
-    $("#vacationType").change(function () {
+    var lblAnnualCredit = $("#lblAnnualCredit");
+    var lblRestCredit = $("#lblRestCredit");
+    var lblProgressVacation = $("#lblProgressVacation");
+    var lblNewVacation = $("#lblNewVacation");
 
-        //Get the value of the vacation type
-        elVacationType = $("#vacationType").val();
+    lblAnnualCredit.text(vacation.totalCredit);
+    lblRestCredit.text(vacation.restCredit());
+    lblProgressVacation.text(vacation.inProgressCredit);
+    lblNewVacation.text(vacation.newCredit);
+
+    //On Vacation Type change
+    vacationType.change(function () {
 
         //the first type اجازة عادية
-        if (elVacationType == 1) {
-            helpMsg = 'عدد الأيام لا يمكن أن يكون أقل من 5 أيام';
-            elvacationDuration.prop("disabled", false);
+        if (vacationType.val() == 1) {
+            vacationStart.prop('disabled', false);
+            vacationEnd.prop('disabled', false);
+            $('#vacationStart, #vacationEnd')
+                .calendarsPicker({
+                    onSelect: customRange,
+                    calendar: $.calendars.instance('ummalqura'),
+                    minDate: 0,
+                    isRTL: true,
+                    commandsAsDateFormat: true,
+                    prevText: '< M',
+                    todayText: 'M y',
+                    nextText: 'M >',
+                    localNumbers: true
+                }).noWeekends;
+
+            $('#vacationEnd').calendarsPicker({
+                onClose: function () {
+                    var a = moment(vacationEnd.val());
+                    var b = moment(vacationStart.val());
+                    var d = a.diff(b, 'days') + 1;
+                    vacationDuration.val(d || "أدخل الفترة المناسبة");
+                }
+            });
+            
+            var calendar = $.calendars.instance('ummalqura'); 
+            var date = calendar.parseDate('mm/dd/yyyy', $('#vacationStart').val()); 
+//            var amount = parseInt(1, 10); 
+//            var period = 'd'; 
+            date.add(10, d);
+            $('#vacationEnd').val(calendar.formatDate('mm/dd/yyyy', date)); 
+
+
+            //Initialize the start/end date values
+            function customRange(dates) {
+                if (this.id == 'vacationStart') {
+                    vacationEnd.calendarsPicker('option', 'minDate', dates[0] || null);
+                } else {
+                    vacationStart.calendarsPicker('option', 'maxDate', dates[0] || null);
+                }
+            }
             initValD = 5;
             minVal = 5;
             maxVal = vacation.restCredit();
@@ -101,40 +134,68 @@ $(document).ready(function () {
         }
 
         //the second type اجازة اضطرارية
-        if (elVacationType == 2) {
-            helpMsg = 'عدد الأيام لا يمكن أن يكون أكثر من 5 أيام';
-            elvacationDuration.prop("disabled", false);
-            elvacationDuration.val("1");
+        if (vacationType.val() == 2) {
+            vacationStart.prop('disabled', false);
+            vacationEnd.prop('disabled', false);
+            $('#vacationStart, #vacationEnd').calendarsPicker();
+
+            vacationDuration.val("1");
             initValD = 1;
             minVal = 1;
             maxVal = 5;
-            labelMsg = 'اجازة اضطرارية';
         }
 
         //if there is no selection
-        if (elVacationType == 0) {
-            helpMsg = 'نرجو إختيار نوع الإجازة';
-            elvacationDuration.prop("disabled", true);
+        if (vacationType.val() == 0) {
+            vacationStart.prop('disabled', true);
+            vacationEnd.prop('disabled', true);
             initValD = 0;
             minVal = 0;
             maxVal = 0;
         }
 
-        //Update the touchspin
-        elvacationDuration.trigger("touchspin.updatesettings", {
-            max: maxVal,
-            min: minVal,
-            initval: initValD
-        });
+
+        //Init the calendar Picker on Umm Al Qura calendar
+        $('#vacationStart, #vacationEnd')
+            .calendarsPicker({
+                onSelect: customRange,
+                calendar: $.calendars.instance('ummalqura'),
+                minDate: 0,
+                isRTL: true,
+                commandsAsDateFormat: true,
+                prevText: '< M',
+                todayText: 'M y',
+                nextText: 'M >',
+                localNumbers: true,
+                onClose: function () {
+                    var a = moment(vacationEnd.val());
+                    var b = moment(vacationStart.val()).add(5, 'days');
+                    var d = a.diff(b, 'days') + 1;
+                    console.log(d);
+                    //                    vacationDuration.val(d);
+                }
+            }).noWeekends;
+
+        //Initialize the start/end date values
+        function customRange(dates) {
+            if (this.id == 'vacationStart') {
+                vacationEnd.calendarsPicker('option', 'minDate', dates[0] || null);
+            } else {
+                vacationStart.calendarsPicker('option', 'maxDate', dates[0] || null);
+            }
+        }
+
+        repStartDate.text(vacationStart.val());
+
 
         //Update the label containing the new vacation
-        lblNewVacation.html($('#vacationDuration').val());
+        lblNewVacation.html(vacationDuration.val());
 
         //Update the value of 'newCredit' in 'vacation'
-        vacation.newCredit = $('#vacationDuration').val();
+        vacation.newCredit = vacationDuration.val();
 
         //Init Vacation Credit Chart
-        $("#vacationChart").sparkline([
+        vacationChart.sparkline([
             vacation.newCredit,
             vacation.restCredit(),
             vacation.oldCredit,
@@ -145,14 +206,11 @@ $(document).ready(function () {
             sliceColors: ['#23c6c8', '#e8ecff', '#f8ac59', '#1c84c6', '#ED5565']
         });
 
-        /////Get values
-        repType.text(labelMsg);
-
         //Update the vacation chart
-        $("input[name='vacationDuration']").change(function () {
-            lblNewVacation.html($('#vacationDuration').val());
+        vacationDuration.change(function () {
+            lblNewVacation.html(vacationDuration.val());
             lblRestCredit =
-                vacation.newCredit = $('#vacationDuration').val();
+                vacation.newCredit = vacationDuration.val();
 
             //Init Vacation Credit Chart
             $("#vacationChart").sparkline([
@@ -168,7 +226,10 @@ $(document).ready(function () {
 
         });
 
+
+
     });
+    //End of // On Vacation Type change
 
     /*\
     ***
@@ -186,34 +247,7 @@ $(document).ready(function () {
         jackSecondaryColor: '#c8ff77',
         size: 'small'
     });
-
-    //    var clickCheckbox = document.querySelector('.typeSwitch');
-    //
-    //    clickCheckbox.addEventListener('change', function () {
-    //        if (clickCheckbox.checked) {
-    //            vacation.sourceCredit = true;
-    //            console.log(vacation.sourceCredit);
-    //        } else {
-    //            vacation.sourceCredit = false;
-    //            console.log(vacation.sourceCredit);
-    //        }
-    //    });
-
     //*******End Switch Button for the credit type
-
-    $('#vacationStart').calendarsPicker({
-        calendar: $.calendars.instance('ummalqura'),
-        minDate: 0,
-        yearRange: '1',
-        isRTL: true
-    });
-
-    $('#vacationStart').change(function () {
-        var vacationStart = $("#vacationStart").val();
-        $("#vacationEnd").val(vacationStart);
-        console.log(vacationStart);
-    });
-
 
     $('.i-checks').iCheck({
         checkboxClass: 'icheckbox__square--green',
@@ -228,6 +262,8 @@ $(document).ready(function () {
     $('.iradio__square--green').click(function () {
         this.parent().addClass('i-checks__label--active');
     });
+
+    //Print Report
 
     $('#printBtn').click(function () {
         $("#printReport").print({

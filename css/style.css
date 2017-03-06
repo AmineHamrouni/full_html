@@ -4534,73 +4534,75 @@ body.rtls .input-group-addon:not(:first-child) { border: 1px solid #ccc; border-
 body.rtls .bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up { border-radius: 0; border-top-left-radius: 4px; border-top-right-radius: 0; }
 /* line 233, _rtl.scss */
 body.rtls .bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down { margin-top: -2px; border-radius: 0; border-bottom-left-radius: 4px; border-bottom-right-radius: 0; }
+/* line 239, _rtl.scss */
+body.rtls .calendars-month { float: right; }
 
-@media (max-width: 992px) { /* line 243, _rtl.scss */
+@media (max-width: 992px) { /* line 246, _rtl.scss */
   body.rtls .chat-users, body.rtls .chat-statistic { margin-right: 0; } }
-/* line 250, _rtl.scss */
+/* line 253, _rtl.scss */
 body.rtls.mini-navbar .footer.fixed, body.body-small.mini-navbar .footer.fixed { margin: 0 70px 0 0; }
 
-/* line 255, _rtl.scss */
+/* line 258, _rtl.scss */
 body.rtls.mini-navbar.fixed-sidebar .footer.fixed, body.body-small.mini-navbar .footer.fixed { margin: 0 0 0 0; }
 
-/* line 260, _rtl.scss */
+/* line 263, _rtl.scss */
 body.rtls.top-navigation .navbar-toggle { float: right; margin-left: 15px; margin-right: 15px; }
 
-/* line 266, _rtl.scss */
+/* line 269, _rtl.scss */
 .body-small.rtls.top-navigation .navbar-header { float: none; }
 
-/* line 270, _rtl.scss */
+/* line 273, _rtl.scss */
 body.rtls.top-navigation #page-wrapper { margin: 0; }
 
-/* line 274, _rtl.scss */
+/* line 277, _rtl.scss */
 body.rtls.mini-navbar #page-wrapper { margin: 0 70px 0 0; }
 
-/* line 278, _rtl.scss */
+/* line 281, _rtl.scss */
 body.rtls.mini-navbar.fixed-sidebar #page-wrapper { margin: 0 0 0 0; }
 
-/* line 282, _rtl.scss */
+/* line 285, _rtl.scss */
 body.rtls.body-small.fixed-sidebar.mini-navbar #page-wrapper { margin: 0 220px 0 0; }
 
-/* line 286, _rtl.scss */
+/* line 289, _rtl.scss */
 body.rtls.body-small.fixed-sidebar.mini-navbar .navbar-static-side { width: 220px; }
 
-/* line 290, _rtl.scss */
+/* line 293, _rtl.scss */
 .body-small.rtls .navbar-fixed-top { margin-right: 0; }
 
-/* line 294, _rtl.scss */
+/* line 297, _rtl.scss */
 .body-small.rtls .navbar-header { float: right; }
 
-/* line 298, _rtl.scss */
+/* line 301, _rtl.scss */
 body.rtls .navbar-top-links li:last-child { margin-left: 20px; }
 
-/* line 302, _rtl.scss */
+/* line 305, _rtl.scss */
 body.rtls .top-navigation #page-wrapper, body.rtls.mini-navbar .top-navigation #page-wrapper, body.rtls.mini-navbar.top-navigation #page-wrapper { margin: 0; }
 
-/* line 308, _rtl.scss */
+/* line 311, _rtl.scss */
 body.rtls .top-navigation .footer.fixed, body.rtls.top-navigation .footer.fixed { margin: 0; }
 
-@media (max-width: 768px) { /* line 314, _rtl.scss */
+@media (max-width: 768px) { /* line 317, _rtl.scss */
   body.rtls .navbar-top-links li:last-child { margin-left: 20px; }
-  /* line 317, _rtl.scss */
+  /* line 320, _rtl.scss */
   .body-small.rtls #page-wrapper { position: inherit; margin: 0 0 0 0; min-height: 1000px; }
-  /* line 322, _rtl.scss */
+  /* line 325, _rtl.scss */
   .body-small.rtls .navbar-static-side { display: none; z-index: 2001; position: absolute; width: 70px; }
-  /* line 328, _rtl.scss */
-  .body-small.rtls.mini-navbar .navbar-static-side { display: block; }
   /* line 331, _rtl.scss */
+  .body-small.rtls.mini-navbar .navbar-static-side { display: block; }
+  /* line 334, _rtl.scss */
   .rtls.fixed-sidebar.body-small .navbar-static-side { display: none; z-index: 2001; position: fixed; width: 220px; }
-  /* line 337, _rtl.scss */
+  /* line 340, _rtl.scss */
   .rtls.fixed-sidebar.body-small.mini-navbar .navbar-static-side { display: block; right: 0; } }
-/* line 344, _rtl.scss */
+/* line 347, _rtl.scss */
 .rtls .ltr-support { direction: ltr; }
 
-/* line 348, _rtl.scss */
+/* line 351, _rtl.scss */
 .rtls.mini-navbar .nav-second-level, .rtls.mini-navbar li.active .nav-second-level { left: auto; right: 70px; }
 
-/* line 354, _rtl.scss */
+/* line 357, _rtl.scss */
 .rtls #right-sidebar { left: -260px; right: auto; }
 
-/* line 359, _rtl.scss */
+/* line 362, _rtl.scss */
 .rtls #right-sidebar.sidebar-open { left: 0; }
 
 /*  This is style for skin config Use only in demo theme 
