@@ -89,11 +89,13 @@ $(document).ready(function () {
         if (vacationType.val() == 1) {
             vacationStart.prop('disabled', false);
             vacationEnd.prop('disabled', false);
-            $('#vacationStart, #vacationEnd')
+            
+
+            vacationStart
                 .calendarsPicker({
-                    onSelect: customRange,
+//                    onSelect: customRange,
                     calendar: $.calendars.instance('ummalqura'),
-                    minDate: 0,
+                    minDate: 1,
                     isRTL: true,
                     commandsAsDateFormat: true,
                     prevText: '< M',
@@ -101,32 +103,16 @@ $(document).ready(function () {
                     nextText: 'M >',
                     localNumbers: true
                 }).noWeekends;
-
-            $('#vacationEnd').calendarsPicker({
-                onClose: function () {
-                    var a = moment(vacationEnd.val());
-                    var b = moment(vacationStart.val());
-                    var d = a.diff(b, 'days') + 1;
-                    vacationDuration.val(d || "أدخل الفترة المناسبة");
-                }
-            });
             
-            var calendar = $.calendars.instance('ummalqura'); 
-            var date = calendar.parseDate('mm/dd/yyyy', $('#vacationStart').val()); 
-//            var amount = parseInt(1, 10); 
-//            var period = 'd'; 
-            date.add(10, d);
-            $('#vacationEnd').val(calendar.formatDate('mm/dd/yyyy', date)); 
 
+            vacationEnd
+                .calendarsPicker({
+                    onSelect: customRange,
+                    calendar: $.calendars.instance('ummalqura'),
+                    minDate: vacationStart.val().add(1, 'days'),
+//                    minDate: 0,
+                });
 
-            //Initialize the start/end date values
-            function customRange(dates) {
-                if (this.id == 'vacationStart') {
-                    vacationEnd.calendarsPicker('option', 'minDate', dates[0] || null);
-                } else {
-                    vacationStart.calendarsPicker('option', 'maxDate', dates[0] || null);
-                }
-            }
             initValD = 5;
             minVal = 5;
             maxVal = vacation.restCredit();
@@ -134,16 +120,7 @@ $(document).ready(function () {
         }
 
         //the second type اجازة اضطرارية
-        if (vacationType.val() == 2) {
-            vacationStart.prop('disabled', false);
-            vacationEnd.prop('disabled', false);
-            $('#vacationStart, #vacationEnd').calendarsPicker();
-
-            vacationDuration.val("1");
-            initValD = 1;
-            minVal = 1;
-            maxVal = 5;
-        }
+        if (vacationType.val() == 2) {}
 
         //if there is no selection
         if (vacationType.val() == 0) {
@@ -155,26 +132,26 @@ $(document).ready(function () {
         }
 
 
-        //Init the calendar Picker on Umm Al Qura calendar
-        $('#vacationStart, #vacationEnd')
-            .calendarsPicker({
-                onSelect: customRange,
-                calendar: $.calendars.instance('ummalqura'),
-                minDate: 0,
-                isRTL: true,
-                commandsAsDateFormat: true,
-                prevText: '< M',
-                todayText: 'M y',
-                nextText: 'M >',
-                localNumbers: true,
-                onClose: function () {
-                    var a = moment(vacationEnd.val());
-                    var b = moment(vacationStart.val()).add(5, 'days');
-                    var d = a.diff(b, 'days') + 1;
-                    console.log(d);
-                    //                    vacationDuration.val(d);
-                }
-            }).noWeekends;
+        //        //Init the calendar Picker on Umm Al Qura calendar
+        //        $('#vacationStart, #vacationEnd')
+        //            .calendarsPicker({
+        //                onSelect: customRange,
+        //                calendar: $.calendars.instance('ummalqura'),
+        //                minDate: 0,
+        //                isRTL: true,
+        //                commandsAsDateFormat: true,
+        //                prevText: '< M',
+        //                todayText: 'M y',
+        //                nextText: 'M >',
+        //                localNumbers: true,
+        //                onClose: function () {
+        //                    var a = moment(vacationEnd.val());
+        //                    var b = moment(vacationStart.val()).add(5, 'days');
+        //                    var d = a.diff(b, 'days') + 1;
+        //                    console.log(d);
+        //                    //                    vacationDuration.val(d);
+        //                }
+        //            }).noWeekends;
 
         //Initialize the start/end date values
         function customRange(dates) {
@@ -183,6 +160,18 @@ $(document).ready(function () {
             } else {
                 vacationStart.calendarsPicker('option', 'maxDate', dates[0] || null);
             }
+        }
+
+        //        //Add days 
+        //        function addDays(theDate, days) {
+        //            return new Date(theDate.getTime() + days * 24 * 60 * 60 * 1000);
+        //        }
+
+        //Diff Days with momentJs
+        function diffDays(end, start) {
+            var end = moment([2007, 0, 29]);
+            var start = moment([2007, 0, 28]);
+            return end.diff(start);
         }
 
         repStartDate.text(vacationStart.val());
