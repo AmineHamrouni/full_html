@@ -1670,7 +1670,7 @@ $stats-color: lighten($action-color, 10%);
         align-items: center;
         flex-direction: row;
         min-height: 150px;
-        border-left: 1px solid $profile-border;
+//        border-left: 1px solid $profile-border;
         padding: 0px 20px;
         h3 {
             margin-bottom: 30px;
@@ -1724,6 +1724,97 @@ $stats-color: lighten($action-color, 10%);
             display: block;
             font-size: 0.4em;
             font-weight: normal;
+        }
+    }
+}
+
+.profile-details {
+    display: flex;
+    width: 100%;
+    max-width: 980px;
+    margin: 0px auto;
+
+    &__body {
+        width: 100%;
+        padding-bottom: 30px;
+        .panel-body {
+            min-height: 350px;
+        }
+        .tabs-container {
+            .nav-tabs {
+                background-color: #fff;
+                margin-bottom: 20px;
+                border-top: 1px solid rgb(243, 243, 244);
+                > li {
+                    > a {
+                        border: 0;
+                        border-radius: 0;
+                        padding: 14px 20px 14px 25px;
+                        &:after {
+                            transition: .2s ease-inl;
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            height: 0px;
+                            width: 100%;
+//                            background-color: transparentize($navy, 20%);
+                            bottom: 0;
+                        }
+                        &:hover {
+                            &:after {
+                                height: 5px;
+                            }
+                        }
+                        &:focus {
+                            background-color: transparent;
+                        }
+                    }
+                    &.active {
+                        position: relative;
+                        > a {
+                            border: none;
+                            background-color: transparent;
+                        }
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            height: 5px;
+                            width: 100%;
+                            background-color: $navy;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+            
+            .tab-content {
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 3px;
+                    height: 100%;
+                    background-image: linear-gradient(to bottom, #4CAF50 20%, #009688 40%, transparent 80%);
+                }
+            }
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            .control-label {
+                flex: 2;
+            }
+            > div {
+                flex: 3;
+                input:disabled {
+                    background: transparent;
+                    border: 0;
+                }
+            } 
+
         }
     }
 }
