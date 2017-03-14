@@ -14,7 +14,11 @@ $(document).ready(function () {
             next: "التالي",
             previous: "السابق",
             loading: "تحميل ..."
-        }
+        },
+        onStepChanging: function (event, currentIndex, newIndex) {
+            return true;
+        },
+        
     });
     //Report
     /////Variabes
@@ -88,12 +92,20 @@ $(document).ready(function () {
         if (vacationType.val() == 1) {
             vacationStart.prop('disabled', false);
             vacationEnd.prop('disabled', false);
-
+            
+            vacationStart.val('');
+            vacationEnd.val('');
+            vacationDuration.val('');
 
             $('#vacationStart,#vacationEnd').calendarsPicker({
                 onSelect: customRange,
+                onClose: function() {
+                    repStartDate.text(vacationStart.val());
+                    repEndDate.text(vacationEnd.val());
+                },
                 calendar: $.calendars.instance('ummalqura'),
                 formatDate: 'dd/mm/yyyy',
+                minDate: 0,
                 isRTL: true,
                 commandsAsDateFormat: true,
                 prevText: '< M',
@@ -102,52 +114,100 @@ $(document).ready(function () {
                 localNumbers: true
             }).noWeekends;
 
+            //Initialize the start/end date values
+            function customRange(dates) {
+                var difff = diffDays(vacationEnd, vacationStart);
+                vacationStart.calendarsPicker('option', 'minDate', 1 || null);
+
+                if (this.id == 'vacationStart') {
+                    vacationEnd.calendarsPicker('option', 'minDate', dates[0] || null);
+                    vacationEnd.val('');
+                    vacationDuration.val('');
+                } else {
+                    
+                    if (difff < 5) {
+                        sweetAlert({
+                            title: "عدد الايام أقل من 5 أيام!",
+                            text: "في الاجازة العادية يجب أن تكون مدة الاجازة على الأقل 5 أيام!",
+                            type: "error",
+                            confirmButtonText: "موافق!"
+                        });
+
+                        vacationEnd.val('');
+                        vacationDuration.val('عدد الايام أقل من 5 أيام');
+                    } else {
+                        vacationDuration.val(difff + ' أيام');
+                        repDuration.text(difff + ' أيام');
+                        vacationStart.calendarsPicker('option', 'maxDate', dates[0] || null);
+                    }
+
+
+
+                }
+
+            }
+
+
         }
 
         //the second type اجازة اضطرارية
-        if (vacationType.val() == 2) {}
+        if (vacationType.val() == 2) {
+            vacationStart.prop('disabled', false);
+            vacationEnd.prop('disabled', false);
 
+            vacationStart.val('');
+            
+            vacationEnd.val('');
+            vacationDuration.val('');
+            
+            $('#vacationStart,#vacationEnd').calendarsPicker({
+                onSelect: customRange,
+                onClose: function() {
+                    repStartDate.text(vacationStart.val());
+                    repEndDate.text(vacationEnd.val());
+                },
+                calendar: $.calendars.instance('ummalqura'),
+                formatDate: 'dd/mm/yyyy',
+                minDate: 1,
+                maxDate: +365,
+                isRTL: true,
+                commandsAsDateFormat: true,
+                prevText: '< M',
+                todayText: 'M y',
+                nextText: 'M >',
+                localNumbers: true
+            }).noWeekends;
+            //Initialize the start/end date values
+            function customRange(dates) {
+                var difff = diffDays(vacationEnd, vacationStart);
+                vacationStart.calendarsPicker('option', 'minDate', 1 || null);
+                if (this.id == 'vacationStart') {
+                    vacationEnd.calendarsPicker('option', 'minDate', dates[0] || null);
+                    vacationEnd.val('');
+                    vacationDuration.val('');
+                } else {
+                    if (difff > 5) {
+                        sweetAlert({
+                            title: "عدد الايام أكثر من 5 أيام!",
+                            text: "في الاجازة الإضطرارية لا يجب أن تتجاوز مدة الاجازة 5 أيام!",
+                            type: "error",
+                            confirmButtonText: "موافق!"
+                        });
+                        vacationEnd.val('');
+                        vacationDuration.val('عدد الايام أكثر من 5 أيام');
+                    } else {
+                        vacationDuration.val(difff + ' أيام');
+                        repDuration.text(difff + ' أيام');
+                        vacationStart.calendarsPicker('option', 'maxDate', dates[0] || null);
+                    }
+                }
+            }
+        }
         //if there is no selection
         if (vacationType.val() == 0) {
             vacationStart.prop('disabled', true);
             vacationEnd.prop('disabled', true);
-            initValD = 0;
-            minVal = 0;
-            maxVal = 0;
         }
-
-
-
-        //Initialize the start/end date values
-        function customRange(dates) {
-            var difff = diffDays(vacationEnd, vacationStart);
-            vacationStart.calendarsPicker('option', 'minDate', 1 || null);
-            
-            if (this.id == 'vacationStart') {
-                vacationEnd.calendarsPicker('option', 'minDate', dates[0] || null);
-                vacationEnd.val('');
-                vacationDuration.val('');
-
-//                var calendar = $.calendars.instance('ummalqura'); 
-//                var date = calendar.parseDate('dd/mm/yyyy', $('#vacationStart').val()); 
-                var amount = 5; 
-                var period = 'd'; 
-                var date = vacationStart.add(amount, period); 
-                console.log(date.val()); 
-                
-            } else {
-                vacationStart.calendarsPicker('option', 'maxDate', dates[0] || null);
-                vacationDuration.val(difff);
-            }
-
-        }
-
-        /*
-         **
-         **
-         **
-         **
-         **/
 
         function diffDays(end, start) {
             var date1 = new Date(start.val());
@@ -156,15 +216,10 @@ $(document).ready(function () {
             var timeDiff = Math.abs(date2.getTime() - date1.getTime());
             var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1;
 
-            console.log(date1);
-            console.log(date2);
-            console.log(timeDiff);
-            console.log(diffDays);
-
             return diffDays;
         }
 
-        repStartDate.text(vacationStart.val());
+        repType.text(vacationType.find(":selected").text());
 
 
 

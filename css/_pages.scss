@@ -1818,3 +1818,41 @@ $stats-color: lighten($action-color, 10%);
         }
     }
 }
+
+//vacationAdmin
+.vacationAdmin {
+    .hr-line-dashed {
+        margin: 0;
+    }
+    &__header{
+        > div {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            font-weight: bold;
+        }
+    }
+    &__line{
+        transition: background-color .1s ease-in-out;
+        > div {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            transition: .2s ease-in-out;
+            .btn {
+                &:nth-child(1) { 
+                    margin-left: 5px;
+                }
+            }
+        }
+        &:hover {
+            background-color: $lazur;
+            color: #fff; 
+            > div {
+                &:nth-child(1) {
+                    border-right: 7px solid $blue;
+                }
+            }
+        }
+    }
+}

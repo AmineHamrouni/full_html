@@ -65,6 +65,10 @@
     <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
 
     <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
+    
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
 
     <link href="js/plugins/calendars/jquery.calendars.picker.css" rel="stylesheet">
     <!--    <link href="http://keith-wood.name/css/jquery.calendars.picker.css" rel="stylesheet">-->
@@ -220,36 +224,6 @@
                                     </p>
 
                                     <div id="vacationSteps" role="form" data-toggle="validator">
-<!--
-                                        <h1>إختر رصيد الإجازات</h1>
-                                        <div class="fieldset">
-                                            <h4>إختر رصيد الإجازات الذي تريد أن يسحب منه رصيد الإجازة الجديدة</h4>
-                                            <div class="hr-line-dashed"></div>
-                                            <div class="row">
-                                                <div class="col-sm-8">
-                                                    <div class="form-group">
-                                                        <div class="col-sm-12">
-                                                            <div class="i-checks">
-                                                                <label class="i-checks__label i-checks__label--active">
-                                                                    <input class="i-checks__radio" type="radio" value="option1" name="a" checked><i></i>
-                                                                    <span class="i-checks__label__name">الرصيد الجديد</span>
-                                                                    <span class="i-checks__label__credit">45</span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="i-checks">
-                                                                <label class="i-checks__label">
-                                                                    <input class="i-checks__radio" type="radio" value="option1" name="a"><i></i>
-                                                                    <span class="i-checks__label__name">الرصيد القديم</span>
-                                                                    <span class="i-checks__label__credit">120</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
--->
 
                                         <h1>تفاصيل</h1>
                                         <div class="fieldset">
@@ -273,7 +247,7 @@
                                                             </div>
                                                         </div>
                                                     </div>                                                    
-                                                   <div class="hr-line-dashed m-sm"></div>
+                                                   <div class="hr-line-dashed"></div>
                                                     <div class="form-group">
                                                         <label class="col-sm-4">نوع الإجازة</label>
                                                         <div class="col-sm-8">
@@ -283,7 +257,6 @@
                                                                 <option value="2">إجازة إضطرارية</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-sm-8 help-block with-errors"></div>
                                                     </div>
                                                     <div class="hr-line-dashed"></div>
                                                     <div class="form-group" id="">
@@ -291,8 +264,7 @@
                                                         <div class="col-sm-8">
                                                             <div class="input-group date">
                                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                                                <input type="text" id="vacationStart" name="vacationStart" class="form-control" placeholder="إختر فترة الإجازة" required disabled>
-                                                                <div class="help-block with-errors"></div>
+                                                                <input type="text" id="vacationStart" name="vacationStart" class="form-control required" placeholder="إختر فترة الإجازة" required disabled>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -302,7 +274,7 @@
                                                         <div class="col-sm-8">
                                                             <div class="input-group date">
                                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                                                <input type="text" id="vacationEnd" name="vacationEnd" class="form-control" placeholder="إختر بداية الإجازة" disabled>
+                                                                <input type="text" id="vacationEnd" name="vacationEnd required" class="form-control" placeholder="إختر بداية الإجازة" disabled>
                                                             </div>
                                                         </div>
                                                         <div class="help-block with-errors"></div>
@@ -792,7 +764,6 @@
     <!-- Switchery -->
     <script src="js/plugins/switchery/switchery.js"></script>
 
-
     <!-- Select2 -->
     <script src="js/plugins/select2/select2.full.min.js"></script>
 
@@ -817,6 +788,9 @@
 
     <!-- Bootstrap Validator -->
     <script src="js/plugins/bootstrap-validator/validator.min.js"></script>
+    
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
 
     <!-- Morris -->
     <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
@@ -824,8 +798,10 @@
 
     <script src="js/plugins/calendars/jquery.plugin.js"></script>
     <!--    <script src="http://keith-wood.name/js/jquery.datepick-ar.js"></script>-->
+<!--
     <script src="http://keith-wood.name/js/jquery.plugin.js"></script>
     <script src="http://keith-wood.name/js/jquery.datepick.js"></script>
+-->
     <script src="js/plugins/calendars/jquery.calendars.js"></script>
     <script src="js/plugins/calendars/jquery.calendars.plus.js"></script>
     <script src="js/plugins/calendars/jquery.calendars.picker.js"></script>

@@ -164,6 +164,9 @@ $box-style_dark: #009688;
         .btn {
             margin: 0;
             margin-left: 5px;
+            &:visited {
+                color: #fff;
+            }
         }
     }
     &__title {
@@ -408,4 +411,12 @@ textarea {
 //Table
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
     vertical-align: middle;
+}
+
+//Sweet Alert
+.sweet-alert {
+    font-family: 'Droid Arabic Kufi', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    p {
+        font-size: 12px;
+    }
 }

@@ -242,237 +242,298 @@
                             </ul>
 
                             <div class="row">
-                                <div class="col-sm-8">
+                                <div class="col-sm-12">
                                     <div class="tab-content">
                                         <div id="tab-1" class="tab-pane fade in active">
                                             <div class="panel-body">
-                                                <div class="row">
-                                                    <div class="col-sm-12">
+                                                <div class="ibox float-e-margins">
+                                                    <div class="ibox__title">
                                                         <h5>تفاصيل شخصية</h5>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">الإسم كامل</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
+                                                    <div id="statsPerso" class="ibox__content">
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">الإسم كامل</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control editable input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">تاريخ الميلاد</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control editable input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">تاريخ الميلاد</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
+                                                        <div class="hr-line-dashed"></div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">العنوان</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control editable input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">العمر</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="hr-line-dashed"></div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">العنوان</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
+                                                        <div class="hr-line-dashed"></div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">رقم الهاتف</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control editable input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">العمر</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="hr-line-dashed"></div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">رقم الهاتف</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">الإدارة</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">الإدارة</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="panel-footer">
-                                                <button id="edit" class="btn btn-default">تعديل</button>
-                                            </div>
-
                                         </div>
                                         <div id="tab-2" class="tab-pane fade">
                                             <div class="panel-body">
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">السجل المدني</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
-                                                            </div>
-                                                        </div>
+                                                <div class="ibox float-e-margins">
+                                                    <div class="ibox__title">
+                                                        <h5>معلومات مهنية</h5>
                                                     </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">تاريخ التعيين في الإمارة</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
+                                                    <div class="ibox__content">
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">السجل المدني</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">تاريخ التعيين في الإمارة</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="hr-line-dashed"></div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">تاريخ التعيين في الدولة</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
+                                                        <div class="hr-line-dashed"></div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">تاريخ التعيين في الدولة</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">تاريخ التقاعد</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">تاريخ التقاعد</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
+                                                        <div class="hr-line-dashed"></div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">مسمى الوظيفة</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">الوظيفة المكلف بها</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="hr-line-dashed"></div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">مسمى الوظيفة</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
+                                                        <div class="hr-line-dashed"></div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">المرتبة</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label class="control-label">تاريخ التعيين بالمرتبة</label>
+                                                                    <div class="">
+                                                                        <input type="text" disabled="" placeholder="Disabled input here..." class="form-control input-lg" value="1234567890">
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">الوظيفة المكلف بها</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="hr-line-dashed"></div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">المرتبة</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label class="control-label">تاريخ التعيين بالمرتبة</label>
-                                                            <div class="">
-                                                                <input type="text" disabled="" placeholder="Disabled input here..." class="form-control" value="1234567890">
-                                                            </div>
-                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div id="tab-3" class="tab-pane fade">
                                             <div class="panel-body">
-                                                <table class="table table-bordered table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>#</th>
-                                                            <th>تاريخ الطلب</th>
-                                                            <th>المدة</th>
-                                                            <th>الرصيد</th>
-                                                            <th>المعوض</th>
-                                                            <th>المدير المباشر</th>
-                                                            <th class="">الحالة</th>
-                                                            <th class="no-print">--</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td>12/10/2015</td>
-                                                            <td>20 يوم</td>
-                                                            <td>القديم</td>
-                                                            <td>محمد عبد الله</td>
-                                                            <td>أحمد عبد الله</td>
-                                                            <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
-                                                            <td class="no-print">
-                                                                <button class="btn btn-xs btn-default" type="button">تعديل</button>
-                                                                <button class="btn btn-xs btn-default" type="button">تعديل</button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2</td>
-                                                            <td>12/10/2015</td>
-                                                            <td>20 يوم</td>
-                                                            <td>القديم</td>
-                                                            <td>محمد عبد الله</td>
-                                                            <td>أحمد عبد الله</td>
-                                                            <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
-                                                            <td class="no-print">
-                                                                <button class="btn btn-xs btn-default" type="button">تعديل</button>
-                                                                <button class="btn btn-xs btn-default" type="button">تعديل</button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3</td>
-                                                            <td>12/10/2015</td>
-                                                            <td>20 يوم</td>
-                                                            <td>القديم</td>
-                                                            <td>محمد عبد الله</td>
-                                                            <td>أحمد عبد الله</td>
-                                                            <td class="text-danger"> <i class="fa fa-level-down"></i> رفض </td>
-                                                            <td class="no-print">
-                                                                <button class="btn btn-xs btn-default" type="button">تعديل</button>
-                                                                <button class="btn btn-xs btn-default" type="button">تعديل</button>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                                <div class="ibox float-e-margins">
+                                                    <div class="ibox__title">
+                                                        <h5>الإجازات</h5>
+                                                    </div>
+                                                    <div class="ibox__content">
+
+                                                        <table class="table table-bordered table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>#</th>
+                                                                    <th>تاريخ الطلب</th>
+                                                                    <th>المدة</th>
+                                                                    <th>الرصيد</th>
+                                                                    <th>المعوض</th>
+                                                                    <th>المدير المباشر</th>
+                                                                    <th class="">الحالة</th>
+                                                                    <th class="no-print">--</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>12/10/2015</td>
+                                                                    <td>20 يوم</td>
+                                                                    <td>القديم</td>
+                                                                    <td>محمد عبد الله</td>
+                                                                    <td>أحمد عبد الله</td>
+                                                                    <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
+                                                                    <td class="no-print">
+                                                                        <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                        <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2</td>
+                                                                    <td>12/10/2015</td>
+                                                                    <td>20 يوم</td>
+                                                                    <td>القديم</td>
+                                                                    <td>محمد عبد الله</td>
+                                                                    <td>أحمد عبد الله</td>
+                                                                    <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
+                                                                    <td class="no-print">
+                                                                        <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                        <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3</td>
+                                                                    <td>12/10/2015</td>
+                                                                    <td>20 يوم</td>
+                                                                    <td>القديم</td>
+                                                                    <td>محمد عبد الله</td>
+                                                                    <td>أحمد عبد الله</td>
+                                                                    <td class="text-danger"> <i class="fa fa-level-down"></i> رفض </td>
+                                                                    <td class="no-print">
+                                                                        <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                        <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="ibox float-e-margins">
+                                                    <div class="ibox__title">
+                                                        <h5>طلبات</h5>
+                                                    </div>
+                                                    <div class="ibox__content">
+
+                                                        <table class="table table-bordered table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>#</th>
+                                                                    <th>تاريخ الطلب</th>
+                                                                    <th>المدة</th>
+                                                                    <th>الرصيد</th>
+                                                                    <th>المعوض</th>
+                                                                    <th>المدير المباشر</th>
+                                                                    <th class="">الحالة</th>
+                                                                    <th class="no-print">--</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>12/10/2015</td>
+                                                                    <td>20 يوم</td>
+                                                                    <td>القديم</td>
+                                                                    <td>محمد عبد الله</td>
+                                                                    <td>أحمد عبد الله</td>
+                                                                    <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
+                                                                    <td class="no-print">
+                                                                        <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                        <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2</td>
+                                                                    <td>12/10/2015</td>
+                                                                    <td>20 يوم</td>
+                                                                    <td>القديم</td>
+                                                                    <td>محمد عبد الله</td>
+                                                                    <td>أحمد عبد الله</td>
+                                                                    <td class="text-navy"> <i class="fa fa-level-up"></i> قبول </td>
+                                                                    <td class="no-print">
+                                                                        <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                        <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3</td>
+                                                                    <td>12/10/2015</td>
+                                                                    <td>20 يوم</td>
+                                                                    <td>القديم</td>
+                                                                    <td>محمد عبد الله</td>
+                                                                    <td>أحمد عبد الله</td>
+                                                                    <td class="text-danger"> <i class="fa fa-level-down"></i> رفض </td>
+                                                                    <td class="no-print">
+                                                                        <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                        <button class="btn btn-xs btn-default" type="button">تعديل</button>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="ibox float-e-margins">
-                                        <div class="ibox__title">
-                                            <h5>Basic IN+ Panel</h5>
-                                        </div>
-                                        <div class="ibox__content">
-                                            <h2>
-                                                                                    This is standard IN+ Panel<br>
-                                                                                </h2>
-                                            <p>
-                                                <strong>Lorem ipsum dolor</strong> Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
-                                            <p>
-                                                <small>
-                                                                                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                                                                                    </small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -608,7 +669,9 @@
     <script src="js/plugins/calendars/jquery.calendars.plus.js"></script>
     <script src="js/plugins/calendars/jquery.calendars.picker.js"></script>
     <script src="js/plugins/calendars/jquery.calendars.ummalqura.js"></script>
-    <!--    <script src="http://keith-wood.name/js/jquery.datepick-ar.js"></script>-->
+    
+    
+    <script src="js/pages/profile.js"></script>
 
     <script>
         $(document).ready(function () {
