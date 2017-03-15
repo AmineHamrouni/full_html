@@ -1,0 +1,14 @@
+Fonts used in this design;
+
+Font: Bentham, 
+Author: Reading Type, 
+Url: http://www.fontsquirrel.com/fonts/bentham; 
+
+Font: Cambo, 
+Author: Huerta Tipográfica, 
+Url: http://www.fontsquirrel.com/fonts/cambo; 
+
+Font: Great Vibes, 
+Author: TypeSETit, 
+Url: http://www.fontsquirrel.com/fonts/great-vibes; 
+

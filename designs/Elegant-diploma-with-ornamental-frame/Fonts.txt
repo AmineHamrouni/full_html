@@ -1,0 +1,14 @@
+Fonts used in this design;
+
+Font: Alex Brush, 
+Author: TypeSETit, 
+Url: http://www.fontsquirrel.com/fonts/alex-brush; 
+
+Font: Lato, 
+Author: tyPoland Lukasz Dziedzic, 
+Url: http://www.fontsquirrel.com/fonts/lato; 
+
+Font: Libre Baskerville, 
+Author: Impallari Type, 
+Url: http://www.fontsquirrel.com/fonts/libre-baskerville; 
+
