@@ -415,8 +415,51 @@ textarea {
 
 //Sweet Alert
 .sweet-alert {
-    font-family: 'Droid Arabic Kufi', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Droid Arabic Kufi', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     p {
         font-size: 12px;
+//        font-family: 'Droid Arabic Kufi', "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
+    h2 {
+//        font-family: 'Droid Arabic Kufi', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+}
+
+//Tabs
+.nav-tabs {
+    &.style {
+        border-bottom: none;
+        > li {
+            margin-left: 1em;
+            > a {
+                margin-left: auto;
+                margin-right: 0;
+                border-radius: 40px;
+                &:hover, &:focus {
+                    background-color: #f6f6f6;
+                }
+            }
+            &.active {
+                > a {
+                    background-color: $blue;
+                    border-color: #DDDDDD;
+                    border-bottom: #DDDDDD;
+                    border-image: none;
+                    border-style: solid;
+                    border-width: 1px;
+                    color: #fff;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+
+//Custom Css for Login Page / SharePoint
+table[id$='loginControl'] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }

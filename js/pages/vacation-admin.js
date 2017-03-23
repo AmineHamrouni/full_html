@@ -1,19 +1,19 @@
 $(document).ready(function () {
-    //Select2 init
-    $(".select2").select2({
-        dir: "rtl"
-    });
 
     var line = $('.vacationAdmin__line');
 
     line.hover(function () {
+//        $(this).siblings('.vacationAdmin__line').find('.btn').hide();
         $(this).siblings('.vacationAdmin__line').css({
-            "opacity": ".5"
+            "opacity": ".5",
         });
+        
     }, function () {
+//        $(this).siblings('.vacationAdmin__line').find('.btn').show();
         $(this).siblings('.vacationAdmin__line').css({
-            "opacity": "1"
+            "opacity": "1",
         });
+        
     });
 
     var refuse = $('.refuse');

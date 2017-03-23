@@ -997,7 +997,7 @@ dd.project-people {
 }
 
 .article .ibox__content {
-    padding: 40px;
+    //padding: 40px;
 }
 
 
@@ -1641,7 +1641,7 @@ body.body-small .vote-icon {
         top: 0;
         right: 0;
         left: 0;
-        bottom: 0;
+        //bottom: 0;
         z-index: 0;
         background-image: linear-gradient(to right, #258dc8 0%, #1ab394 100%);
     }
@@ -1852,6 +1852,76 @@ $stats-color: lighten($action-color, 10%);
                 &:nth-child(1) {
                     border-right: 7px solid $blue;
                 }
+            }
+        }
+    }
+}
+
+//Attend Leave
+.ALMonth {
+    &__item {
+        &__title {
+            background-color: $lazur;
+            color: #fff;
+//            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            height: 30px;
+            font-weight: bold;
+            padding-right: 15px;
+        }
+        &__content {
+            display: flex;
+            transition: .2s ease-in-out;
+            &:nth-child(even) {
+                background-color: #f4f4f4;
+            }
+            .ALMonth__col {
+                font-size: 12px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:nth-child(1) {
+                    flex: 1;
+                    max-width: 25px;
+                }
+                &:nth-child(2) {
+                    flex: 1;
+                }
+                &:nth-child(3) {
+                    flex: 1;
+                }
+                &:nth-child(4) {
+                    flex: 1;
+                }
+                &:nth-child(5) {
+                    flex: 1;
+                }
+                &:nth-child(6) {
+                    flex: 1;
+                }
+                &:nth-child(7) {
+                    flex: 1;
+                }
+                &:nth-child(8) {
+                    flex: 1;
+                }
+            }
+            &:hover {
+                background-color: #f2f2f2;
+            }
+        }
+    }
+    &__thead {
+        .ALMonth__item__content {
+            display: flex;
+            background-color: $navy;
+            background-color: #258dc8;
+            color: #fff;
+            font-weight: bold;
+            .ALMonth__col {
+                height: 40px;
             }
         }
     }

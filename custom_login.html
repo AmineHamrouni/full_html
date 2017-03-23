@@ -14,13 +14,14 @@
 
     <!-- Toastr style -->
     <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
 </head>
 
-<body class="jaz rtls fixed-sidebar fixed-nav fixed-nav-basic">
+<body class="rtls">
 
     <div class="login-page">
 
@@ -32,7 +33,7 @@
                         <img src="img/logo.png" alt="">
 
                     </div>
-                    
+
                     <h3>مرحبا بكم في البوابة الداخلية إمارة منطقة جازان</h3>
                     <!-- Start Block -->
                     <div class="m-t">
@@ -50,6 +51,7 @@
                     </div>
                     <!-- End Block -->
                     <p class="m-t"> <small>ادارة تقنية المعلومات -  إمارة منطقة جازان &copy; 2017</small> </p>
+                    <div id="error-label" style="display: none;">fefe</div>
                 </div>
             </div>
         </div>
@@ -66,17 +68,10 @@
     <!-- Mainly scripts -->
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <!-- d3 and c3 charts -->
-    <script src="js/plugins/d3/d3.min.js"></script>
-    <script src="js/plugins/c3/c3.min.js"></script>
 
 
     <!-- Custom and plugin javascript -->
-    <script src="js/inspinia.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
 
     <!-- Toastr -->
     <script src="js/plugins/toastr/toastr.min.js"></script>
@@ -86,6 +81,17 @@
 
     <script>
         $(document).ready(function () {
+
+            //            var errorLabel = document.getElementById('error-label');
+            //            
+            //            if ( errorLabel.length > 0 ) {
+            //                alert('error');
+            //            }
+
+//            swal({title: "حدث خطأ!",text: "حدث خطأ.",type: "error",showConfirmButton: true,confirmButtonText: "رجوع!"})
+
+
+
             /* ---- particles.js config ---- */
 
             particlesJS("particles-js", {
