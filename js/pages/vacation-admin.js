@@ -1,13 +1,18 @@
 $(document).ready(function () {
 
-    var line = $('.vacationAdmin__line');
+    var line = $('.vacationAdmin__line'),
+        refuseMsg = $('.refuse__msg').hide(),
+        refuse = $('.refuse'),
+        confirmRefuse = $('.confirmRefuse'),
+        closeConfirmRefuse = $('.closeConfirmRefuse'),
+        accept = $('.accept');
 
     line.hover(function () {
 //        $(this).siblings('.vacationAdmin__line').find('.btn').hide();
         $(this).siblings('.vacationAdmin__line').css({
             "opacity": ".5",
         });
-        
+                
     }, function () {
 //        $(this).siblings('.vacationAdmin__line').find('.btn').show();
         $(this).siblings('.vacationAdmin__line').css({
@@ -16,45 +21,20 @@ $(document).ready(function () {
         
     });
 
-    var refuse = $('.refuse');
-    var accept = $('.accept');
     refuse.click(function () {
-        sweetAlert({
-                title: "هل أنت متأكد من رفض الإجراء?",
-                text: "<div class='text-right col-sm-4'><span>أضف سبب الرفض</span></div><div class='text-right col-sm-8'><select class='select2 form-control' style='width: 100%'><option value='1'>سبب أول</option><option value='2'>سبب ثاني</option><option value='3'>سبب ثالث</option><option value='4'>سبب رابع</option></select></div>",
-                html: true,
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "تأكيد!",
-                cancelButtonText: "إلغاء",
-                closeOnConfirm: false,
-                closeOnCancel: false
-            },
-            function (isConfirm) {
-                $(".select2").select2({
-                    dir: "rtl"
-                });
-                if (isConfirm) {
-                    swal({
-                        title: "تم رفض الإجازة",
-                        text: "تم الرفض!",
-                        type: "success",
-                        confirmButtonText: "رجوع"
-                    });
-                } else {
-                    swal({
-                        title: "تم إلغاء الإجراء",
-                        text: "تم الإلغاء!",
-                        type: "success",
-                        confirmButtonText: "رجوع"
-                    });
-
-                }
+        $(this).parents('.vacationAdmin__line').children('.refuse__msg').fadeToggle("slow", "linear");
+        confirmRefuse.click(function () {
+            swal({
+                title: "تم رفض الإجازة",
+                text: "تم الرفض!",
+                type: "success",
+                confirmButtonText: "رجوع"
             });
+        });
     });
-
+    
     accept.click(function () {
+        refuseMsg.fadeOut(200);
         swal("تم القبول", "تم قبول الإجازة!", "success");
         swal({
             title: "تم قبول الإجازة",
@@ -64,4 +44,9 @@ $(document).ready(function () {
             confirmButtonColor: "#1ab394!"
         });
     });
+    
+    closeConfirmRefuse.click(function () {
+        refuseMsg.fadeOut(200);
+    });
+    
 });

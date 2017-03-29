@@ -509,3 +509,11 @@ button.dim:active:before {
 .btn:focus {
     outline: none !important;
 }
+
+.input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group {
+    padding: 9px 12px;
+}
+
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+    padding: 9px 12px;
+}

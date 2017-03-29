@@ -413,6 +413,11 @@ textarea {
     vertical-align: middle;
 }
 
+//form-group
+.form-group {
+    transition: .2s ease-in-out;
+}
+
 //Sweet Alert
 .sweet-alert {
     font-family: 'Droid Arabic Kufi', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -462,4 +467,29 @@ table[id$='loginControl'] {
     bottom: 0;
     right: 0;
     left: 0;
+}
+
+//Fix Knob Bug
+.knob {
+    margin: 0 !important;
+    width: 57px !important;
+    height: 57px !important;
+    border-radius: 60px !important;
+    border: 5px solid #607D8B  !important;
+}
+
+.flexCenter {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+//Tour
+.tour {
+    min-width: 280px;
+    font-family: 'Droid Arabic Kufi', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    .popover-title {
+        font-size: 12px;
+    }
 }

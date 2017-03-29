@@ -1671,24 +1671,32 @@ $stats-color: lighten($action-color, 10%);
         flex-direction: row;
         min-height: 150px;
 //        border-left: 1px solid $profile-border;
-        padding: 0px 20px;
+        padding: 10px 20px;
         h3 {
             margin-bottom: 30px;
         }
         p {
             font-size: 10px;
         }
+        &__container {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
         &__img {
             @include size(128px);
-            border-radius: 50%;
+            //border-radius: 50%;
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            //box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+        &__title {
+            margin-right: 1em;
         }
         &__details {
-            margin-right: 2.5em;
+            margin-right: 1em;
         }
     }
     &__stats {
@@ -1816,6 +1824,9 @@ $stats-color: lighten($action-color, 10%);
             } 
 
         }
+        .hr-line-dashed {
+            margin: 5px;
+        }
     }
 }
 
@@ -1833,7 +1844,7 @@ $stats-color: lighten($action-color, 10%);
         }
     }
     &__line{
-        transition: background-color .1s ease-in-out;
+        transition: .2s ease-in-out;
         > div {
             display: flex;
             align-items: center;
@@ -1845,15 +1856,15 @@ $stats-color: lighten($action-color, 10%);
                 }
             }
         }
-        &:hover {
-            background-color: $lazur;
-            color: #fff; 
-            > div {
-                &:nth-child(1) {
-                    border-right: 7px solid $blue;
-                }
-            }
-        }
+//        &:hover {
+//            background-color: $lazur;
+//            color: #fff; 
+//            > div {
+//                &:nth-child(1) {
+//                    border-right: 7px solid $blue;
+//                }
+//            }
+//        }
     }
 }
 
@@ -1925,4 +1936,7 @@ $stats-color: lighten($action-color, 10%);
             }
         }
     }
+}
+.refuse__msg {
+    background-color: #f6f6f6;
 }

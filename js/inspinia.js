@@ -236,6 +236,11 @@ $(document).ready(function () {
             $(".footer").addClass('fixed');
         }
     }
+    
+    $('select').select2({
+        dir: "rtl"
+    });
+
 });
 
 // check if browser support HTML5 local storage

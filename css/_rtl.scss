@@ -30,7 +30,7 @@ body.rtls {
     }
     .minimalize-styl-2 {
         float: right;
-        margin: 14px 20px 5px 5px;
+        //margin: 14px 20px 5px 5px;
         &:nth-child(2) {
             margin-right: 0px;
         }
@@ -294,6 +294,9 @@ body.rtls {
         }
     }
 
+    .popover[class*=tour-] .popover-navigation [data-role=end] {
+        float: left;
+    }
 
 }
 
