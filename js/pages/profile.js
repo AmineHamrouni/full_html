@@ -49,5 +49,21 @@ $(document).ready(function () {
             }
         }
     });
+    
+    //Hover Form Group    
+    var line = $('.form-group');
+
+    line.hover(function () {
+//        $(this).siblings('.vacationAdmin__line').find('.btn').hide();
+        $(this).siblings('.form-group').css({
+            "opacity": ".5"
+        });
+        
+    }, function () {
+//        $(this).siblings('.vacationAdmin__line').find('.btn').show();
+        $(this).siblings('.form-group').css({
+            "opacity": "1"
+        });
+    });
 
 });
