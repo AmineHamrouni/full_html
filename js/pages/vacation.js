@@ -28,7 +28,17 @@ $(document).ready(function () {
                 elVacationStart.closest('.form-group').removeClass('has-error');
                 return true;
             }
-        },
+            var eltotalVacation = $('.totalVacation');
+
+            if (!eltotalVacation.val()) {
+                elVacationStart.closest('.form-group').addClass('has-error');
+                elVacationStart.siblings(".help-block").text('يجب إدخال تاريخ');
+                return false;
+            } else {
+                eltotalVacation.closest('.form-group').removeClass('has-error');
+                return true;
+            }
+        }
 
     });
     
@@ -115,7 +125,8 @@ $(document).ready(function () {
                 confirmButtonColor: "#DD6B55",
                 confirmButtonText: "رجوع!",
             });
-            elTotalVacation.val('إختر الرصيد بدقة');
+            elTotalVacation.val('');
+            elTotalVacation.attr('placeholder', 'إختر الرصيد بدقة');
             $('.knob').val(0).trigger('change');
         } else {
             countTotalVacation();
@@ -180,9 +191,9 @@ $(document).ready(function () {
         // 
     })
 
-    $('#example').barrating({
-        theme: 'bars-movie'
-      });
+//    $('#example').barrating({
+//        theme: 'bars-movie'
+//      });
     
     var line = $('.form-group');
 

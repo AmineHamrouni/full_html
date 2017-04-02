@@ -1656,7 +1656,41 @@ body.body-small .vote-icon {
     .ibox__content {
         padding: 0;
     }
-    &__perso {}
+    &__perso {
+      &__header {
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #ebebeb;
+        text-align: center;
+        padding-top: 10px;
+      }
+      &__body {
+        padding: 20px;
+        .control-label {
+          text-align: right;
+        }
+      }
+      &__img {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 150px;
+        overflow: hidden;
+        border: 10px solid #1ab394;
+      }
+      &__details {
+        padding: 10px;
+        text-align: center;
+        h2 {
+          color: #258dc8;
+          font-size: 12px;
+          font-weight: bold;
+        }
+        p {
+          color: #989898;
+          font-size: 10px;
+        }
+      }
+  }
     &__pro {
         &__header {
             display: flex;
@@ -1749,40 +1783,54 @@ body.body-small .vote-icon {
         }
         &__content {
             padding: 30px;
-            > h3 {
-                font-size: 11px;
-                color: rgb( 103, 106, 108 );
-                font-weight: bold;
-                line-height: 2.364;
-                display: flex;
-                &:before {
-                    content: '';
-                    background-color: #25c86e;
-                    height: 27px;
-                    width: 5px;
-                    display: inline-block;
-                    margin-left: 10px;
-                }
-            }
-            .form-group {
-                margin-bottom: 0;
-            }
-            .control-label {
-                font-size: 8px;
-                padding-right: 0;
-                padding-left: 0;
-                font-weight: normal;
-                color: #1f8fd6;
-//                text-align: right;
-            }
-            .form-control-static {
-                font-weight: bold;
-            }
-            .hr-line-dashed {
-                margin: 5px 0;
-            }
+        }
+      &__footer {
+        padding: 10px 30px 10px;
+        background-color: rgb(248, 247, 255);
+        p {
+          font-size: 9px;
+          color: #676a6c;
+          text-align: left;
+          margin: 0;
+          span {
+            color: #1f8fd6;
+          }
+        }
+      }
+    }
+      h3 {
+        font-size: 11px;
+        color: rgb( 103, 106, 108 );
+        font-weight: bold;
+        line-height: 2.364;
+        display: flex;
+        &:before {
+            content: '';
+            background-color: #25c86e;
+            height: 27px;
+            width: 5px;
+            display: inline-block;
+            margin-left: 10px;
         }
     }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+    .control-label {
+        font-size: 8px;
+        padding-right: 0;
+        padding-left: 0;
+        font-weight: normal;
+        color: #1f8fd6;
+    }
+    .form-control-static {
+        font-weight: bold;
+    }
+    .hr-line-dashed {
+        margin: 5px 0;
+    }
+
 }
 
 //vacationAdmin

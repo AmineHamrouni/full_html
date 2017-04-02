@@ -2,6 +2,7 @@ $(document).ready(function () {
     var statsPerso = $('#statsPerso');
     var allInputs = statsPerso.find('.editable');
     var editBtn = $('#editBtn');
+    var minimalize = $('.navbar-minimalize');
     var saveBtn = $('#saveBtn').hide();
 
     editBtn.click(function () {
@@ -18,6 +19,10 @@ $(document).ready(function () {
 
     // Minimalize menu
     $('.navbar-minimalize').click();
+
+    minimalize.click(function () {
+      $('.myProfile__perso__img').fadeToggle();
+    });
 
     var chart = c3.generate({
         bindto: '#chart',
@@ -54,12 +59,12 @@ $(document).ready(function () {
     var line = $('.form-group');
 
     line.hover(function () {
-//        $(this).siblings('.vacationAdmin__line').find('.btn').hide();
         $(this).siblings('.form-group').css({
             "opacity": ".5"
         });
         
-    }, function () {
+    }, 
+               function () {
 //        $(this).siblings('.vacationAdmin__line').find('.btn').show();
         $(this).siblings('.form-group').css({
             "opacity": "1"
