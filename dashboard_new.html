@@ -39,7 +39,8 @@
   <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
   <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
   <link href="js/plugins/calendars/jquery.calendars.picker.css" rel="stylesheet">
-  <!--    <link href="http://keith-wood.name/css/jquery.calendars.picker.css" rel="stylesheet">-->
+    <!-- c3 Charts -->
+    <link href="css/plugins/c3/c3.min.css" rel="stylesheet">
   <link href="css/animate.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet"> </head>
 
@@ -120,234 +121,37 @@
           <h2>مرحبا بك في لوحة التحكم الخاصة بك</h2> </div>
         <div class="header-style__particles" id="particles-js"></div>
       </div>
-      <div class="page-wrapper__inner">
-        <div class="myProfile">
-          <div class="row">
-            <div class="col-sm-9">
-              <div class="ibox myProfile__pro">
-                <div class="ibox__content">
-                  <div class="myProfile__pro__header">
-                    <div class="myProfile__pro__today">
-                      <div class="myProfile__pro__today__icon"> <i class="fa fa-calendar"></i> </div>
-                      <div class="myProfile__pro__today__content"> <span>02</span> <span>رجب</span> <span>1438</span> </div>
-                    </div>
-                    <div class="myProfile__pro__todayStats">
-<!--
-                      <div>
-                          <a href="" class="btn btn-primary btn-rounded">مداوم</a></div>
--->
-                      <div>
-                        <div class="btn btn-primary btn-block btn-rounded" data-toggle="popover" data-placement="auto bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> مداوم</div>
-                        <p>منذ ساعة</p>
-                      </div>
-                      <div> <a href="" class="btn btn-danger btn-block btn-rounded">41 دق</a>
-                        <p>عدد دقائق التأخير</p>
-                      </div>
-                    </div>
-                    <div class="myProfile__pro__vacation">
-                      <div>
-                        <h5>رصيد الإجازات</h5> <a class="btn btn-block btn-primary btn-rounded" href="">تقديم إجازة</a> </div>
-                      <div> <a class="stats">121</a>
-                        <p>رصيد قديم</p>
-                      </div>
-                      <div> <a class="stats">21</a>
-                        <p>رصيد جديد</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="myProfile__pro__content">
-                    <h3>معلومات مهنية</h3>
-                    <div class="row">
-                      <div class="col-xs-12">
-                        <div class="form-horizontal">
-                          <div class="form-group">
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">السجل المدني</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">مسمى الوظيفة</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">الوظيفة المكلف بها</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="hr-line-dashed"></div>
-                          <div class="form-group">
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">تاريخ التعيين في الدولة</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">تاريخ التعيين في الإمارة</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">تاريخ التعيين بالمرتبة</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="hr-line-dashed"></div>
-                          <div class="form-group">
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">تاريخ التقاعد</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">المرتبة</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="hr-line-dashed"></div>
-                          <div class="form-group">
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">السجل المدني</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">مسمى الوظيفة</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">الإدارة</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="hr-line-dashed"></div>
-                          <div class="form-group">
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">السجل المدني</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">مسمى الوظيفة</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <label class="col-sm-5 control-label">الإدارة</label>
-                              <div class="col-sm-7">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="hr-line-dashed"></div>
+        <div class="page-wrapper__inner">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="ibox">
+                        <div class="ibox__content">
+                           <div>
+                            <div class="btn btn-primary">مداوم</div>
+                           </div>
+                            <div class="hr-line-dashed"></div>
+                           <div>
+                            <div class="btn btn-danger">45 دق تأخير</div>
+                           </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="myProfile__pro__footer">
-                    <p>اذا يوجد أخطاء في المعلومات المدخلة يرجى الإتصال <span>بإدارة شؤون الموظفين</span></p>
-                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="ibox myProfile__perso">
-                <div class="ibox__content">
-                  <div class="myProfile__perso__header">
-                    <div class="myProfile__perso__img"> <img alt="image" class="" src="img/doc.jpg"> </div>
-                    <div class="myProfile__perso__details">
-                      <h2>د. سعد المقرن بن مقرن</h2>
-                      <p> <span>وكيل إمارة منطقة جازان</span> </p>
-                    </div>
-                  </div>
-                  <div class="myProfile__perso__body">
-                    <h3>معلومات شخصية</h3>
-                    <div class="row">
-                      <div class="col-xs-12">
-                        <div class="form-horizontal">
-                          <div class="form-group">
-                            <div class="col-sm-12">
-                              <label class="col-sm-4 control-label">الإسم الكامل</label>
-                              <div class="col-sm-8">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="hr-line-dashed"></div>
-                          <div class="form-group">
-                            <div class="col-sm-12">
-                              <label class="col-sm-4 control-label">تاريخ الميلاد</label>
-                              <div class="col-sm-8">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="hr-line-dashed"></div>
-                          <div class="form-group">
-                            <div class="col-sm-12">
-                              <label class="col-sm-4 control-label">العمر</label>
-                              <div class="col-sm-8">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="hr-line-dashed"></div>
-                          <div class="form-group">
-                            <div class="col-sm-12">
-                              <label class="col-sm-4 control-label">العنوان</label>
-                              <div class="col-sm-8">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="hr-line-dashed"></div>
-                          <div class="form-group">
-                            <div class="col-sm-12">
-                              <label class="col-sm-4 control-label">رقم الهاتف</label>
-                              <div class="col-sm-8">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="hr-line-dashed"></div>
-                          <div class="form-group">
-                            <div class="col-sm-12">
-                              <label class="col-sm-4 control-label">المستوى التعليمي</label>
-                              <div class="col-sm-8">
-                                <p class="form-control-static">email@example.com</p>
-                              </div>
-                            </div>
-                          </div>
+                <div class="col-sm-4">
+                    <div class="ibox">
+                        <div class="ibox__content">
+                            <h5 class="m-b-md">Server status Q12</h5>
+                            <h2 class="text-navy">
+                                <i class="fa fa-play fa-rotate-270"></i> Up
+                            </h2>
+                            <small>Last down 42 days ago</small>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+                <div class="col-sm-3">
+                </div>
             </div>
-          </div>
         </div>
       </div>
-    </div>
   </div>
   <!-- Mainly scripts -->
   <script src="js/jquery-2.1.1.js"></script>
@@ -424,6 +228,9 @@
   <script src="js/plugins/slick/slick.min.js"></script>
   <!-- Steps -->
   <script src="js/plugins/staps/jquery.steps.min.js"></script>
+  <!-- d3 and c3 charts -->
+  <script src="js/plugins/d3/d3.min.js"></script>
+  <script src="js/plugins/c3/c3.min.js"></script>
   <!-- Jquery Validate -->
   <script src="js/plugins/validate/jquery.validate.min.js"></script>
   <!-- Morris -->
@@ -435,7 +242,7 @@
   <script src="js/plugins/calendars/jquery.calendars.plus.js"></script>
   <script src="js/plugins/calendars/jquery.calendars.picker.js"></script>
   <script src="js/plugins/calendars/jquery.calendars.ummalqura.js"></script>
-  <script src="js/pages/profile.js"></script>
+  <script src="js/pages/dashboard_new.js"></script>
   <script>
     $(document).ready(function () {
       /* ---- particles.js config ---- */
