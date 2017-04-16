@@ -29,7 +29,7 @@
     <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
 
     <link href="css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
-    
+
     <link href="css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
 
     <link href="css/plugins/cropper/cropper.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
     <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
 
     <link href="http://keith-wood.name/css/jquery.datepick.css" rel="stylesheet">
-    
+
     <link href="css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
 
     <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
@@ -67,10 +67,10 @@
     <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
 
     <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Tour -->
     <link href="css/plugins/bootstrapTour/bootstrap-tour.min.css" rel="stylesheet">
-    
+
     <!-- Sweet Alert -->
     <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 
@@ -131,8 +131,8 @@
                                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                     <div class="clear">
                                         <h2 class="block m-t-xs profile-element__name">
-                                              <strong class="font-bold">د. سعد المقرن بن مقرن</strong>
-                                       </h2>
+                                            <strong class="font-bold">د. سعد المقرن بن مقرن</strong>
+                                        </h2>
                                         <h4 class="block profile-element__title">وكيل إمارة منطقة جازان
                                             <!--<b class="caret"></b>-->
                                         </h4>
@@ -227,27 +227,26 @@
                                         تفضل بتعمير كافة البيانات المطلوبة لتقديم إجازة.
                                         <a href="#" class="btn btn-primary startTour"><i class="fa fa-play"></i> مساعدة</a>
                                     </p>
-                                    
 
-                                    <div id="vacationSteps" role="form" data-toggle="validator">
+
+                                    <div id="vacationSteps" role="form" data-toggle="validator" ng-app="">
                                         <h1>تفاصيل</h1>
                                         <div class="fieldset">
-<!--                                            <h4>تفاصيل الإجازة</h4>-->
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                    <div class="row form-group"  id="step1">
+                                                    <div class="row form-group" id="step1">
                                                         <label class="col-sm-3 control-label">
                                                             إختر نوع الإجازة
                                                         </label>
 
                                                         <div class="col-sm-4">
-                                                            <div class="i-checks"><label> <input id="normal" type="radio" value="0000" name="a"> <i></i> إجازة عادية </label></div>
+                                                            <div class="i-checks"><label> <input id="normal" type="radio" value="0000" name="RbTypeVac" ng-model="TypeVac"> <i></i> إجازة عادية </label></div>
                                                         </div>
                                                         <div class="col-sm-4">
-                                                            <div class="i-checks"><label> <input id="emergency" type="radio" value="1111" name="a"> <i></i> إجازة إضطرارية </label></div>
+                                                            <div class="i-checks"><label> <input id="emergency" type="radio" value="1111" name="RbTypeVac" ng-model="TypeVac"> <i></i> إجازة إضطرارية </label></div>
                                                         </div>
                                                     </div>
-                                            
+
                                                     <div class="hr-line-dashed"></div>
 
                                                     <div class="row form-group" id="step2">
@@ -255,12 +254,12 @@
                                                             بداية الإجازة
                                                         </label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" name="vacationStart" class="vacationStart form-control required" data-mask="99/99/9999"placeholder="إختر بداية الإجازة" disabled>
-                                                            
+                                                            <input type="text" name="vacationStart" class="vacationStart form-control required" data-mask="99/99/9999" placeholder="إختر بداية الإجازة" ng-model="vacationStart">
+
                                                             <span class="help-block m-b-none">بداية الإجازة ينطلق من يوم الغد.</span>
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <div class="hr-line-dashed"></div>
 
                                                     <div class="row form-group" id="step3">
@@ -268,17 +267,17 @@
                                                             إختر الرصيد
                                                         </label>
                                                         <div class="col-sm-4">
-                                                            <input type="text" value="0" class="oldCredit knob" data-fgColor="#1AB394" data-width="85" data-height="85" data-angleOffset=90 data-displayPrevious=true disabled/>
-                                                            <p>
-                                                            رصيد قديم
+                                                            <input type="text" value="0" class="oldCredit knob" data-linecap=round data-fgColor="#1AB394" data-width="85" data-height="85" data-angleOffset=90 data-displayPrevious=true ng-model="oldCredit" />
+                                                            <p class="text-center">
+                                                                رصيد قديم
                                                             </p>
                                                         </div>
                                                         <div class="col-sm-4">
-                                                            <input type="text" value="0" class="newCredit knob" data-fgColor="#1c84c6" data-width="85" data-height="85" data-angleOffset=90 data-displayPrevious=true disabled/>
-                                                            <p>رصيد جديد</p>
+                                                            <input type="text" value="0" class="newCredit knob" data-fgColor="#1c84c6" data-width="85" data-height="85" data-linecap=round data-angleOffset=90 data-displayPrevious=true  ng-model="newCredit" />
+                                                            <p class="text-center">رصيد جديد</p>
                                                         </div>
                                                     </div>
-                                            
+
                                                     <div class="hr-line-dashed"></div>
 
                                                     <div class="row form-group" id="step4">
@@ -286,11 +285,11 @@
                                                             مجموع أيام الإجازة
                                                         </label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" disabled="" placeholder="مجموع الرصيد..." class="totalVacation form-control">
+                                                            <input type="text" readonly placeholder="مجموع الرصيد..." class="totalVacation form-control" ng-model="totalVacation">
                                                             <span class="help-block m-b-none">مجموع أيام الإجازة لا يمكن أن يتجاوز رصيدك السنوي.</span>
                                                         </div>
                                                     </div>
-                                            
+
                                                 </div>
                                             </div>
 
@@ -298,28 +297,93 @@
                                         <h1>اختيار نائب</h1>
                                         <div class="fieldset">
                                             <h4>اختر نائب</h4>
-                                            <div class="row">
-                                                <select id="example">
-                                                  <option value="1">سيء</option>
-                                                  <option value="2">متوسط</option>
-                                                  <option value="3">جيد</option>
-                                                  <option value="4">جيد جدا</option>
-                                                </select>
+                                            <div class="row form-group" id="step4">
+                                                <label class="col-sm-3 control-label">
+                                                    مجموع أيام الإجازة
+                                                </label>
+                                                <div class="col-sm-9">
+                                                    <select class="employee" id="example" ng-model="employee">
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                    </select>
+                                                </div>
                                             </div>
+
                                         </div>
                                         <h1>تأكيد الطلب</h1>
                                         <div class="fieldset">
                                             <h4>تقرير الطلب</h4>
-                                            <div class="row">
+                                            <div class="report">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-6 control-label">نوع الإجازة</label>
+                                                            <div class="col-sm-6">
+                                                                <p class="repType">نوع الإجازة</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hr-line-dashed"></div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-6 control-label">بداية الإجازة</label>
+                                                            <div class="col-sm-6">
+                                                                <p class="repStartDate">1437/05/12</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hr-line-dashed"></div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-6 control-label">رصيد قديم</label>
+                                                            <div class="col-sm-6">
+                                                                <p class="repOldCredit">21</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-6 control-label"><i class="fa fa-clock-o"></i>رصيد جديد</label>
+                                                            <div class="col-sm-6">
+                                                                <p class="repNewCredit">5</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hr-line-dashed"></div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-6 control-label">مجموع أيام الإجازة</label>
+                                                            <div class="col-sm-6">
+                                                                <p class="repTotal">26</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hr-line-dashed"></div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-6 control-label">النائب</label>
+                                                            <div class="col-sm-6">
+                                                                <p class="repEmployee">النائب</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 
                                             </div>
                                         </div>
-
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
 
                         <div class="col-lg-4">
@@ -576,7 +640,7 @@
 
         </div>
     </form>
-    
+
 
     <!-- Mainly scripts -->
     <script src="js/jquery-2.1.1.js"></script>
@@ -598,9 +662,6 @@
     <script src="js/plugins/d3/d3.min.js"></script>
     <script src="js/plugins/c3/c3.min.js"></script>
 
-
-    <!-- Custom and plugin javascript -->
-    <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
 
     <!-- jQuery UI -->
@@ -620,7 +681,7 @@
 
     <!-- Toastr -->
     <script src="js/plugins/toastr/toastr.min.js"></script>
-    
+
     <!-- Input Mask-->
     <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
@@ -699,7 +760,7 @@
 
     <!-- Bootstrap Validator -->
     <script src="js/plugins/bootstrap-validator/validator.min.js"></script>
-    
+
     <!-- Sweet alert -->
     <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
 
@@ -714,135 +775,31 @@
     <script src="js/plugins/calendars/jquery.calendars.plus.js"></script>
     <script src="js/plugins/calendars/jquery.calendars.picker.js"></script>
     <script src="js/plugins/calendars/jquery.calendars.ummalqura.js"></script>
-    
+
     <!-- JSKnob -->
     <script src="js/plugins/jsKnob/jquery.knob.js"></script>
 
     <!-- iCheck -->
     <script src="js/plugins/iCheck/icheck.min.js"></script>
-    
+
     <!-- Bootstrap Tour -->
     <script src="js/plugins/bootstrapTour/bootstrap-tour.min.js"></script>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/fontawesome-stars.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/bars-movie.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
 
     <!-- Inquiry JS -->
     <script src="js/pages/vacation.js"></script>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
 
-            /* ---- particles.js config ---- */
-
-            particlesJS("particles-js", {
-                "particles": {
-                    "number": {
-                        "value": 398,
-                        "density": {
-                            "enable": true,
-                            "value_area": 1657.2100474277727
-                        }
-                    },
-                    "color": {
-                        "value": "#ffffff"
-                    },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
-                        },
-                        "polygon": {
-                            "nb_sides": 5
-                        },
-                        "image": {
-                            "src": "img/github.svg",
-                            "width": 100,
-                            "height": 100
-                        }
-                    },
-                    "opacity": {
-                        "value": 0.5,
-                        "random": false,
-                        "anim": {
-                            "enable": true,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 3,
-                        "random": true,
-                        "anim": {
-                            "enable": false,
-                            "speed": 40,
-                            "size_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#ffffff",
-                        "opacity": 0.4,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 3,
-                        "direction": "none",
-                        "random": true,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": {
-                            "enable": true,
-                            "rotateX": 4329.212564336912,
-                            "rotateY": 1200
-                        }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "window",
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "grab"
-                        },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "repulse"
-                        },
-                        "resize": true
-                    },
-                    "modes": {
-                        "grab": {
-                            "distance": 203.7962037962038,
-                            "line_linked": {
-                                "opacity": 0.8418939375541366
-                            }
-                        },
-                        "bubble": {
-                            "distance": 400,
-                            "size": 40,
-                            "duration": 2,
-                            "opacity": 8,
-                            "speed": 3
-                        },
-                        "repulse": {
-                            "distance": 200,
-                            "duration": 0.4
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        }
-                    }
-                },
-                "retina_detect": true
-            });
 
         });
     </script>

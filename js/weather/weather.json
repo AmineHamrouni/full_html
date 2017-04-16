@@ -1,0 +1,138 @@
+{
+    "query": {
+        "count": 1,
+        "created": "2017-04-12T06:42:50Z",
+        "lang": "en-US",
+        "results": {
+            "channel": {
+                "units": {
+                    "distance": "mi",
+                    "pressure": "in",
+                    "speed": "mph",
+                    "temperature": "F"
+                },
+                "title": "Yahoo! Weather - Jazan, SA",
+                "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2346956/",
+                "description": "Yahoo! Weather for Jazan, SA",
+                "language": "en-us",
+                "lastBuildDate": "Wed, 12 Apr 2017 09:42 AM AST",
+                "ttl": "60",
+                "location": {
+                    "city": "Jazan",
+                    "country": "Saudi Arabia",
+                    "region": " SA"
+                },
+                "wind": {
+                    "chill": "90",
+                    "direction": "225",
+                    "speed": "7"
+                },
+                "atmosphere": {
+                    "humidity": "45",
+                    "pressure": "1005.0",
+                    "rising": "0",
+                    "visibility": "16.1"
+                },
+                "astronomy": {
+                    "sunrise": "5:55 am",
+                    "sunset": "6:25 pm"
+                },
+                "image": {
+                    "title": "Yahoo! Weather",
+                    "width": "142",
+                    "height": "18",
+                    "link": "http://weather.yahoo.com",
+                    "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+                },
+                "item": {
+                    "title": "Conditions for Jazan, SA at 09:00 AM AST",
+                    "lat": "17.10462",
+                    "long": "42.666321",
+                    "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2346956/",
+                    "pubDate": "Wed, 12 Apr 2017 09:00 AM AST",
+                    "condition": {
+                        "code": "34",
+                        "date": "Wed, 12 Apr 2017 09:00 AM AST",
+                        "temp": "90",
+                        "text": "Mostly Sunny"
+                    },
+                    "forecast": [{
+                        "code": "32",
+                        "date": "12 Apr 2017",
+                        "day": "Wed",
+                        "high": "93",
+                        "low": "77",
+                        "text": "Sunny"
+                    }, {
+                        "code": "32",
+                        "date": "13 Apr 2017",
+                        "day": "Thu",
+                        "high": "93",
+                        "low": "77",
+                        "text": "Sunny"
+                    }, {
+                        "code": "32",
+                        "date": "14 Apr 2017",
+                        "day": "Fri",
+                        "high": "95",
+                        "low": "81",
+                        "text": "Sunny"
+                    }, {
+                        "code": "32",
+                        "date": "15 Apr 2017",
+                        "day": "Sat",
+                        "high": "101",
+                        "low": "79",
+                        "text": "Sunny"
+                    }, {
+                        "code": "32",
+                        "date": "16 Apr 2017",
+                        "day": "Sun",
+                        "high": "96",
+                        "low": "77",
+                        "text": "Sunny"
+                    }, {
+                        "code": "32",
+                        "date": "17 Apr 2017",
+                        "day": "Mon",
+                        "high": "97",
+                        "low": "79",
+                        "text": "Sunny"
+                    }, {
+                        "code": "32",
+                        "date": "18 Apr 2017",
+                        "day": "Tue",
+                        "high": "93",
+                        "low": "80",
+                        "text": "Sunny"
+                    }, {
+                        "code": "32",
+                        "date": "19 Apr 2017",
+                        "day": "Wed",
+                        "high": "94",
+                        "low": "82",
+                        "text": "Sunny"
+                    }, {
+                        "code": "32",
+                        "date": "20 Apr 2017",
+                        "day": "Thu",
+                        "high": "94",
+                        "low": "82",
+                        "text": "Sunny"
+                    }, {
+                        "code": "32",
+                        "date": "21 Apr 2017",
+                        "day": "Fri",
+                        "high": "94",
+                        "low": "83",
+                        "text": "Sunny"
+                    }],
+                    "description": "<![CDATA[<img src=\"http://l.yimg.com/a/i/us/we/52/34.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR />Mostly Sunny\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Wed - Sunny. High: 93Low: 77\n<BR /> Thu - Sunny. High: 93Low: 77\n<BR /> Fri - Sunny. High: 95Low: 81\n<BR /> Sat - Sunny. High: 101Low: 79\n<BR /> Sun - Sunny. High: 96Low: 77\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2346956/\">Full Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)\n<BR />\n]]>",
+                    "guid": {
+                        "isPermaLink": "false"
+                    }
+                }
+            }
+        }
+    }
+}

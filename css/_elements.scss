@@ -1908,101 +1908,113 @@ a.forum-item-title:hover {
     clear: both;
 }
 
-#vertical-timeline {
+#vertical__timeline {
     position: relative;
     padding: 0;
     margin-top: 2em;
     margin-bottom: 2em;
 }
 
-#vertical-timeline::before {
+#vertical__timeline::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 18px;
+    //left: 18px;
+    right: 18px;
     height: 100%;
     width: 4px;
     background: #f1f1f1;
 }
 
-.vertical-timeline-content .btn {
-    float: right;
+.vertical__timeline__content .btn {
+    //float: right;
+    float: left;
 }
 
-#vertical-timeline.light-timeline:before {
+#vertical__timeline.light-timeline:before {
     background: #e7eaec;
 }
 
-.dark-timeline .vertical-timeline-content:before {
-    border-color: transparent #f5f5f5 transparent transparent;
-}
-
-.dark-timeline.center-orientation .vertical-timeline-content:before {
+.dark-timeline .vertical__timeline__content:before {
     border-color: transparent transparent transparent #f5f5f5;
+//    border-color: transparent #f5f5f5 transparent transparent;
 }
 
-.dark-timeline .vertical-timeline-block:nth-child(2n) .vertical-timeline-content:before,
-.dark-timeline.center-orientation .vertical-timeline-block:nth-child(2n) .vertical-timeline-content:before {
+.dark-timeline.center-orientation .vertical__timeline__content:before {
     border-color: transparent #f5f5f5 transparent transparent;
+//    border-color: transparent transparent transparent #f5f5f5;
 }
 
-.dark-timeline .vertical-timeline-content,
-.dark-timeline.center-orientation .vertical-timeline-content {
+.dark-timeline .vertical__timeline__block:nth-child(2n) .vertical__timeline__content:before,
+.dark-timeline.center-orientation .vertical__timeline__block:nth-child(2n) .vertical__timeline__content:before {
+    border-color: transparent transparent transparent #f5f5f5;
+//    border-color: transparent #f5f5f5 transparent transparent;
+}
+
+.dark-timeline .vertical__timeline__content,
+.dark-timeline.center-orientation .vertical__timeline__content {
     background: #f5f5f5;
 }
 
 @media only screen and (min-width: 1170px) {
-    #vertical-timeline.center-orientation {
+    #vertical__timeline.center-orientation {
         margin-top: 3em;
         margin-bottom: 3em;
     }
-    #vertical-timeline.center-orientation:before {
-        left: 50%;
-        margin-left: -2px;
+    #vertical__timeline.center-orientation:before {
+        right: 50%;
+        margin-right: -2px;
+//        left: 50%;
+//        margin-left: -2px;
     }
 }
 
 @media only screen and (max-width: 1170px) {
-    .center-orientation.dark-timeline .vertical-timeline-content:before {
-        border-color: transparent #f5f5f5 transparent transparent;
+    .center-orientation.dark-timeline .vertical__timeline__content:before {
+        border-color: transparent transparent transparent #f5f5f5;
+//        border-color: transparent #f5f5f5 transparent transparent;
     }
 }
 
-.vertical-timeline-block {
+.vertical__timeline__block {
     position: relative;
     margin: 2em 0;
+  &:last-child {
+    background-color: #fff;
+  }
 }
 
-.vertical-timeline-block:after {
+.vertical__timeline__block:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.vertical-timeline-block:first-child {
+.vertical__timeline__block:first-child {
     margin-top: 0;
 }
 
-.vertical-timeline-block:last-child {
+.vertical__timeline__block:last-child {
     margin-bottom: 0;
 }
 
 @media only screen and (min-width: 1170px) {
-    .center-orientation .vertical-timeline-block {
+    .center-orientation .vertical__timeline__block {
         margin: 4em 0;
     }
-    .center-orientation .vertical-timeline-block:first-child {
+    .center-orientation .vertical__timeline__block:first-child {
         margin-top: 0;
     }
-    .center-orientation .vertical-timeline-block:last-child {
+    .center-orientation .vertical__timeline__block:last-child {
         margin-bottom: 0;
     }
 }
 
-.vertical-timeline-icon {
+.vertical__timeline__icon {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
+//    left: 0;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -2011,63 +2023,75 @@ a.forum-item-title:hover {
     text-align: center;
 }
 
-.vertical-timeline-icon i {
+.vertical__timeline__icon i {
     display: block;
     width: 24px;
     height: 24px;
     position: relative;
-    left: 50%;
+    right: 50%;
+//    left: 50%;
     top: 50%;
-    margin-left: -12px;
+//    margin-left: -12px;
+    margin-right: -12px;
     margin-top: -9px;
 }
 
 @media only screen and (min-width: 1170px) {
-    .center-orientation .vertical-timeline-icon {
+    .center-orientation .vertical__timeline__icon {
         width: 50px;
         height: 50px;
-        left: 50%;
-        margin-left: -25px;
+        right: 50%;
+        margin-right: -25px;
+//        left: 50%;
+//        margin-left: -25px;
         -webkit-transform: translateZ(0);
         -webkit-backface-visibility: hidden;
         font-size: 19px;
     }
-    .center-orientation .vertical-timeline-icon i {
-        margin-left: -12px;
+    .center-orientation .vertical__timeline__icon i {
+        margin-right: -12px;
+//        margin-left: -12px;
         margin-top: -10px;
     }
-    .center-orientation .cssanimations .vertical-timeline-icon.is-hidden {
+    .center-orientation .cssanimations .vertical__timeline__icon.is-hidden {
         visibility: hidden;
     }
 }
 
-.vertical-timeline-content {
+.vertical__timeline__content {
     position: relative;
-    margin-left: 60px;
+    margin-right: 60px;
+//    margin-left: 60px;
     background: white;
     border-radius: 0.25em;
     padding: 1em;
 }
 
-.vertical-timeline-content:after {
+.vertical__timeline__content:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.vertical-timeline-content h2 {
+.vertical__timeline__content h2 {
     font-weight: 400;
     margin-top: 4px;
 }
 
-.vertical-timeline-content p {
+.vertical__timeline__content p {
     margin: 1em 0;
     line-height: 1.6;
+  font-size: 12px;
 }
 
-.vertical-timeline-content .vertical-date {
-    float: left;
+.vertical__timeline__content .vertical-date {
+    float: right;
+//    float: left;
     font-weight: 500;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: left;
 }
 
 .vertical-date small {
@@ -2075,67 +2099,83 @@ a.forum-item-title:hover {
     font-weight: 400;
 }
 
-.vertical-timeline-content::before {
+.vertical__timeline__content::before {
     content: '';
     position: absolute;
     top: 16px;
-    right: 100%;
+    left: 100%;
+//    right: 100%;
     height: 0;
     width: 0;
     border: 7px solid transparent;
-    border-right: 7px solid white;
+    border-left: 7px solid white;
+//    border-right: 7px solid white;
 }
 
 @media only screen and (min-width: 768px) {
-    .vertical-timeline-content h2 {
+    .vertical__timeline__content h2 {
         font-size: 18px;
     }
-    .vertical-timeline-content p {
-        font-size: 13px;
+    .vertical__timeline__content p {
+        font-size: 10px;
     }
 }
 
 @media only screen and (min-width: 1170px) {
-    .center-orientation .vertical-timeline-content {
-        margin-left: 0;
+    .center-orientation .vertical__timeline__content {
+        margin-right: 0;
+//        margin-left: 0;
         padding: 1.6em;
         width: 45%;
     }
-    .center-orientation .vertical-timeline-content::before {
+    .center-orientation .vertical__timeline__content::before {
         top: 24px;
-        left: 100%;
-        border-color: transparent;
-        border-left-color: white;
-    }
-    .center-orientation .vertical-timeline-content .btn {
-        float: left;
-    }
-    .center-orientation .vertical-timeline-content .vertical-date {
-        position: absolute;
-        width: 100%;
-        left: 122%;
-        top: 2px;
-        font-size: 14px;
-    }
-    .center-orientation .vertical-timeline-block:nth-child(even) .vertical-timeline-content {
-        float: right;
-    }
-    .center-orientation .vertical-timeline-block:nth-child(even) .vertical-timeline-content::before {
-        top: 24px;
-        left: auto;
         right: 100%;
+//        left: 100%;
         border-color: transparent;
         border-right-color: white;
+//        border-left-color: white;
     }
-    .center-orientation .vertical-timeline-block:nth-child(even) .vertical-timeline-content .btn {
+    .center-orientation .vertical__timeline__content .btn {
         float: right;
+//        float: left;
     }
-    .center-orientation .vertical-timeline-block:nth-child(even) .vertical-timeline-content .vertical-date {
-        left: auto;
+    .center-orientation .vertical__timeline__content .vertical-date {
+        position: absolute;
+        width: 100%;
         right: 122%;
-        text-align: right;
+//        left: 122%;
+        top: 2px;
+        font-size: 14px;
+      text-align: right;
     }
-    .center-orientation .cssanimations .vertical-timeline-content.is-hidden {
+    .center-orientation .vertical__timeline__block:nth-child(even) .vertical__timeline__content {
+        float: left;
+//        float: right;
+    }
+    .center-orientation .vertical__timeline__block:nth-child(even) .vertical__timeline__content::before {
+        top: 24px;
+        right: auto;
+        left: 100%;
+//        left: auto;
+//        right: 100%;
+        border-color: transparent;
+        border-left-color: white;
+//        border-right-color: white;
+    }
+    .center-orientation .vertical__timeline__block:nth-child(even) .vertical__timeline__content .btn {
+        float: left;
+//        float: right;
+    }
+    .center-orientation .vertical__timeline__block:nth-child(even) .vertical__timeline__content .vertical-date {
+        right: auto;
+        left: 122%;
+//        left: auto;
+//        right: 122%;
+//        text-align: right;
+        text-align: left;
+    }
+    .center-orientation .cssanimations .vertical__timeline__content.is-hidden {
         visibility: hidden;
     }
 }
@@ -2602,4 +2642,21 @@ body.tour-open .animated {
         }
     }
     &__switch {}
+}
+.report {
+    .row {
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: contain;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding-right: 60px;
+        &:nth-child(1) {
+            background-image: url(https://image.flaticon.com/icons/svg/326/326651.svg);
+        }
+        &:nth-child(2) {
+            background-image: url(https://image.flaticon.com/icons/svg/138/138773.svg);
+        }
+    }
 }

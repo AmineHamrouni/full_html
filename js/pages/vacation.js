@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    $(document).keydown(function (e) {
+
+      if (e.ctrlKey && e.keyCode == 13) {
+        alert('Ctrl-Enter pressed');
+      }
+    });    
     var required = $('.required').val();
     
     //Form Steps
@@ -47,9 +53,15 @@ $(document).ready(function () {
         checkboxClass: 'icheckbox__square--green',
         radioClass: 'iradio__square--green',
     });
+    
+    $('.select2').select2({
+        dir: "rtl"
+    });
+
 
     /* Knob */
     var maxOld, maxNew, elOld, elNew, totalVacation, elTotalVacation, elVacationStart, maxTotal, minTotal;
+    var repType, repStartDate, repOldCredit, repNewCredit, repTotal, repEmployee;
 
     elOld = $('.oldCredit');
     elNew = $('.newCredit');
@@ -60,10 +72,8 @@ $(document).ready(function () {
     totalVacation = 0;
 
     $("input[type=radio]").on('ifChecked', function (event) {
-        elNew.prop('disabled', false);
-        elOld.prop('disabled', false);
-        elVacationStart.prop('disabled', false);
-
+        elVacationStart.prop('readonly', false);
+        
         /*Date Picker*/
         $('.vacationStart').calendarsPicker({
             calendar: $.calendars.instance('ummalqura'),
@@ -74,7 +84,12 @@ $(document).ready(function () {
             prevText: '< M',
             todayText: 'M y',
             nextText: 'M >',
-            localNumbers: true
+            localNumbers: true,
+            onhange: function() {
+                repStartDate = this.datepick('getDate');
+                elNew.attr("readonly", false);
+                elOld.attr("readonly", false);
+            }
         }).noWeekends;
 
 
@@ -89,6 +104,20 @@ $(document).ready(function () {
             $('.knob').val(0).trigger('change');
         }
     });
+    
+    $("[name$='RbTypeVac']").change(function(){
+        repType = $("[name$='RbTypeVac']:checked").val();
+        $('.repType').text(repType);
+    });    
+    
+    $("[id$='ddlReplaceManager']").change(function(){
+        var e = $("[id$='ddlReplaceManager']:selected").val();
+    });
+    
+    $(".select2").change(function(){
+        var c = $("[]:checked").val();
+        $('.repEmployee').text(repType);
+    });
 
     maxNew = 10;
     maxOld = 100;
@@ -99,6 +128,8 @@ $(document).ready(function () {
         'release': function (v) {
             totalCredit(elNew, v);
             verifyTotal();
+            repOldCredit = v;
+            $('.repOldCredit').text(repOldCredit);
         }
     });
 
@@ -108,11 +139,14 @@ $(document).ready(function () {
         'release': function (v) {
             totalCredit(elOld, v);
             verifyTotal();
+            repNewCredit = v;
+            $('.repNewCredit').text(repNewCredit);
         }
     });
 
     function totalCredit(val, v) {
         totalVacation = parseInt(val.val()) + v;
+        $('.repTotal').text(totalVacation);
         return totalVacation;
     }
 
@@ -190,24 +224,22 @@ $(document).ready(function () {
         // Start the tour
         // 
     })
-
-//    $('#example').barrating({
-//        theme: 'bars-movie'
-//      });
     
     var line = $('.form-group');
 
-    line.hover(function () {
-//        $(this).siblings('.vacationAdmin__line').find('.btn').hide();
-        $(this).siblings('.form-group').css({
-            "opacity": ".5"
-        });
-        
-    }, function () {
-//        $(this).siblings('.vacationAdmin__line').find('.btn').show();
-        $(this).siblings('.form-group').css({
-            "opacity": "1"
-        });
-    });
+    line.hover(
+        function () {
+            //        $(this).siblings('.vacationAdmin__line').find('.btn').hide();
+            $(this).siblings('.form-group').css({
+                "opacity": ".5"
+            });
+
+        },
+        function () {
+            $(this).siblings('.form-group').css({
+                "opacity": "1"
+            });
+        }
+    );
     
 });

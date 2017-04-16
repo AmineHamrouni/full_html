@@ -50,11 +50,14 @@
  
  a {
      cursor: pointer;
- }
  
- a:hover,
- a:focus {
-     text-decoration: none;
+     &:hover,
+     &:focus {
+         text-decoration: none;
+     }
+     &:visited {
+         color: #fff;
+     }
  }
  
  .border-bottom {
