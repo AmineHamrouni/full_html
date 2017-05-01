@@ -888,12 +888,14 @@
     <script>
         $(document).ready(function () {
             $('.dataTables-example').DataTable({
-                pageLength: 10,
+                pageLength: 5,
                 responsive: true,
                 dom: '<"html5buttons"B>lTfgitp',
+                searching: false,
                 buttons: [
                     {
-                        extend: 'copy'
+                        extend: 'copy',
+                        text: 'نسخ'
                     },
                     {
                         extend: 'csv'
@@ -909,6 +911,7 @@
 
                     {
                         extend: 'print',
+                        text: 'طباعة',
                         customize: function (win) {
                             $(win.document.body).addClass('white-bg');
                             $(win.document.body).css('font-size', '10px');

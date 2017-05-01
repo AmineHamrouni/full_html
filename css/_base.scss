@@ -18,7 +18,7 @@
  }
  
  #page-wrapper {
-     min-height: auto;
+     //min-height: auto;
  }
  
  body.boxed-layout {
@@ -56,7 +56,7 @@
          text-decoration: none;
      }
      &:visited {
-         color: #fff;
+         color: inherit;
      }
  }
  
@@ -553,7 +553,7 @@
      background-color: $ibox__title-bg;
      border-color: $border-color;
      border: none;
-     color: inherit;
+     //color: inherit;
      margin-bottom: 0;
      padding: 10px;
      //min-height: 48px;

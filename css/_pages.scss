@@ -1170,7 +1170,7 @@ table.issue-tracker tbody tr td {
 $top-menu-height: 130px;
 $top-menu-bg: #2f4050;
 .menu {
-    position: fixed;
+    //position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -1180,9 +1180,16 @@ $top-menu-bg: #2f4050;
     //height: 230px;
     overflow: hidden;
     color: #fff;
-    z-index: 3000;
+    //z-index: 3000;
+//    opacity: 0;
+//    display: none;
+    transition: .2s ease;
+    &--open {
+//        display: block;
+//        opacity: 1;
+    }
     &__items {
-        position: absolute;
+        //position: absolute;
         top: 0;
         left: 0;
         right: 0;
@@ -1206,9 +1213,9 @@ $top-menu-bg: #2f4050;
         margin-bottom: 20px;
         &:nth-child(1) {
             background-color: $navy;
-            .menu__item__icon {
-                width: 180px;
-            }
+//            .menu__item__icon {
+//                width: 180px;
+//            }
         }
         &:nth-child(2) {
             background-color: $yellow;
@@ -1641,11 +1648,22 @@ body.body-small .vote-icon {
     @include linearGradient(bottom, $blueLagoon_light, $blueLagoon_dark);
     .nav>li {
         &.active {
-            border-color: $blueLagoon_light;
+            //border-color: $blueLagoon_light;
+            border-color: none;
             background: rgba(41, 56, 70, 0.35);
             box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            position: relative;
             a {
                 color: #fff;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                right: -4px;
+                top: 0;
+                height: 100%;
+                width: 4px;
+                background-color: $blueLagoon_light;
             }
         }
         >a {
@@ -1752,6 +1770,13 @@ body.body-small .vote-icon {
             //border: 10px solid #1ab394;
             box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
             animation: pulse 1.5s infinite;
+            background-image: url(../img/profile.svg);
+            background-size: cover;
+            background-position: center;
+            @include size(128px);
+            img {
+                width: 100%;
+            }
         }
         @-webkit-keyframes pulse {
             0% {
@@ -2043,3 +2068,4 @@ body.body-small .vote-icon {
 .refuse__msg {
     background-color: #f6f6f6;
 }
+

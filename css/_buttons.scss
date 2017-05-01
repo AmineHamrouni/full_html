@@ -40,7 +40,7 @@
     color: #fff;
 }
 
-.btn-primary {
+.btn-primary, .btn-primary:visited {
     background-color: $navy;
     border-color: $navy;
     color: #FFFFFF;
@@ -85,7 +85,7 @@ fieldset[disabled] .btn-primary.active {
     border-color: lighten($navy, 4%);
 }
 
-.btn-success {
+.btn-success, .btn-success:visited {
     background-color: $blue;
     border-color: $blue;
     color: #FFFFFF;
@@ -130,7 +130,7 @@ fieldset[disabled] .btn-success.active {
     border-color: lighten($blue, 4%);
 }
 
-.btn-info {
+.btn-info, .btn-info:visited {
     background-color: $lazur;
     border-color: $lazur;
     color: #FFFFFF;
@@ -175,7 +175,7 @@ fieldset[disabled] .btn-info.active {
     border-color: lighten($lazur, 4%);
 }
 
-.btn-default {
+.btn-default, .btn-default:visited {
     color: inherit;
     background: white;
     border: 1px solid $border-color;
@@ -218,7 +218,7 @@ fieldset[disabled] .btn-default.active {
     color: #cacaca;
 }
 
-.btn-warning {
+.btn-warning, .btn-warning:visited {
     background-color: $yellow;
     border-color: $yellow;
     color: #FFFFFF;
@@ -263,7 +263,7 @@ fieldset[disabled] .btn-warning.active {
     border-color: lighten($yellow, 4%);
 }
 
-.btn-danger {
+.btn-danger, .btn-danger:visited {
     background-color: $red;
     border-color: $red;
     color: #FFFFFF;

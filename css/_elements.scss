@@ -1744,7 +1744,7 @@ label.error {
 
 .img-preview-sm {
     height: 130px;
-    width: 200px;
+    width: 130px;
 }
 
 
@@ -2643,20 +2643,36 @@ body.tour-open .animated {
     }
     &__switch {}
 }
+$report_row_height: 40px;
 .report {
     .row {
         background-repeat: no-repeat;
         background-position: center right;
         background-size: contain;
-        height: 60px;
+        height: $report_row_height;
         display: flex;
         align-items: center;
-        padding-right: 60px;
+        padding-right: $report_row_height;
         &:nth-child(1) {
             background-image: url(https://image.flaticon.com/icons/svg/326/326651.svg);
         }
         &:nth-child(2) {
             background-image: url(https://image.flaticon.com/icons/svg/138/138773.svg);
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+        }
+        .repTotal {
+            input {
+                border: none;
+                background: none;
+                padding: 0;
+            }
+        }
+        .repRes {
+            font-size: 14px;
+            font-weight: bold;
         }
     }
 }

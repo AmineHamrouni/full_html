@@ -18,10 +18,10 @@ $(document).ready(function () {
     });
 
     // Minimalize menu
-    $('.navbar-minimalize').click();
+    minimalize.click();
 
     minimalize.click(function () {
-      $('.myProfile__perso__img').fadeToggle();
+        $('.myProfile__perso__img').fadeToggle();
     });
 
     var chart = c3.generate({
@@ -29,7 +29,7 @@ $(document).ready(function () {
         data: {
             columns: [
         ['تأخير', 30, 200, 100, 400, 150, 150, 250],
-        ['غياب', 50, 20, 10, 40, 15,15, 25]
+        ['غياب', 50, 20, 10, 40, 15, 15, 25]
       ],
             axes: {
                 data2: 'y2'
@@ -54,21 +54,67 @@ $(document).ready(function () {
             }
         }
     });
-    
+
     //Hover Form Group    
     var line = $('.form-group');
 
     line.hover(function () {
-        $(this).siblings('.form-group').css({
-            "opacity": ".5"
+            $(this).siblings('.form-group').css({
+                "opacity": ".5"
+            });
+
+        },
+        function () {
+            //        $(this).siblings('.vacationAdmin__line').find('.btn').show();
+            $(this).siblings('.form-group').css({
+                "opacity": "1"
+            });
         });
-        
-    }, 
-               function () {
-//        $(this).siblings('.vacationAdmin__line').find('.btn').show();
-        $(this).siblings('.form-group').css({
-            "opacity": "1"
-        });
+
+    var $image = $(".image-crop > img");
+    $($image).cropper({
+        aspectRatio: 1,
+        width: 128,
+        preview: ".img-preview",
+        done: function (data) {
+            // Output the result data for cropping image.
+        }
     });
+    
+    var imageData = $image.cropper('getCroppedCanvas', {width: 128, height: 128}).toDataURL();
+
+    var $inputImage = $("#inputImage");
+    if (window.FileReader) {
+        $inputImage.change(function () {
+            var fileReader = new FileReader(),
+                files = this.files,
+                file;
+
+            if (!files.length) {
+                return;
+            }
+
+            file = files[0];
+
+            if (/^image\/\w+$/.test(file.type)) {
+                fileReader.readAsDataURL(file);
+                fileReader.onload = function () {
+                    $inputImage.val("");
+                    $image.cropper("reset", true).cropper("replace", this.result);
+                };
+            } else {
+                showMessage("Please choose an image file.");
+            }
+        });
+    } else {
+        $inputImage.addClass("hide");
+    }
+
+    $("#download").click(function () {
+        //$( ".downloaded" ).val($image.cropper("getDataURL"));
+        window.open(imageData);
+        $( ".downloaded" ).val(imageData);
+    });
+    
 
 });

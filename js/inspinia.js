@@ -189,6 +189,31 @@ $(window).bind("resize", function () {
     }
 });
 
+$(document).ready(function () {
+    $('#open_menu').on( "click", function () {
+        $('#top_menu').addClass('menu--opened');
+        $('html').css('overflow', 'hidden');
+        $('#top_menu').siblings().css('opacity', '.4');
+        $('body').bind('touchmove', function(e) {
+            e.preventDefault()
+        });
+    });
+    //
+    $('#top_menu').siblings().on( "click", function () {
+        $('.menu--opened').fadeOut().removeClass('menu--opened');
+//        $('html').css('overflow', 'scroll');
+//        $('body').unbind('touchmove');
+    });    
+    $('#top_menu .close').on( "click", function () {
+        $('.menu--opened').fadeOut().removeClass('menu--opened');
+        $('html').css('overflow', 'scroll');
+        $('body').unbind('touchmove');
+        $('#top_menu').siblings().css('opacity', '1');
+    });    
+ 
+});
+
+
 // Local Storage functions
 // Set proper body class and plugins based on user configuration
 $(document).ready(function () {
@@ -245,6 +270,11 @@ function localStorageSupport() {
     return (('localStorage' in window) && window['localStorage'] !== null)
 }
 
+//
+//
+
+
+
 // For demo purpose - animation css script
 function animationHover(element, animation) {
     element = $(element);
@@ -299,110 +329,110 @@ function WinMove() {
 //Particles
 /* ---- particles.js config ---- */
 
-particlesJS("particles-js", {
-    "particles": {
-        "number": {
-            "value": 398,
-            "density": {
-                "enable": true,
-                "value_area": 1657.2100474277727
-            }
-        },
-        "color": {
-            "value": "#ffffff"
-        },
-        "shape": {
-            "type": "circle",
-            "stroke": {
-                "width": 0,
-                "color": "#000000"
-            },
-            "polygon": {
-                "nb_sides": 5
-            },
-            "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
-            }
-        },
-        "opacity": {
-            "value": 0.5,
-            "random": false,
-            "anim": {
-                "enable": true,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-            }
-        },
-        "size": {
-            "value": 3,
-            "random": true,
-            "anim": {
-                "enable": false,
-                "speed": 40,
-                "size_min": 0.1,
-                "sync": false
-            }
-        },
-        "line_linked": {
-            "enable": true,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-        },
-        "move": {
-            "enable": true,
-            "speed": 3,
-            "direction": "none",
-            "random": true,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-                "enable": true,
-                "rotateX": 4329.212564336912,
-                "rotateY": 1200
-            }
-        }
-    },
-    "interactivity": {
-        "detect_on": "window",
-        "events": {
-            "onhover": {
-                "enable": true,
-                "mode": "grab"
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "repulse"
-            },
-            "resize": true
-        },
-        "modes": {
-            "grab": {
-                "distance": 203.7962037962038,
-                "line_linked": {
-                    "opacity": 0.8418939375541366
-                }
-            },
-            "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-            },
-            "repulse": {
-                "distance": 200,
-                "duration": 0.4
-            },
-            "push": {
-                "particles_nb": 4
-            }
-        }
-    },
-    "retina_detect": true
-});
+//particlesJS("particles-js", {
+//    "particles": {
+//        "number": {
+//            "value": 398,
+//            "density": {
+//                "enable": true,
+//                "value_area": 1657.2100474277727
+//            }
+//        },
+//        "color": {
+//            "value": "#ffffff"
+//        },
+//        "shape": {
+//            "type": "circle",
+//            "stroke": {
+//                "width": 0,
+//                "color": "#000000"
+//            },
+//            "polygon": {
+//                "nb_sides": 5
+//            },
+//            "image": {
+//                "src": "img/github.svg",
+//                "width": 100,
+//                "height": 100
+//            }
+//        },
+//        "opacity": {
+//            "value": 0.5,
+//            "random": false,
+//            "anim": {
+//                "enable": true,
+//                "speed": 1,
+//                "opacity_min": 0.1,
+//                "sync": false
+//            }
+//        },
+//        "size": {
+//            "value": 3,
+//            "random": true,
+//            "anim": {
+//                "enable": false,
+//                "speed": 40,
+//                "size_min": 0.1,
+//                "sync": false
+//            }
+//        },
+//        "line_linked": {
+//            "enable": true,
+//            "distance": 150,
+//            "color": "#ffffff",
+//            "opacity": 0.4,
+//            "width": 1
+//        },
+//        "move": {
+//            "enable": true,
+//            "speed": 3,
+//            "direction": "none",
+//            "random": true,
+//            "straight": false,
+//            "out_mode": "out",
+//            "bounce": false,
+//            "attract": {
+//                "enable": true,
+//                "rotateX": 4329.212564336912,
+//                "rotateY": 1200
+//            }
+//        }
+//    },
+//    "interactivity": {
+//        "detect_on": "window",
+//        "events": {
+//            "onhover": {
+//                "enable": true,
+//                "mode": "grab"
+//            },
+//            "onclick": {
+//                "enable": true,
+//                "mode": "repulse"
+//            },
+//            "resize": true
+//        },
+//        "modes": {
+//            "grab": {
+//                "distance": 203.7962037962038,
+//                "line_linked": {
+//                    "opacity": 0.8418939375541366
+//                }
+//            },
+//            "bubble": {
+//                "distance": 400,
+//                "size": 40,
+//                "duration": 2,
+//                "opacity": 8,
+//                "speed": 3
+//            },
+//            "repulse": {
+//                "distance": 200,
+//                "duration": 0.4
+//            },
+//            "push": {
+//                "particles_nb": 4
+//            }
+//        }
+//    },
+//    "retina_detect": true
+//});

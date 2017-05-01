@@ -18,7 +18,7 @@ $news-bar__time__bg: darken($light-blue, 5%);
 .news-bar {
   border-top: 0;
   //padding: 20px 0px 20px 20px;
-  padding: 0px;
+  padding: 0;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -75,7 +75,7 @@ $news-bar__time__bg: darken($light-blue, 5%);
 
 .meteo-bar {
   border-top: 0;
-  padding: 0px;
+  padding: 0;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -139,7 +139,7 @@ $box-style_dark: #009688;
             text-align: justify;
         }
     }
-    &
+
     .slick_custom_buttons .slick-prev, .slick_custom_buttons .slick-next {
         top: auto;
         bottom: 10px;
@@ -173,7 +173,7 @@ $box-style_dark: #009688;
         padding-right: 20px;
         position: absolute;
         top: 50%;
-        right: 0px;
+        right: 0;
         z-index: 2;
         color: white;
         transform: translateY(-50%);
@@ -356,6 +356,11 @@ textarea {
 
 //iCheck
 .i-checks {
+    tr {
+        display: inline-block;
+        margin-left: 2em;
+        margin-top: 7px;
+    }
     &__label {
         border: 3px solid #ccc;
         border-radius: 3px;
