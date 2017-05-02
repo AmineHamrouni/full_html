@@ -1820,6 +1820,7 @@ body.body-small .vote-icon {
     &__pro {
         &__header {
             display: flex;
+            flex-wrap: wrap;
             border-bottom: 1px solid #e7eaec;
             border-top: 1px solid #e7eaec;
             >div {
@@ -1839,6 +1840,8 @@ body.body-small .vote-icon {
                 color: #fff;
                 max-width: 165px;
                 background-color: #1f8fd6;
+                position: relative;
+                padding:10px;
                 span {
                     font-size: 16px;
                     padding-right: 5px;
@@ -1908,7 +1911,10 @@ body.body-small .vote-icon {
             }
         }
         &__content {
+            position: relative;
             padding: 30px;
+            display: flex;
+            flex-direction: column;
         }
         &__footer {
             padding: 10px 30px 10px;
@@ -1954,6 +1960,24 @@ body.body-small .vote-icon {
     }
     .hr-line-dashed {
         margin: 5px 0;
+    }
+    .job {
+        &__details {
+            background-color: pink;
+        }
+        &__history {
+            &__btn {
+            }
+            &__content {
+                display: none;
+                //position: absolute;
+                //top:20px;
+                //right:15px;
+                //height:100%;
+                //width:100%;
+                background-color: pink;
+            }
+        }
     }
 }
 

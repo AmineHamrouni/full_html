@@ -1,4 +1,16 @@
 $(document).ready(function () {
+    //job history
+    var jobHistBtn = $('#job__history__btn');
+    var jobHistContent = $('.job__history__content');
+    var jobDetailsContent = $('.job__details');
+    jobHistBtn.on( "click", function() {
+        jobHistContent.toggle("slide", { direction: "right" }, 0);
+        jobDetailsContent.toggle("slide", { direction: "left" }, 0);
+    });
+
+});
+
+$(document).ready(function () {
     var statsPerso = $('#statsPerso');
     var allInputs = statsPerso.find('.editable');
     var editBtn = $('#editBtn');
@@ -71,6 +83,7 @@ $(document).ready(function () {
             });
         });
 
+    //Crop Function
     var $image = $(".image-crop > img");
     $($image).cropper({
         aspectRatio: 1,

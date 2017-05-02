@@ -129,7 +129,7 @@
             <div class="page-wrapper__inner">
                 <div class="myProfile">
                     <div class="row">
-                        <div class="col-sm-9">
+                        <div class="col-md-9 col-xs-12">
                             <div class="ibox myProfile__pro">
                                 <div class="ibox__content">
                                     <div class="myProfile__pro__header">
@@ -138,10 +138,6 @@
                                             <div class="myProfile__pro__today__content"> <span>02</span> <span>رجب</span> <span>1438</span> </div>
                                         </div>
                                         <div class="myProfile__pro__todayStats">
-                                            <!--
-                      <div>
-                          <a href="" class="btn btn-primary btn-rounded">مداوم</a></div>
--->
                                             <div>
                                                 <div class="btn btn-primary btn-block btn-rounded" data-toggle="popover" data-placement="auto bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> مداوم</div>
                                                 <p>منذ ساعة</p>
@@ -162,112 +158,193 @@
                                         </div>
                                     </div>
                                     <div class="myProfile__pro__content">
-                                        <h3>معلومات مهنية</h3>
                                         <div class="row">
-                                            <div class="col-xs-12">
-                                                <div class="form-horizontal">
-                                                    <div class="form-group">
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">السجل المدني</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
+                                            <div class="col-xs-6">
+                                                <h3>معلومات مهنية</h3>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <button data-toggle="button" id="job__history__btn"
+                                                        class="btn btn-info btn-rounded pull-right btn-outline">
+                                                    <i class="fa fa-archive"></i> تاريخ الوظيفة
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="job__details">
+                                                <div class="col-xs-12">
+                                                    <div class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">السجل المدني</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">مسمى الوظيفة</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">الوظيفة المكلف بها</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">مسمى الوظيفة</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
+                                                        <div class="hr-line-dashed"></div>
+                                                        <div class="form-group">
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">تاريخ التعيين في الدولة</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">تاريخ التعيين في الإمارة</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">تاريخ التعيين بالمرتبة</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">الوظيفة المكلف بها</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
+                                                        <div class="hr-line-dashed"></div>
+                                                        <div class="form-group">
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">تاريخ التقاعد</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">المرتبة</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
                                                             </div>
                                                         </div>
+                                                        <div class="hr-line-dashed"></div>
+                                                        <div class="form-group">
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">السجل المدني</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">مسمى الوظيفة</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">الإدارة</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hr-line-dashed"></div>
+                                                        <div class="form-group">
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">السجل المدني</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">مسمى الوظيفة</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 col-xs-12">
+                                                                <label class="col-sm-5 control-label">الإدارة</label>
+                                                                <div class="col-sm-7">
+                                                                    <p class="form-control-static">email@example.com</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hr-line-dashed"></div>
                                                     </div>
-                                                    <div class="hr-line-dashed"></div>
-                                                    <div class="form-group">
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">تاريخ التعيين في الدولة</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">تاريخ التعيين في الإمارة</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">تاريخ التعيين بالمرتبة</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
-                                                            </div>
-                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="job__history__content">
+                                                <div class="col-xs-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-striped table-bordered table-hover">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>مسمى الوظيفة</th>
+                                                                <th>مرتبة</th>
+                                                                <th>رقمها</th>
+                                                                <th>الدرجة</th>
+                                                                <th>الراتب</th>
+                                                                <th>جهة العمل</th>
+                                                                <th>بداية الخدمة</th>
+                                                                <th>نهاية الخدمة</th>
+                                                                <th>الأسباب</th>
+                                                                <th>رقم الأمر</th>
+                                                                <th>تاريخ الأمر</th>
+                                                                <th>ملاحظات</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>مساعد مبرمج</td>
+                                                                <td>06</td>
+                                                                <td>0008</td>
+                                                                <td>06</td>
+                                                                <td>0000</td>
+                                                                <td>إمارة منطقة جازان</td>
+                                                                <td>1431/01/06</td>
+                                                                <td>--</td>
+                                                                <td>تعيين</td>
+                                                                <td>406</td>
+                                                                <td>1430/04/01</td>
+                                                                <td>--</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>مساعد مبرمج</td>
+                                                                <td>07</td>
+                                                                <td>0008</td>
+                                                                <td>07</td>
+                                                                <td>0000</td>
+                                                                <td>إمارة منطقة جازان</td>
+                                                                <td>1431/01/06</td>
+                                                                <td>--</td>
+                                                                <td>تعيين</td>
+                                                                <td>406</td>
+                                                                <td>1430/04/01</td>
+                                                                <td>--</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>مساعد مبرمج</td>
+                                                                <td>06</td>
+                                                                <td>0008</td>
+                                                                <td>08</td>
+                                                                <td>0000</td>
+                                                                <td>إمارة منطقة جازان</td>
+                                                                <td>1431/01/06</td>
+                                                                <td>--</td>
+                                                                <td>تعيين</td>
+                                                                <td>406</td>
+                                                                <td>1430/04/01</td>
+                                                                <td>--</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
                                                     </div>
-                                                    <div class="hr-line-dashed"></div>
-                                                    <div class="form-group">
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">تاريخ التقاعد</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">المرتبة</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hr-line-dashed"></div>
-                                                    <div class="form-group">
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">السجل المدني</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">مسمى الوظيفة</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">الإدارة</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hr-line-dashed"></div>
-                                                    <div class="form-group">
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">السجل المدني</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">مسمى الوظيفة</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <label class="col-sm-5 control-label">الإدارة</label>
-                                                            <div class="col-sm-7">
-                                                                <p class="form-control-static">email@example.com</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hr-line-dashed"></div>
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                     <div class="myProfile__pro__footer">
                                         <p>اذا يوجد أخطاء في المعلومات المدخلة يرجى الإتصال <span>بإدارة شؤون الموظفين</span></p>
@@ -275,7 +352,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-md-3 col-xs-12">
                             <div class="ibox myProfile__perso">
                                 <div class="ibox__content">
                                     <div class="myProfile__perso__header">
