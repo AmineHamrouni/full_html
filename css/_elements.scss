@@ -935,7 +935,7 @@ div.dt-button-info {
     background-color: #FFFFFF;
     background-image: none;
     border: 1px solid #e5e6e7;
-    border-radius: 1px;
+    border-radius: 4px;
     color: inherit;
     display: block;
     padding: 6px 12px;
@@ -1001,6 +1001,13 @@ div.dt-button-info {
 .slider_red .noUi-connect {
     background: none repeat scroll 0 0 $red;
     box-shadow: none;
+}
+
+/* Clock */
+
+.clock {
+    zoom: 0.65;
+    -moz-transform: scale(0.65);
 }
 
 

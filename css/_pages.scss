@@ -1699,7 +1699,7 @@ body.body-small .vote-icon {
 }
 
 
-/*Page Wrapper Class*/
+//Page Wrapper Class
 
 .page-wrapper {
     &__inner {
@@ -1742,9 +1742,6 @@ body.body-small .vote-icon {
 
 //Profile new style
 .myProfile {
-    max-width: 1270px;
-    width: 100%;
-    margin: 0 auto;
     .ibox__content {
         padding: 0;
     }
@@ -1818,6 +1815,9 @@ body.body-small .vote-icon {
         }
     }
     &__pro {
+        .ibox__content {
+            min-height: 600px;
+        }
         &__header {
             display: flex;
             flex-wrap: wrap;
@@ -2017,6 +2017,7 @@ body.body-small .vote-icon {
         //            }
         //        }
     }
+
 }
 
 //Attend Leave
@@ -2087,6 +2088,12 @@ body.body-small .vote-icon {
             }
         }
     }
+}
+
+//Tasks / OverTime
+.diffDate {
+    background-color: transparent;
+    border: 0;
 }
 
 .refuse__msg {

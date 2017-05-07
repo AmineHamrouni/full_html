@@ -328,6 +328,7 @@
  .table > thead > tr > th {
      border-bottom: 1px solid #DDDDDD;
      vertical-align: bottom;
+   font-size:10px;
  }
  
  .table > thead > tr > th,
@@ -338,7 +339,7 @@
  .table > tfoot > tr > td {
      border-top: 1px solid $border-color;
      line-height: 1.42857;
-     padding: 8px;
+     padding: 8px 4px;
      vertical-align: top;
  }
  /* PANELS */
@@ -571,7 +572,7 @@
      border-image: none;
      border-width: 0 1px 1px 1px;
      border-style: solid;
-     min-height: 120px;
+     min-height: 40px;
      transition: .5s ease-in-out;
      //Force font family for the chart graphs
      font-family: 'Droid Arabic Kufi', "Helvetica Neue", Helvetica, Arial, sans-serif !important;

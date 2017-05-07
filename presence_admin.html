@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>إمارة منطقة جازان</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet">
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <!-- c3 Charts -->
+    <link href="css/plugins/c3/c3.min.css" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+    <link href="css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+    <link href="css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="css/plugins/cropper/cropper.min.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
+    <link href="css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+    <link href="css/plugins/dualListbox/bootstrap-duallistbox.min.css" rel="stylesheet">
+    <link href="css/plugins/slick/slick.css" rel="stylesheet">
+    <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
+    <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
+    <link href="js/plugins/calendars/jquery.calendars.picker.css" rel="stylesheet">
+    <!--    <link href="http://keith-wood.name/css/jquery.calendars.picker.css" rel="stylesheet">-->
+    <link href="css/plugins/cropper/cropper.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> </head>
+
+<body class="jaz rtls fixed-sidebar fixed-nav fixed-nav-basic">
+    <div id="wrapper" class="">
+          <div class="menu animated fadeInDown collapse" id="top_menu">
+            <ul class="menu__items">
+                <li class="menu__item">
+                    <a href="" class="menu__item__icon"> <i class="fa fa-user"></i> <span>بياناتي</span> </a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__item__icon"> <i class="fa fa-calendar"></i> <span>إجازاتي</span> </a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__item__icon"> <i class="fa fa-users"></i> <span>بيانات الاتصال</span> </a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__item__icon"> <i class="fa fa-envelope"></i> <span>بريد الكتروني</span> </a>
+                </li>
+                <li class="menu__close">
+                    <button class="close" type="button" data-toggle="collapse" data-target="#top_menu" aria-exapnded="false" aria-controls="top_menu">إغلاق &times; </button>
+                </li>
+            </ul>
+        </div>
+
+        <!--navigation-->
+        <nav class="navbar-default navbar-static-side nav-style-1" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <div class="profile-element__img"> <img alt="image" class="" src="img/doc.jpg" /> </div>
+                            <a id="open_menu" href="#" data-toggle="collapse" data-target="#top_menu" aria-exapnded="false" aria-controls="top_menu">
+                                <div class="clear">
+                                    <h2 class="block m-t-xs profile-element__name">
+                                        <strong class="font-bold">د. سعد المقرن بن مقرن</strong>
+                                    </h2>
+                                    <h4 class="block profile-element__title">وكيل إمارة منطقة جازان
+                                        <!--<b class="caret"></b>-->
+                                    </h4>
+                                </div>
+                            </a>
+<!--
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">الملف الشخصي</a></li>
+                                <li><a href="contacts.html">جهات الاتصال</a></li>
+                                <li><a href="mailbox.html">صندوق البريد</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">خروج</a></li>
+                            </ul>
+-->
+                        </div>
+                        <div class="logo-element"> </div>
+                    </li>
+                    <li class="active fadeIn animated"> <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">لوحة التحكم</span> </a> </li>
+                    <li class="fadeIn animated"> <a href="mailbox.html"><i class="fa fa-envelope"></i><span class="nav-label">البريد الالكتروني </span><span class="label label-warning pull-right">16/24</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="mailbox.html">البريد الالكتروني</a></li>
+                            <li><a href="mail_detail.html">مثال لبريد الكتروني</a></li>
+                            <li><a href="mail_compose.html">إرسال بريد الكتروني</a></li>
+                            <li><a href="email_template.html">المسودات</a></li>
+                        </ul>
+                    </li>
+                    <li class="fadeIn animated"> <a href="profile.html"><i class="fa fa-user"></i><span class="nav-label">البيانات الشخصية</span></a> </li>
+                    <li class="fadeIn animated"> <a href="inquiry.html"><i class="fa fa-check-square"></i><span class="nav-label">كشف حضوري وانصرافي</span></a> </li>
+                    <li class="fadeIn animated"> <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">طلبات الاجازات</span></a> </li>
+                    <li class="fadeIn animated"> <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">الدورات التدريبية</span></a> </li>
+                    <li class="fadeIn animated"> <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">الأخبار</span></a> </li>
+                    <li class="fadeIn animated"> <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">التحويلات الداخلية</span></a> </li>
+                </ul>
+            </div>
+        </nav>
+        <!--page wrapper-->
+        <div id="page-wrapper" class="gray-bg dashbard-1 page-wrapper--down">
+
+            <!--topnavbar-->
+            <div class="row header-style navbar-fixed-top">
+                <div class="header-style__title ui-sortable">
+                    <div class="header-style__actions">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-success " href="#"> <i class="fa fa-bars"></i> </a>
+                    </div>
+                    <h2>مرحبا بك في لوحة التحكم الخاصة بك</h2>
+                </div>
+                <div class="header-style__particles" id="particles-js"></div>
+            </div>
+            <div class="page-wrapper__inner">
+                <div class="presenceAdmin">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="ibox">
+                                <div class="ibox__title">تفاصيل الحضور والانصراف اليوم</div>
+                                <div class="ibox__content">
+                                    <div class="row">
+
+                                        <label class="col-sm-2">تاريخ</label>
+
+                                        <div class="col-sm-4">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                <input type="text" class="form-control" placeholder="تاريخ البداية">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <button class="btn btn-success">ابحث</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="ibox__title">إرشادات</div>
+                            <div class="instructions">
+                                <div>
+                                    <div class="ibox__content">
+                                        <p>
+                                            يتم إدخال اوقات الحضور والانصرتف آليا عن طريق اجهزة البصمة.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="ibox__content">
+                                        <p>
+                                            يتم تسجيل الانسحاب من خلال هذه الشاشة عن طريق اخال بداية ونهاية وقت الانسحاب.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="ibox__content">
+                                        <p>
+                                            قبل حضور الدورات التدريبية يجب أن تسجل إدارة التطلوير الاداري البرنامج اولا.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="ibox__content">
+                                        <p>
+                                            الاجازات يتم رصدها اليا بعد تسجيلها فب تظام الاجزات.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="ibox">
+                                <div class="ibox__title">نتيجة البحث</div>
+                                <div class="ibox__content">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="table-responsive">
+                                                <table class="table table-striped table-hover dataTables-example">
+                                                    <thead>
+                                                        <tr class="blue-bg">
+                                                            <th>الحضور</th>
+                                                            <th>الإسم</th>
+                                                            <th>وقت الحضور</th>
+                                                            <th>التأخير (دق)</th>
+                                                            <th>الحالة</th>
+                                                            <th>بداية الانسحاب</th>
+                                                            <th>نهاية الانسحاب</th>
+                                                            <th>دقائق الانسحاب</th>
+                                                            <th>وقت الانصراف</th>
+                                                            <th>نوع الانصراف</th>
+                                                            <th>حالات أخرى</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><span class="badge badge-danger">غياب</span></td>
+                                                            <td>عاصم محمد ال سالم</td>
+                                                            <td>07:59</td>
+                                                            <td>22</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td><button class="btn btn-primary dim" type="button"><i class="fa fa-check"></i></button></td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="badge badge-primary">حاضر</span></td>
+                                                            <td>عبد الله محمد كاملي</td>
+                                                            <td>07:59</td>
+                                                            <td>22</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="badge badge-primary">حاضر</span></td>
+                                                            <td>احمد حسن محلاوي</td>
+                                                            <td>07:59</td>
+                                                            <td>22</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <!-- d3 and c3 charts -->
+    <script src="js/plugins/d3/d3.min.js"></script>
+    <script src="js/plugins/c3/c3.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- GITTER -->
+    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+    <!-- Toastr -->
+    <script src="js/plugins/toastr/toastr.min.js"></script>
+    <!-- Particles -->
+    <script src="js/plugins/particles/particles.min.js"></script>
+    <!-- Chosen -->
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+    <!-- JSKnob -->
+    <script src="js/plugins/jsKnob/jquery.knob.js"></script>
+    <!-- Input Mask-->
+    <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+    <!-- Data picker -->
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <!-- NouSlider -->
+    <script src="js/plugins/nouslider/jquery.nouislider.min.js"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <!-- IonRangeSlider -->
+    <script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <!-- MENU -->
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <!-- Color picker -->
+    <script src="js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <!-- Clock picker -->
+    <script src="js/plugins/clockpicker/clockpicker.js"></script>
+    <!-- Image cropper -->
+    <script src="js/plugins/cropper/cropper.min.js"></script>
+    <!-- Date range use moment.js same as full calendar plugin -->
+    <script src="js/plugins/fullcalendar/moment.min.js"></script>
+    <!-- NouSlider -->
+    <script src="js/plugins/nouslider/jquery.nouislider.min.js"></script>
+    <!-- Date range picker -->
+    <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <!-- Select2 -->
+    <script src="js/plugins/select2/select2.full.min.js"></script>
+    <!-- TouchSpin -->
+    <script src="js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <!-- Tags Input -->
+    <script src="js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+    <!-- Dual Listbox -->
+    <script src="js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
+    <!-- slick carousel-->
+    <script src="js/plugins/slick/slick.min.js"></script>
+    <!-- Steps -->
+    <script src="js/plugins/staps/jquery.steps.min.js"></script>
+    <!-- Jquery Validate -->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <!-- Morris -->
+    <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="js/plugins/morris/morris.js"></script>
+    <script src="js/plugins/calendars/jquery.plugin.js"></script>
+    <!--    <script src="http://keith-wood.name/js/jquery.datepick-ar.js"></script>-->
+    <script src="js/plugins/calendars/jquery.calendars.js"></script>
+    <script src="js/plugins/calendars/jquery.calendars.plus.js"></script>
+    <script src="js/plugins/calendars/jquery.calendars.picker.js"></script>
+    <script src="js/plugins/calendars/jquery.calendars.ummalqura.js"></script>
+
+
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css" rel="stylesheet">
+    <script src="js/plugins/dataTables/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+
+    <!-- slick carousel-->
+    <script src="js/plugins/slick/slick.min.js"></script>
+    <link href="css/plugins/slick/slick.css" rel="stylesheet">
+    <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
+
+
+
+
+    <script type="text/javascript">
+        var clock = $('.clock').FlipClock({
+            clockFace: 'TwentyFourHourClock'
+        });
+
+        $('.instructions').slick({
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            //adaptiveHeight: true
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            /* ---- particles.js config ---- */
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 398,
+                        "density": {
+                            "enable": true,
+                            "value_area": 1657.2100474277727
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        },
+                        "image": {
+                            "src": "img/github.svg",
+                            "width": 100,
+                            "height": 100
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": true,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 3,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": true,
+                            "rotateX": 4329.212564336912,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "window",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 203.7962037962038,
+                            "line_linked": {
+                                "opacity": 0.8418939375541366
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+    </script>
+
+    <script>
+//        $(document).ready(function () {
+//            $('.dataTables-example').DataTable({
+//                pageLength: 5,
+//                responsive: true,
+//                dom: '<"html5buttons"B>lTfgitp',
+//                searching: false,
+//                buttons: [
+//                    {
+//                        extend: 'excel',
+//                        title: 'ExampleFile'
+//                    },
+//                    {
+//                        extend: 'print',
+//                        text: 'طباعة',
+//                        customize: function (win) {
+//                            $(win.document.body).addClass('white-bg');
+//                            $(win.document.body).css('font-size', '10px');
+//
+//                            $(win.document.body).find('table')
+//                                .addClass('compact')
+//                                .css('font-size', 'inherit');
+//                        }
+//                    }
+//                ]
+//            });
+//
+//        });
+    </script>
+</body>
+
+</html>
