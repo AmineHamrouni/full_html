@@ -15,6 +15,9 @@ body.rtls {
     .pull-left {
         float: right !important;
     }
+    .ibox__content {
+        direction: rtl;
+    }
     .ibox__tools {
         float: left;
     }

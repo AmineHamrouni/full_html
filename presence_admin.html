@@ -216,12 +216,103 @@
                                                         <tr>
                                                             <td><span class="badge badge-danger">غياب</span></td>
                                                             <td>عاصم محمد ال سالم</td>
-                                                            <td>07:59</td>
+                                                            <td><span class="loginTime">12:35</span></td>
                                                             <td>22</td>
                                                             <td>--</td>
                                                             <td>--</td>
                                                             <td>--</td>
-                                                            <td><button class="btn btn-primary dim" type="button"><i class="fa fa-check"></i></button></td>
+                                                            <td>
+                                                                <button class="btn btn-primary btn-sm"
+                                                                        type="button" data-toggle="tooltip" data-placement="top" title="تسجيل انسحاب">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </button>
+                                                                <div class="panel panel-info">
+                                                                    <!--<div class="panel-heading"></div>-->
+                                                                    <div class="panel-body">
+                                                                        <div class="form-horizontal">
+                                                                            <div class="form-group">
+                                                                                <label for="" class="col-sm-4 control-label">توقيت البداية</label>
+                                                                                <div class="col-sm-4">
+                                                                                    <select name="" id=""
+                                                                                            class="form-control start-mn"></select>
+                                                                                    <span class="help-block">دقائق</span>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <select name=""
+                                                                                            class="form-control start-hr">
+                                                                                    </select>
+                                                                                    <span class="help-block">ساعة</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="" class="col-sm-4 control-label">توقيت النهاية</label>
+                                                                                <div class="col-sm-4">
+                                                                                    <select name=""
+                                                                                            class="form-control end-mn">
+                                                                                        <!--<option value="00">00</option>-->
+                                                                                        <!--<option value="01">01</option>-->
+                                                                                        <!--<option value="02">02</option>-->
+                                                                                        <!--<option value="03">03</option>-->
+                                                                                        <!--<option value="04">04</option>-->
+                                                                                        <!--<option value="05" selected>05</option>-->
+                                                                                        <!--<option value="06">06</option>-->
+                                                                                        <!--<option value="07">07</option>-->
+                                                                                        <!--<option value="08">08</option>-->
+                                                                                        <!--<option value="09">09</option>-->
+                                                                                        <!--<option value="10">10</option>-->
+                                                                                        <!--<option value="11">11</option>-->
+                                                                                        <!--<option value="12">12</option>-->
+                                                                                        <!--<option value="13">13</option>-->
+                                                                                        <!--<option value="14">14</option>-->
+                                                                                        <!--<option value="15">15</option>-->
+                                                                                        <!--<option value="16">16</option>-->
+                                                                                        <!--<option value="17">17</option>-->
+                                                                                        <!--<option value="18">18</option>-->
+                                                                                        <!--<option value="19">19</option>-->
+                                                                                        <!--<option value="20">20</option>-->
+                                                                                        <!--<option value="21">21</option>-->
+                                                                                        <!--<option value="22">22</option>-->
+                                                                                        <!--<option value="23">23</option>-->
+                                                                                        <!--<option value="24">24</option>-->
+                                                                                        <!--<option value="25">25</option>-->
+                                                                                        <!--<option value="26">26</option>-->
+                                                                                        <!--<option value="27">27</option>-->
+                                                                                        <!--<option value="28">28</option>-->
+                                                                                        <!--<option value="29">29</option>-->
+                                                                                        <!--<option value="30">30</option>-->
+                                                                                    </select>
+                                                                                    <span class="help-block">دقائق</span>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <select name=""
+                                                                                            class="form-control end-hr">
+                                                                                        <!--<option value="07">07</option>-->
+                                                                                        <!--<option value="08">08</option>-->
+                                                                                        <!--<option value="09">09</option>-->
+                                                                                        <!--<option value="10">10</option>-->
+                                                                                        <!--<option value="11">11</option>-->
+                                                                                        <!--<option value="12">12</option>-->
+                                                                                        <!--<option value="13">01</option>-->
+                                                                                        <!--<option value="14">02</option>-->
+                                                                                    </select>
+                                                                                    <span class="help-block">ساعة</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label class="col-sm-4 control-label">مدة الإنسحاب</label>
+                                                                                <div class="col-sm-8">
+                                                                                    <input class="form-control duration text-center" type="text" placeholder="مدة الإنسحاب بالدقائق" readonly>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <div class="col-sm-offset-4 col-sm-8">
+                                                                                    <button type="submit" class="btn btn-primary btn-block submit" disabled>تأكيد</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                             <td>--</td>
                                                             <td>--</td>
                                                             <td>--</td>
@@ -361,26 +452,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
 
     <!-- slick carousel-->
-    <script src="js/plugins/slick/slick.min.js"></script>
-    <link href="css/plugins/slick/slick.css" rel="stylesheet">
-    <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
+    <!--<script src="js/plugins/slick/slick.min.js"></script>-->
+    <!--<link href="css/plugins/slick/slick.css" rel="stylesheet">-->
+    <!--<link href="css/plugins/slick/slick-theme.css" rel="stylesheet">-->
+
+    <!-- Input Mask-->
+    <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
 
+    <script src="js/pages/presence-admin.js"></script>
 
-
-    <script type="text/javascript">
-        var clock = $('.clock').FlipClock({
-            clockFace: 'TwentyFourHourClock'
-        });
-
-        $('.instructions').slick({
-            infinite: true,
-            speed: 500,
-            fade: true,
-            cssEase: 'linear',
-            //adaptiveHeight: true
-        });
-    </script>
 
     <script>
         $(document).ready(function() {
