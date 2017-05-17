@@ -35,7 +35,7 @@ $(document).ready(function () {
     
     accept.click(function () {
         refuseMsg.fadeOut(200);
-        swal("تم القبول", "تم قبول الإجازة!", "success");
+        // swal("تم القبول", "تم قبول الإجازة!", "success");
         swal({
             title: "تم قبول الإجازة",
             text: "تم القبول",

@@ -258,8 +258,7 @@
                         <h2>الإدراة العامة</h2>
                         <p><strong>الحالة: </strong>في إنتظار الرد.</p>
                         <a href="#" class="btn btn-sm btn-success">أكثر معلومات</a>
-                        <span class="vertical-date">
-                          اليوم<br/>
+                        <span class="vertical-date">اليوم<br/>
                           <small>الساعة 9:40</small>
                         </span>
                       </div>
@@ -271,14 +270,117 @@
                       </div>
 
                       <div class="vertical__timeline__content">
-                        <h2>شؤون الموظفين</h2>
-                        <p><strong>الحالة: </strong>تم الرفض.
-                        </p>
-                        <p>
-                          <strong>السبب: </strong>
-                          سبب الرفض
-                        </p>
-                        <a href="#" class="btn btn-sm btn-danger">أكثر معلومات</a>
+                        <div class="row">
+                          <div class="col-xs-12">
+                            <h2>شؤون الموظفين</h2>
+                            <p><strong>الحالة: </strong>تم الرفض.
+                            </p>
+                            <p>
+                              <strong>السبب: </strong>
+                              سبب الرفض
+                            </p>
+
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-12">
+                            <button class="btn btn-danger dim" type="button" data-toggle="collapse" href="#refusePanel" aria-expanded="false" aria-controls="refusePanel"><i class="fa fa-times"></i></button>
+                            <button class="btn btn-primary dim accept_btn" type="button"
+                                    role="button"><i class="fa fa-check"></i></button>
+                            <button class="btn btn-success dim pull-left no-margins " role="button"
+                                    data-toggle="collapse" href="#empList" aria-expanded="false" aria-controls="empList">
+قائمة الموظفين المعنيين                            </button>
+                          </div>
+                          <div class="col-xs-12">
+                            <div class="collapse m-xs" id="refusePanel">
+                              <div class="hr-line-dashed"></div>
+                              <div class="form-group">
+                                <label>إختر سبب الرفض</label>
+                              </div>
+                              <div class="col-sm-12">
+                                <div class="i-checks"><label> <input name="reasons" type="radio" value="2090001" checked> <i></i> للمفاهمة </label></div>
+                                <div class="i-checks"><label> <input name="reasons" type="radio" value="2090002"> <i></i> أعمال لا تتطلب لتكاليف </label></div>
+                                <div class="i-checks"><label> <input name="reasons" type="radio" value="2090003"> <i></i> تقليل عدد الموظفين </label></div>
+                                <div class="i-checks"><label> <input name="reasons" type="radio" value="2090004"> <i></i> حذف موظف </label></div>
+                                <div class="i-checks"><label> <input name="reasons" type="radio" value="2090033"> <i></i> أخرى </label></div>
+                              </div>
+                              <div class="form-group">
+                                <button class="btn btn-danger dim refuse_btn" type="button"
+                                        role="button"><i class="fa fa-times"></i> تأكيد رفض الطلب</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xs-12">
+                            <div class="collapse m-xs" id="empList">
+                              <div class="hr-line-dashed"></div>
+                              <div class="panel panel-default">
+                                <div class="panel-body">
+                                  <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                      <th>اسم الموظف</th>
+                                      <th>المسمى الوظيفي</th>
+                                      <th>المرتبة</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td>عاصم محمد ال سالم</td>
+                                      <td>مطور أنظمة</td>
+                                      <td>7</td>
+                                    </tr>
+                                    <tr>
+                                      <td>عاصم محمد ال سالم</td>
+                                      <td>مطور أنظمة</td>
+                                      <td>7</td>
+                                    </tr>
+                                    <tr>
+                                      <td>عاصم محمد ال سالم</td>
+                                      <td>مطور أنظمة</td>
+                                      <td>7</td>
+                                    </tr>
+                                    <tr>
+                                      <td>عاصم محمد ال سالم</td>
+                                      <td>مطور أنظمة</td>
+                                      <td>7</td>
+                                    </tr>
+                                    <tr>
+                                      <td>عاصم محمد ال سالم</td>
+                                      <td>مطور أنظمة</td>
+                                      <td>7</td>
+                                    </tr>
+                                    <tr>
+                                      <td>عاصم محمد ال سالم</td>
+                                      <td>مطور أنظمة</td>
+                                      <td>7</td>
+                                    </tr>
+                                    <tr>
+                                      <td>عاصم محمد ال سالم</td>
+                                      <td>مطور أنظمة</td>
+                                      <td>7</td>
+                                    </tr>
+                                    <tr>
+                                      <td>عاصم محمد ال سالم</td>
+                                      <td>مطور أنظمة</td>
+                                      <td>7</td>
+                                    </tr>
+                                    <tr>
+                                      <td>عاصم محمد ال سالم</td>
+                                      <td>مطور أنظمة</td>
+                                      <td>7</td>
+                                    </tr>
+                                    <tr>
+                                      <td>عاصم محمد ال سالم</td>
+                                      <td>مطور أنظمة</td>
+                                      <td>7</td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         <span class="vertical-date">
                             اليوم<br/>
                             <small>الساعة 10:23</small>
@@ -326,6 +428,10 @@
 
   <!-- Peity -->
   <script src="js/plugins/peity/jquery.peity.min.js"></script>
+
+  <!-- Sweet alert -->
+  <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
 
   <!-- d3 and c3 charts -->
   <script src="js/plugins/d3/d3.min.js"></script>
@@ -463,8 +569,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js"></script>
 -->
 
-  <!-- Inquiry JS -->
-  <script src="js/pages/vacation.js"></script>
+  <!-- Timeline JS -->
+  <script src="js/pages/timeline.js"></script>
 
   <script>
     $(document).ready(function() {
@@ -581,35 +687,6 @@
 
     });
   </script>
-  
-      <script>
-        $(document).ready(function(){
-
-            // Local script for demo purpose only
-            $('#lightVersion').click(function(event) {
-                event.preventDefault()
-                $('#ibox__content').removeClass('ibox__content');
-                $('#vertical__timeline').removeClass('dark-timeline');
-                $('#vertical__timeline').addClass('light-timeline');
-            });
-
-            $('#darkVersion').click(function(event) {
-                event.preventDefault()
-                $('#ibox__content').addClass('ibox__content');
-                $('#vertical__timeline').removeClass('light-timeline');
-                $('#vertical__timeline').addClass('dark-timeline');
-            });
-
-            $('#leftVersion').click(function(event) {
-                event.preventDefault()
-                $('#vertical__timeline').toggleClass('center-orientation');
-            });
-
-
-        });
-    </script>
-
-
 
 </body>
 

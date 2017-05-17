@@ -33,37 +33,58 @@ $(document).ready(function() {
     submitBtn = $(".submit");
 
     // make the select start equal to the login time
-    for (var i = loginTimeMn; i < 60; i++) {
-        listMn.push({ id: i, text: i });
+    function timeLogin() {
+        for (var i = 0; i < 60; i++) {
+            listMn.push({ id: i, text: i });
+        }
+        for (var i = loginTimeHr; i < 15; i++) {
+            if ( i > 12 ) {
+                listHr.push({ id: i, text: "0" + i - 12 + " مساء" });
+            } else {
+                listHr.push({ id: i, text: i + " صباحا" });
+            }
+        }
     }
 
-    for (var i = loginTimeHr; i < 15; i++) {
-        listHr.push({ id: i, text: i });
+    function loadSelect() {
+        // Load Data to the time selector
+        start_mn.select2({
+            data: listMn,
+            dir: "rtl"
+        });
+
+        start_hr.select2({
+            data: listHr,
+            dir: "rtl"
+        });
+
+        end_mn.select2({
+            data: listMn,
+            dir: "rtl"
+        });
+
+        end_hr.select2({
+            data: listHr,
+            dir: "rtl"
+        });
+
     }
 
-    // Load Data to the time selector
-    start_mn.select2({
-        data: listMn,
-        dir: "rtl"
-    });
+    timeLogin();
 
-    start_hr.select2({
-        data: listHr,
-        dir: "rtl"
-    });
+    loadSelect();
 
-    end_mn.select2({
-        data: listMn,
-        dir: "rtl"
-    });
-
-    end_hr.select2({
-        data: listHr,
-        dir: "rtl"
+    $(" .panel__btn ").popover({
+        html: true,
+        content: function() {
+            var content = $(this).siblings('.panel__body');
+            return content.html();
+        }
     });
 
     //Calculate the duration on select change
     $( "select" ).change(function() {
+
         start_time = parseInt(start_mn.val()) + parseInt(start_hr.val()) * 60;
         end_time = parseInt(end_mn.val()) + parseInt(end_hr.val()) * 60;
         duration = end_time - start_time;
@@ -75,7 +96,7 @@ $(document).ready(function() {
         } else {
             lblDuration.val(duration + ' دق ' );
             submitBtn.attr("disabled", false);
-            submitBtn.text("تأكيد إنسحاب بـ " + duration + " دقيقة");
+            submitBtn.text("تأكيد إنسحاب بـ " + duration + " دق");
         }
 
     });

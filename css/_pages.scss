@@ -184,7 +184,8 @@
             align-items: center;
             flex-direction: column;
             > div {
-                @include size(128px);
+                height:128px;
+                width:128px;
                 background-image: url(https://cdn3.iconfinder.com/data/icons/office-flat-colorful/614/3138_-_Fingerprint-128.png);
                 background-size: 50px;
                 background-repeat: no-repeat;
@@ -1734,9 +1735,12 @@ body.body-small .vote-icon {
         top: 0;
         right: 0;
         left: 0;
-        //bottom: 0;
+        bottom: 0;
+        height: 100%;
         z-index: 0;
-        background-image: linear-gradient(to right, #258dc8 0%, #1ab394 100%);
+        //background-image: linear-gradient(to right, #258dc8 0%, #1ab394 100%);
+        background-image: url(../img/background/bg_1.jpeg);
+        background-size: cover;
     }
 }
 
@@ -1770,7 +1774,8 @@ body.body-small .vote-icon {
             background-image: url(../img/profile.svg);
             background-size: cover;
             background-position: center;
-            @include size(128px);
+            height:128px;
+            width:128px;
             img {
                 width: 100%;
             }
@@ -2100,3 +2105,39 @@ body.body-small .vote-icon {
     background-color: #f6f6f6;
 }
 
+//presenceAdmin
+.presenceAdmin {
+    .ibox__content {
+        min-height: 80px;
+    }
+
+    .popover {
+        min-width: 400px;
+    }
+
+    .panel{
+        &__container {
+            //position: relative;
+        }
+        &__form {
+            font-family: 'Droid Arabic Kufi', "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 11px;
+        }
+    }
+
+    .instructions {
+        .slick-prev, .slick-next {
+            top: auto !important;
+            bottom: 10px;
+            margin-bottom: 0;
+        }
+        .slick-next {
+            right: 10px;
+        }
+        .slick-prev {
+            right: 30px;
+            left: auto !important;
+            z-index: 1;
+        }
+    }
+}
